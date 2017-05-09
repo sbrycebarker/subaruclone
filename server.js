@@ -4,17 +4,28 @@ const express = require('express'),
       massive = require('massive'),
       cors = require('cors'),
       moment = require('moment'),
-      foundation = require('foundation-cli')
+      foundation = require('foundation-cli'),
+      mongoose =require('mongoose'),
       request = require('request');
 
       var app = express()
-      app.use(cors());
-      app.use(bodyParser.json())
 
+
+
+      app.use(bodyParser.json())
+      app.use(cors());
+
+      var cars = require('./public/js/cars')
+
+      app.get('/cars', cars.read)
+
+      mongoose.connect('mongodb://sbrycebarker:serg1234@ds129030.mlab.com:29030/subaru', function(err) {
+          if (err) throw err;
+      });
 
       app.use(express.static('./public'))
 
-            var port = 3000
+            var port = 3030
 
 
         app.listen(port, function() {

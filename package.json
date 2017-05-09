@@ -24,6 +24,8 @@
     "foundation-cli": "^2.2.2",
     "massive": "^2.6.0",
     "moment": "^2.18.1",
+    "mongodb": "^2.2.26",
+    "mongoose": "^4.9.8",
     "request": "^2.81.0"
   }
 }

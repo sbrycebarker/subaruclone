@@ -1,16 +1,96 @@
+html {
+  margin: 0;
+}
+body {
+  margin: 0;
+}
 .top {
+  position: relative;
+  height: 38px;
+  width: 100%;
+  background-color: #232323;
   font-size: 10px;
   font-family: helvetica arial sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  color: white;
 
+}
+
+header {
+  margin: 0;
+  height: 58px;
+  width: 100%;
+  position: white;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: auto;
+}
+
+.itemscon {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 30px;
+  width: 600px;
+  float: right;
+  border: 1px white solid;
+ }
+
+.topitems {
+  height: 50px;
+  width: 125px;
+  margin: 0 10px;
+  position: relative;
+  display: inline-block;
 }
 
 .subaruhome {
+  margin: 11px 0 0 23px;
+  position: relative;
 	background: url('../views/imgs/siteimgs.PNG') no-repeat -1px 0;
 	width: 150px;
 	height: 40px;
+  border: none;
+}
+.centermenu {
+  position: relative;
+  display: inline-block;
+  height: 25px;
+  width: 500px;
+  margin: 0 auto;
+}
+.items {
+  margin: 0;
+  height: auto;
+  width: 150px;
+  font-size: 12px;
+  display: inline-block;
+  text-align: center;
+}
+.front {
+  height: 855px;
+  width: auto;
+  background-color: blue;
+  background: url("../views/imgs/outback.JPG") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.centermenu h2 {
-  font-family: helvetica arial sans-serif;
-  font-size: 12px;
+
+
+.footer {
+  height: 603px;
+  width: 100%;
+  background-color: #232323;
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
 }
