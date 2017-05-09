@@ -1,0 +1,16 @@
+.top {
+  font-size: 10px;
+  font-family: helvetica arial sans-serif;
+
+}
+
+.subaruhome {
+	background: url('../views/imgs/siteimgs.PNG') no-repeat -1px 0;
+	width: 150px;
+	height: 40px;
+}
+
+.centermenu h2 {
+  font-family: helvetica arial sans-serif;
+  font-size: 12px;
+}

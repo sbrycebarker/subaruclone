@@ -21,6 +21,7 @@
     "cors": "^2.8.3",
     "express": "^4.15.2",
     "express-session": "^1.15.2",
+    "foundation-cli": "^2.2.2",
     "massive": "^2.6.0",
     "moment": "^2.18.1",
     "request": "^2.81.0"
