@@ -23,7 +23,7 @@ gulp.task('build-css', function(){
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(cachebust.resources())
-        .pipe(concat('styles.css'))
+        // .pipe(concat('styles.css'))
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('./public/dist'));
 })
@@ -45,7 +45,7 @@ gulp.task('build-js', function() {
       .pipe(gulp.dest('./public/dist/js'));
 });
 
-gulp.task('build', [ 'build-css', 'build-js'], function() {
+gulp.task('build', [ 'clean', 'build-css', 'build-js'], function() {
     return gulp.src('public/index.html')
         .pipe(cachebust.references())
         .pipe(gulp.dest('./public/dist'));

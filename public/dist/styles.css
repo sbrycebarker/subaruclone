@@ -1,9 +1,14 @@
+.links {
+  height: 200px;
+  width: 1130px;
+  background-color: white; }
+
 html {
-  margin: 0;
-}
+  margin: 0; }
+
 body {
-  margin: 0;
-}
+  margin: 0; }
+
 .top {
   position: fixed;
   height: 38px;
@@ -15,9 +20,7 @@ body {
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
-  color: white;
-
-}
+  color: white; }
 
 .white {
   margin: 0;
@@ -29,8 +32,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: white;
-  padding: auto;
-}
+  padding: auto; }
 
 .itemscon {
   position: relative;
@@ -39,84 +41,73 @@ body {
   height: 30px;
   width: 600px;
   float: right;
-  border: 1px white solid;
- }
+  border: 1px white solid; }
 
 .topitems {
   height: 50px;
   width: 125px;
   margin: 0 10px;
   position: relative;
-  display: inline-block;
-}
+  display: inline-block; }
 
 .subaruhome {
   margin: 11px 0 0 23px;
   position: relative;
-	background: url('../views/imgs/siteimgs.PNG') no-repeat -1px 0;
-	width: 150px;
-	height: 40px;
-  border: none;
-}
+  background: url("../views/imgs/siteimgs.PNG") no-repeat -1px 0;
+  width: 150px;
+  height: 40px;
+  border: none; }
+
 .centermenu {
   position: relative;
   display: inline-block;
   height: 25px;
   width: 500px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
+
 .items {
   margin: 0;
   height: auto;
   width: 150px;
   font-size: 12px;
   display: inline-block;
-  text-align: center;
-}
+  text-align: center; }
 
 .sideitems {
   height: 30px;
   width: 450px;
   position: relative;
   display: flex;
-  border: 1px solid black;
-}
+  border: 1px solid black; }
 
 .side {
   height: 30px;
   width: 200px;
   display: flex;
-  flex-direction: row;
-}
+  flex-direction: row; }
+
 .side h4 {
-  font-size: 12px;
-}
+  font-size: 12px; }
 
 .byo {
   background: url("../views/imgs/byo.gif");
   height: 30px;
-  width: 30px;
-}
+  width: 30px; }
 
 .byo:hover {
   background: url("../views/imgs/byo.gif") -30px;
   height: 30px;
-  width: 30px;
-}
+  width: 30px; }
 
 .fad {
   background: url("../views/imgs/fad.gif");
   height: 30px;
-  width: 30px;
-}
+  width: 30px; }
 
 .fad:hover {
   background: url("../views/imgs/fad.gif") -30px;
   height: 30px;
-  width: 30px;
-}
-
-
+  width: 30px; }
 
 .front {
   height: 855px;
@@ -126,11 +117,11 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-}
+  background-size: cover; }
+
 .footersociallinks {
-  position: relative;
-}
+  position: relative; }
+
 /*.social {
   background: url('../views/imgs/fb.jpg');
   background-color: blue;
@@ -138,35 +129,28 @@ body {
   width: 35px;
 }*/
 .small-only {
-  display: none;
-}
+  display: none; }
 
 .ui-link {
   position: relative;
-  display: inline-flex;
-}
+  display: inline-flex; }
 
 .zip_modal_input {
-  display: none;
-}
+  display: none; }
 
 p {
   height: auto;
   width: auto;
-  display: none;
-}
+  display: none; }
 
 .map_search_input {
-  display: none;
-}
+  display: none; }
 
 .change_retailer_modal {
-  display: none;
-}
+  display: none; }
 
 .zip_code.far_zipCode {
-  display: none;
-}
+  display: none; }
 
 .footer {
   height: 603px;
@@ -176,5 +160,6 @@ p {
   display: inline-flex;
   justify-content: center;
   flex-wrap: wrap;
-  color: white;
-}
+  color: white; }
+
+/*# sourceMappingURL=maps/styles.css.map */

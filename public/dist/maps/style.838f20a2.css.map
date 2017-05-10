@@ -1,0 +1,1 @@
+{"version":3,"file":"../style.838f20a2.css","sources":["style.sass"],"sourcesContent":[".links {\n  height: 200px;\n  width: 1130px;\n  background-color: white; }\n"],"names":[],"mappings":"AAAA,AAAA,MAAM,CAAC;EACL,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,MAAM;EACb,gBAAgB,EAAE,KAAK,GAAI"}

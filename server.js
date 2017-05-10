@@ -23,7 +23,7 @@ const express = require('express'),
           if (err) throw err;
       });
 
-      app.use(express.static('./public'))
+      app.use(express.static('./public/dist'))
 
             var port = 3030
 
