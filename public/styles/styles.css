@@ -23,7 +23,7 @@ header {
   margin: 0;
   height: 58px;
   width: 100%;
-  position: white;
+  position: fixed;
   display: flex;
   justify-content: center;
   background-color: white;
@@ -71,18 +71,72 @@ header {
   display: inline-block;
   text-align: center;
 }
+
+.sideitems {
+  height: 30px;
+  width: 300px;
+  position: relative;
+  display: inline-flex;
+}
+
+.side {
+  height: 30px;
+  width: 250px;
+}
+
+.byo {
+  background: url("../views/imgs/byo.gif");
+  height: 30px;
+  width: 30px;
+}
+
+.byo:hover {
+  background: url("../views/imgs/byo.gif") -30px;
+  height: 30px;
+  width: 30px;
+}
+
+.fad {
+  background: url("../views/imgs/fad.gif");
+  height: 30px;
+  width: 30px;
+}
+
+.fad:hover {
+  background: url("../views/imgs/fad.gif") -30px;
+  height: 30px;
+  width: 30px;
+}
+
+
+
 .front {
   height: 855px;
   width: auto;
   background-color: blue;
-  background: url("../views/imgs/outback.JPG") no-repeat center center fixed;
+  background: url("../views/imgs/outback.JPG") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+.footersociallinks {
+  position: relative;
+}
+/*.social {
+  background: url('../views/imgs/fb.jpg');
+  background-color: blue;
+  height: 35px;
+  width: 35px;
+}*/
+.small-only {
+  display: none;
+}
 
-
+.ui-link {
+  position: relative;
+  display: inline-flex;
+}
 
 .footer {
   height: 603px;
