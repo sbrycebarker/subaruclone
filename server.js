@@ -15,7 +15,7 @@ const express = require('express'),
       app.use(bodyParser.json())
       app.use(cors());
 
-      var cars = require('./public/js/cars')
+      var cars = require('./server/cars')
 
       app.get('/cars', cars.read)
 
@@ -23,7 +23,7 @@ const express = require('express'),
           if (err) throw err;
       });
 
-      app.use(express.static('./public/dist'))
+      app.use(express.static('./public'))
 
             var port = 3030
 

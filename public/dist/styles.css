@@ -3,6 +3,24 @@
   width: 1130px;
   background-color: white; }
 
+.frontlinks {
+  position: absolute;
+  font-size: 14px;
+  color: white;
+  opacity: .8;
+  top: 200px;
+  right: 100px;
+  background-color: blue; }
+
+.front {
+  height: 855px;
+  width: auto;
+  background-color: blue;
+  background: url("../assets/imgs/outback.JPG") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+
 html {
   margin: 0; }
 
@@ -53,7 +71,7 @@ body {
 .subaruhome {
   margin: 11px 0 0 23px;
   position: relative;
-  background: url("../views/imgs/siteimgs.PNG") no-repeat -1px 0;
+  background: url("../assets/imgs/siteimgs.PNG") no-repeat -1px 0;
   width: 150px;
   height: 40px;
   border: none; }
@@ -90,40 +108,30 @@ body {
   font-size: 12px; }
 
 .byo {
-  background: url("../views/imgs/byo.gif");
+  background: url("../assets/imgs/byo.gif");
   height: 30px;
   width: 30px; }
 
 .byo:hover {
-  background: url("../views/imgs/byo.gif") -30px;
+  background: url("../assets/imgs/byo.gif") -30px;
   height: 30px;
   width: 30px; }
 
 .fad {
-  background: url("../views/imgs/fad.gif");
+  background: url("../assets/imgs/fad.gif");
   height: 30px;
   width: 30px; }
 
 .fad:hover {
-  background: url("../views/imgs/fad.gif") -30px;
+  background: url("../assets/imgs/fad.gif") -30px;
   height: 30px;
   width: 30px; }
-
-.front {
-  height: 855px;
-  width: auto;
-  background-color: blue;
-  background: url("../views/imgs/outback.JPG") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
 
 .footersociallinks {
   position: relative; }
 
 /*.social {
-  background: url('../views/imgs/fb.jpg');
+  background: url('../assets/imgs/fb.jpg');
   background-color: blue;
   height: 35px;
   width: 35px;
