@@ -6,6 +6,7 @@
 
 var gulp = require('gulp'),
     del = require('del'),
+    livereload = require('gulp-livereload')
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     uglify = require('gulp-uglify'),
@@ -52,5 +53,11 @@ gulp.task('build', ['build-css', 'build-js'])//, function() {
 // });
 
 gulp.task('watch', function() {
-    return gulp.watch(['./public/index.html', './public/styles/*.*css', './public/js/**/*.js'],['build']);
+    livereload.listen();
+    return gulp.watch(['./public/index.html',
+    './public/styles/*.*css',
+    './public/styles/*.*sass',
+    './public/js/**/*.js'],
+    ['build']);
+
 });

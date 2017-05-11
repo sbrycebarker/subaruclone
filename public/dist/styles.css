@@ -4,22 +4,26 @@
   background-color: white; }
 
 .frontlinks {
-  position: absolute;
+  height: 30px;
+  width: 300px;
+  position: relative;
   font-size: 14px;
   color: white;
+  background-color: blue;
   opacity: .8;
-  top: 200px;
-  right: 100px;
-  background-color: blue; }
+  bottom: 400px;
+  margin: 0 200px; }
 
 .front {
   height: 855px;
   width: auto;
-  background-color: blue;
+  position: relative;
+  top: 96px;
   background: url("../assets/imgs/outback.JPG") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  z-index: 0; }
 
 html {
   margin: 0; }
@@ -38,7 +42,8 @@ body {
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
-  color: white; }
+  color: white;
+  z-index: 1; }
 
 .white {
   margin: 0;
@@ -50,7 +55,8 @@ body {
   display: flex;
   justify-content: center;
   background-color: white;
-  padding: auto; }
+  padding: auto;
+  z-index: 1; }
 
 .itemscon {
   position: relative;
@@ -85,7 +91,7 @@ body {
 
 .items {
   margin: 0;
-  height: auto;
+  height: 25px;
   width: 150px;
   font-size: 12px;
   display: inline-block;
