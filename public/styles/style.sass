@@ -1,3 +1,20 @@
+
+.top
+  position: fixed
+  height: 38px
+  width: 100%
+  background-color: #232323
+  font-size: 10px
+  font-family: helvetica arial sans-serif
+  margin: 0
+  display: flex
+  justify-content: flex-end
+  flex-direction: row
+  color: white
+  z-index: 1
+
+
+
 .links
   height: 200px
   width: 1130px
@@ -6,26 +23,84 @@
 .frontlinks
   height: 30px
   width: 300px
-  position: relative
+  position: absolute
   font-size: 14px
   color: white
-  background-color: blue
   opacity: .8
   bottom: 400px
   margin: 0 200px
 
-// .frontlinks a
-//   margin: auto
 
+.vehiclelist
+  position: relative
+  display: inline-block
+  right: 250px
+  width: 958px
+  height: 568px
+  background-color: white
+  margin: 0
+
+.vehicle
+  width: 239px
+  height: 69px
+  border: solid 1px black
+
+.topbuttons
+  background-color: white
+  border: none
+
+.carheader
+    height: 855px
+    width: auto
+    position: relative
+    top: 96px
+    background: url("../assets/imgs/brz.JPG") no-repeat center center
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    background-size: cover
 
 .front
   height: 855px
-  width: auto
+  width: 100%
   position: relative
-  top: 96px
   background: url("../assets/imgs/outback.JPG") no-repeat center center
   -webkit-background-size: cover
   -moz-background-size: cover
   background-size: cover
   z-index: 0
+  margin-top: 96px
   //-o-background-size: cover
+
+.tools
+  height: 425px
+  width: 100%
+  background-color: green
+  position: relative
+
+.promise
+  height: 714px
+  width: 100%
+  background-color: #0FA4DC
+
+.content
+  height: 1020px
+  width: 100%
+  background-color: blue
+
+#left
+  height: 50%
+  width: 33%
+  background: url("../assets/imgs/MY18_OBK_HP_FMA.jpg") no-repeat center center
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  background-size: cover
+
+.footer
+  height: 603px
+  width: 100%
+  margin: auto
+  background-color: #232323
+  position: relative
+  display: inline-flex
+  justify-content: center
+  color: white

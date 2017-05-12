@@ -1,26 +1,15 @@
 html {
   margin: 0;
 }
+
 body {
   margin: 0;
+  display: grid;
 }
-.top {
-  position: fixed;
-  height: 38px;
-  width: 100%;
-  background-color: #232323;
-  font-size: 10px;
-  font-family: helvetica arial sans-serif;
-  margin: 0;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: row;
-  color: white;
-  z-index: 1;
 
-}
 
 .white {
+  position: relative;
   margin: 0;
   top: 38px;
   border-bottom: 1px black;
@@ -39,17 +28,18 @@ body {
   display: flex;
   justify-content: flex-end;
   height: 30px;
-  width: 600px;
+  width: 550px;
   float: right;
   border: 1px white solid;
  }
 
 .topitems {
-  height: 50px;
-  width: 125px;
-  margin: 0 10px;
+  height: 30px;
+  width: 115px;
+  margin: 0;
   position: relative;
   display: inline-block;
+  text-align: center;
 }
 
 .subaruhome {
@@ -60,38 +50,48 @@ body {
 	height: 40px;
   border: none;
 }
+
 .centermenu {
   position: relative;
-  display: inline-block;
+  display: flex;
   height: 25px;
   width: 500px;
   margin: 0 auto;
+  bottom: -30px;
 }
+
 .items {
   margin: 0;
   height: 25px;
   width: 150px;
-  font-size: 12px;
+  font-size: 16px;
+  font-family: sans-serif;
   display: inline-block;
   text-align: center;
+  background-color: white;
+  border: none;
+  bottom: 5;
 }
 
 .sideitems {
   height: 30px;
-  width: 450px;
+  width: 320px;
   position: relative;
   display: flex;
   border: 1px solid black;
+  justify-content: flex-end;
 }
 
 .side {
   height: 30px;
-  width: 200px;
+  width: 150px;
   display: flex;
   flex-direction: row;
 }
+
 .side h4 {
   font-size: 12px;
+  margin-left: 5px;
 }
 
 .byo {
@@ -121,7 +121,16 @@ body {
 .footersociallinks {
   position: relative;
 }
-
+.brz {
+    height: 855px;
+    width: auto;
+    position: relative;
+    top: 96px;
+    background: url("../assets/imgs/outback.JPG") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
 
 /*.social {
   background: url('../assets/imgs/fb.jpg');
@@ -160,15 +169,4 @@ p {
 
 .zip_code.far_zipCode {
   display: none;
-}
-
-.footer {
-  height: 603px;
-  width: 100%;
-  background-color: #232323;
-  position: absolute;
-  display: inline-flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  color: white;
 }

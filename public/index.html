@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="./dist/styles.css" media="screen" title="no title" charset="utf-8">
 
 </head>
-<body>
+<body ng-controller="mainCtrl">
 
   <header>
     <div class="top">
@@ -25,9 +25,13 @@
     <a ui-sref="home" class="subaruhome"></a>
 
     <div class="centermenu">
-      <div class="items">VEHICLES</div>
-      <div class="items">SHOPPING TOOLS</div>
-      <div class="items">WHY SUBARU</div>
+      <div class="items">
+      <button id="vehicles" class="topbuttons" ng-click="showmenu = !showmenu">VEHICLES</button>
+      <tasks ng-show="showmenu"></tasks>
+      </div>
+    <div class="item"
+      <div id="tools" class="items" ng-click="">SHOPPING TOOLS</div>
+      <div id="why" class="items" ng-click="">WHY SUBARU</div>
     </div>
 
     <div class="sideitems">
@@ -44,7 +48,7 @@
     </div>
   </div>
   </header>
-  <main ng-controller="mainCtrl">
+  <main>
 
       <ui-view></ui-view>
 
@@ -284,72 +288,9 @@
           </div>
       </div>
 
-      <div class="terms-conditions">
-          <div class="row collapse">
-              <div class="column small-9">
-                  <p class="terms-conditions-add-padding">
-                      © Subaru of America, Inc. Use of this site signifies your acceptance of the <a target="_parent" href="/company/conditions.html" class="ui-link">Terms &amp; Conditions</a>
-                  </p>
-              </div>
-              <div class="footerlegal">
-
-      <div class="column small-3 text-right">
-          <p class="terms-conditions-add-padding">
-              <a class="legal ui-link" href="#" title="Legal">Legal Disclaimers</a>
-          </p>
-      </div>
-
-      <div id="legal-disclaimer-container" class="footer_three" style="display: none">
-          <div class="legal-disclaimer">
-              <div class="legal-disclaimer-footer-body">
-                  <p>* Manufacturer's suggested retail price does not include destination and delivery charges, tax, title
-      and registration fees. Destination and delivery includes handling and inland freight fees and may
-      vary in some states. Prices, specifications, options, features and models subject to change
-       without notice.</p>
-
-      	            <p>** EPA-estimated fuel economy. Actual mileage may vary.</p>
-
-      	            <p>Subaru has the utmost respect for the environment and is a proud partner of Leave No Trace.
-      				Care was taken not to harm the environment when taking this photo.</p>
-
-      				<p>Subaru, SUBARU BOXER, BRZ, Forester, Impreza, Legacy, Outback, STI, Tribeca, WRX, XV Crosstrek and EyeSight are registered trademarks.</p>
-
-      	            <p>iPod and iPad are registered trademarks of Apple Inc.; Brembo is a registered trademark of Freni Brembo S.p.A.; Alcantara is a registered trademark of Alcantara S.p.A and Alcantara is produced by Toray Group.; TORSEN is a registered trademark of JTEKT Corporation.; BBS is a registered trademark of BBS Kraftfahrzeugtechnik AG.; Bluetooth is a registered trademark of Bluetooth SIG, Inc.; HomeLink<sup>®</sup> and the HomeLink<sup>®</sup> house icon are registered trademarks of Gentex Corporation.; Aha and Harman Kardon are a registered trademarks of Harman International Industries, Inc.; Android is a trademark of Google Inc.; HD Radio is a registered trademark of iBiquity Digital Corporation.; Pandora is a registered trademark of Pandora Media, Inc.; SiriusXM and SiriusXM NavTraffic are registered trademarks of SiriusXM Satellite Radio, Inc.; iHeart is a registered trademark of Clear Channel.</p>
-
-      	            <p>PLEASE REVIEW THESE IMPORTANT DISCLOSURES.<br>
-      	                Subaru of America, Inc. reserves the right to make changes at any time without
-      					notice or obligation to the information contained on this Internet site, prices,
-      					incentive programs, specifications, equipment, colors, materials, product
-      					illustrations and to change or discontinue models. All prices are based upon
-      					Manufacturer's Suggested Retail Prices (""MSRP"") in U.S. dollars (unless
-      					otherwise indicated) and exclude taxes, title fees, licensing, options and
-      					destination charges unless specifically included. Retailers are independent
-      					businesses and are free to set their own retail prices. All information contained
-      					at this Internet site is intended for the USA market only.</p>
-              </div>
-          </div>
-      </div></div>
-      </div>
-      </div><div class="legal_modal mobile_legal_modal">
 
 
 
-      <div class="legal_modal">
-      	<div id="disclaimer" class="disclaimers_modal">
-      		<p>*/1 Manufacturer's suggested retail price does not include destination and delivery charges, tax, title and registration fees. Destination and delivery includes handling and inland freight fees and may vary in some states. Prices, specifications, options, features and models subject to change without notice.</p><br>
-
-      		<p>** EPA-estimated fuel economy. Actual mileage may vary.</p><br>
-
-      		<p>Subaru has the utmost respect for the environment and is a proud partner of Leave No Trace. Care was taken not to harm the environment when taking this photo.</p><br>
-
-      		<p>Subaru, SUBARU BOXER, BRZ, Forester, Impreza, Legacy, Outback, STI, Tribeca, WRX, XV Crosstrek and EyeSight are registered trademarks</p><br>
-
-      		<p>iPod and iPad are registered trademarks of Apple Inc.; Brembo is a registered trademark of Freni Brembo S.p.A.; Alcantara is a registered trademark of Alcantara S.p.A and Alcantara is produced by Toray Group.; TORSEN is a registered trademark of JTEKT Corporation.; BBS is a registered trademark of BBS Kraftfahrzeugtechnik AG.; Bluetooth is a registered trademark of Bluetooth SIG, Inc.; HomeLink<sup>®</sup> and the HomeLink<sup>®</sup> house icon are registered trademarks of Gentex Corporation.; Aha and Harman Kardon are a registered trademarks of Harman International Industries, Inc.; Android is a trademark of Google Inc.; HD Radio is a registered trademark of iBiquity Digital Corporation.; Pandora is a registered trademark of Pandora Media, Inc.; SiriusXM<sup>®</sup> and SiriusXM<sup>®</sup> NavTraffic are registered trademarks of SiriusXM<sup>®</sup> Satellite Radio, Inc.; iHeart is a registered trademark of Clear Channel.</p><br>
-
-      		<p>PLEASE REVIEW THESE IMPORTANT DISCLOSURES.<br>
-      Subaru of America, Inc. reserves the right to make changes at any time without notice or obligation to the information contained on this Internet site, prices, incentive programs, specifications, equipment, colors, materials, product illustrations and to change or discontinue models. All prices are based upon Manufacturer's Suggested Retail Prices (""MSRP"") in U.S. dollars (unless otherwise indicated) and exclude taxes, title fees, licensing, options and destination charges unless specifically included. Retailers are independent businesses and are free to set their own retail prices. All information contained at this Internet site is intended for the USA market only.</p>
-      	</div>
-      </div> </div>
       </div>
       </div>
       <div class="zip_code far_zipCode">

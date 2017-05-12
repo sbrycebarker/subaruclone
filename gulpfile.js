@@ -46,7 +46,7 @@ gulp.task('build-js', function() {
       .pipe(gulp.dest('./public/dist/js'));
 });
 
-gulp.task('build', ['build-css', 'build-js'])//, function() {
+ gulp.task('build', ['build-css', 'build-js']) //, function() {
 //     return gulp.src('public/index.html')
 //         .pipe(cachebust.references())
 //         .pipe(gulp.dest('./public/dist'));
@@ -55,6 +55,7 @@ gulp.task('build', ['build-css', 'build-js'])//, function() {
 gulp.task('watch', function() {
     livereload.listen();
     return gulp.watch(['./public/index.html',
+    './public/views/*.*html',
     './public/styles/*.*css',
     './public/styles/*.*sass',
     './public/js/**/*.js'],

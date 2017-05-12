@@ -1,35 +1,13 @@
-.links {
-  height: 200px;
-  width: 1130px;
-  background-color: white; }
-
-.frontlinks {
-  height: 30px;
-  width: 300px;
-  position: relative;
-  font-size: 14px;
-  color: white;
-  background-color: blue;
-  opacity: .8;
-  bottom: 400px;
-  margin: 0 200px; }
-
-.front {
-  height: 855px;
-  width: auto;
+.brz {
+  height: 1000px;
+  width: 100%;
   position: relative;
   top: 96px;
-  background: url("../assets/imgs/outback.JPG") no-repeat center center;
+  background-color: blue;
+  background: url("../assets/imgs/brz.JPG") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover;
-  z-index: 0; }
-
-html {
-  margin: 0; }
-
-body {
-  margin: 0; }
+  background-size: cover; }
 
 .top {
   position: fixed;
@@ -45,7 +23,103 @@ body {
   color: white;
   z-index: 1; }
 
+.links {
+  height: 200px;
+  width: 1130px;
+  background-color: white; }
+
+.frontlinks {
+  height: 30px;
+  width: 300px;
+  position: absolute;
+  font-size: 14px;
+  color: white;
+  opacity: .8;
+  bottom: 400px;
+  margin: 0 200px; }
+
+.vehiclelist {
+  position: relative;
+  display: inline-block;
+  right: 250px;
+  width: 958px;
+  height: 568px;
+  background-color: white;
+  margin: 0; }
+
+.vehicle {
+  width: 239px;
+  height: 69px;
+  border: solid 1px black; }
+
+.topbuttons {
+  background-color: white;
+  border: none; }
+
+.carheader {
+  height: 855px;
+  width: auto;
+  position: relative;
+  top: 96px;
+  background: url("../assets/imgs/brz.JPG") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+
+.front {
+  height: 855px;
+  width: 100%;
+  position: relative;
+  background: url("../assets/imgs/outback.JPG") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  z-index: 0;
+  margin-top: 96px; }
+
+.tools {
+  height: 425px;
+  width: 100%;
+  background-color: green;
+  position: relative; }
+
+.promise {
+  height: 714px;
+  width: 100%;
+  background-color: #0FA4DC; }
+
+.content {
+  height: 1020px;
+  width: 100%;
+  background-color: blue; }
+
+#left {
+  height: 50%;
+  width: 33%;
+  background: url("../assets/imgs/MY18_OBK_HP_FMA.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+
+.footer {
+  height: 603px;
+  width: 100%;
+  margin: auto;
+  background-color: #232323;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  color: white; }
+
+html {
+  margin: 0; }
+
+body {
+  margin: 0;
+  display: grid; }
+
 .white {
+  position: relative;
   margin: 0;
   top: 38px;
   border-bottom: 1px black;
@@ -63,16 +137,17 @@ body {
   display: flex;
   justify-content: flex-end;
   height: 30px;
-  width: 600px;
+  width: 550px;
   float: right;
   border: 1px white solid; }
 
 .topitems {
-  height: 50px;
-  width: 125px;
-  margin: 0 10px;
+  height: 30px;
+  width: 115px;
+  margin: 0;
   position: relative;
-  display: inline-block; }
+  display: inline-block;
+  text-align: center; }
 
 .subaruhome {
   margin: 11px 0 0 23px;
@@ -84,34 +159,41 @@ body {
 
 .centermenu {
   position: relative;
-  display: inline-block;
+  display: flex;
   height: 25px;
   width: 500px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  bottom: -30px; }
 
 .items {
   margin: 0;
   height: 25px;
   width: 150px;
-  font-size: 12px;
+  font-size: 16px;
+  font-family: sans-serif;
   display: inline-block;
-  text-align: center; }
+  text-align: center;
+  background-color: white;
+  border: none;
+  bottom: 5; }
 
 .sideitems {
   height: 30px;
-  width: 450px;
+  width: 320px;
   position: relative;
   display: flex;
-  border: 1px solid black; }
+  border: 1px solid black;
+  justify-content: flex-end; }
 
 .side {
   height: 30px;
-  width: 200px;
+  width: 150px;
   display: flex;
   flex-direction: row; }
 
 .side h4 {
-  font-size: 12px; }
+  font-size: 12px;
+  margin-left: 5px; }
 
 .byo {
   background: url("../assets/imgs/byo.gif");
@@ -135,6 +217,16 @@ body {
 
 .footersociallinks {
   position: relative; }
+
+.brz {
+  height: 855px;
+  width: auto;
+  position: relative;
+  top: 96px;
+  background: url("../assets/imgs/outback.JPG") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
 
 /*.social {
   background: url('../assets/imgs/fb.jpg');
@@ -165,15 +257,5 @@ p {
 
 .zip_code.far_zipCode {
   display: none; }
-
-.footer {
-  height: 603px;
-  width: 100%;
-  background-color: #232323;
-  position: absolute;
-  display: inline-flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  color: white; }
 
 /*# sourceMappingURL=maps/styles.css.map */
