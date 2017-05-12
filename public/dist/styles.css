@@ -86,20 +86,100 @@
 .promise {
   height: 714px;
   width: 100%;
+  color: white;
   background-color: #0FA4DC; }
 
+.love {
+  height: 435px;
+  width: 435px;
+  position: absolute;
+  background: url("../assets/imgs/lovepromise.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+
+.tslp {
+  position: relative;
+  margin: 0; }
+
+.tslp h1 {
+  margin: 0; }
+
+.learn {
+  height: 60px;
+  width: 250px;
+  background-color: #0FA4DC;
+  color: white;
+  border: 2px white solid; }
+
+.learn:hover {
+  border: 2px black solid;
+  color: black; }
+
 .content {
-  height: 1020px;
   width: 100%;
-  background-color: blue; }
+  height: 1020px;
+  background-color: blue;
+  display: flex;
+  flex-wrap: wrap; }
 
 #left {
-  height: 50%;
+  height: 25vw;
   width: 33%;
   background: url("../assets/imgs/MY18_OBK_HP_FMA.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover; }
+
+#mid {
+  height: 25vw;
+  width: 33%;
+  background: url("../assets/imgs/MY18_WRX_HP_FMA.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+
+#right {
+  height: 25vw;
+  width: 33%;
+  background: url("../assets/imgs/Homepage_FMA_Spring_Service.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+
+#lef {
+  height: 25vw;
+  width: 49%;
+  background: url("../assets/imgs/Homepage_FMA_Spring_Service.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+
+#rig {
+  height: 25vw;
+  width: 49%;
+  background: url("../assets/imgs/lovepromise.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+
+.backtotop {
+  height: 100px;
+  width: 100%;
+  padding: 49px 0 53px 0;
+  text-align: center; }
+
+.textwrapper {
+  width: 1440px;
+  height: 75px;
+  margin: 0 auto; }
+
+.topscroller {
+  height: 70px;
+  width: 119px;
+  border: 1px solid black;
+  bottom: 0;
+  margin: 0 auto; }
 
 .footer {
   height: 603px;
