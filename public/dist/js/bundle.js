@@ -15,17 +15,36 @@ angular.module('myApp', ['ui.router']).config(function ($stateProvider, $urlRout
 'use strict';
 
 angular.module('myApp').directive('tasks', function () {
-    return {
-        restrict: 'E',
-        template: '\n    <div class="vehiclelist" style:" margin: 0;">\n    <div class="vehicle" ui-sref="vehicles({vehicle: \'brz\'})">BRZ</div>\n\n    <div class="options" ui-sref="all">All Vehicles</div>\n\n\n    </div> '
-    };
+  return {
+    restrict: 'E',
+    templateUrl: "./views/cardropdown.html"
+  };
 });
 'use strict';
 
 angular.module('myApp').controller('mainCtrl', function ($scope, mainService) {
+
+  $scope.getCars = function (results) {
+    mainService.getCars().then(function (results) {
+      console.log('results');
+      $scope.planets = results;
+    });
+  };
+
+  $scope.getCars;
+
   $scope.showmenu = false;
 });
 'use strict';
 
-angular.module('myApp').service('mainService', function ($http) {});
+angular.module('myApp').service('mainService', function ($http) {
+
+  this.getCars = function (cars) {
+    return $http({
+      method: 'GET',
+      url: '/getCars'
+
+    });
+  };
+});
 //# sourceMappingURL=bundle.js.map

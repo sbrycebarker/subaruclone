@@ -19,7 +19,6 @@ body {
   display: flex;
   justify-content: center;
   background-color: white;
-  padding: auto;
   z-index: 1
 }
 
@@ -30,13 +29,12 @@ body {
   height: 30px;
   width: 550px;
   float: right;
-  border: 1px white solid;
  }
 
 .topitems {
   height: 30px;
   width: 115px;
-  margin: 0;
+  margin: 0 5px;
   position: relative;
   display: inline-block;
   text-align: center;
@@ -78,7 +76,6 @@ body {
   width: 320px;
   position: relative;
   display: flex;
-  border: 1px solid black;
   justify-content: flex-end;
 }
 
@@ -131,6 +128,7 @@ body {
     -moz-background-size: cover;
     background-size: cover;
 }
+
 
 /*.social {
   background: url('../assets/imgs/fb.jpg');

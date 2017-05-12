@@ -15,9 +15,10 @@ const express = require('express'),
       app.use(bodyParser.json())
       app.use(cors());
 
+
       var cars = require('./server/cars')
 
-      app.get('/cars', cars.read)
+      app.get('/getCars', cars.read)
 
       mongoose.connect('mongodb://sbrycebarker:serg1234@ds129030.mlab.com:29030/subaru', function(err) {
           if (err) throw err;
