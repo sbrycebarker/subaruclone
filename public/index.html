@@ -12,10 +12,10 @@
       <div class="itemscon">
       <ul>
         <b>
-      <div class="topitems">YOUR LOCATION <b>{{}}</b></div>
-      <div class="topitems">FOR OWNERS</div>
-      <div class="topitems">CUSTOMER SUPPORT</div>
-      <div class="topitems">SEARCH</div>
+      <div class="topitems"><img class="location">YOUR LOCATION <b>{{}}</b></div>
+      <div class="topitems"><img class="">FOR OWNERS</div>
+      <div class="topitems"><img class="">CUSTOMER SUPPORT</div>
+      <div class="topitems"><img class="">SEARCH</div>
         </b>
       </ul>
       </div>
@@ -25,16 +25,17 @@
     <a ui-sref="home" class="subaruhome"></a>
 
     <div class="centermenu">
-      <div class="items">
-      <button id="vehicles" class="topbuttons" ng-click="showmenu = !showmenu">VEHICLES</button>
-      <tasks ng-show="showmenu"></tasks>
+
+            <button id="vehicles" class="items" ng-click="showmenu = !showmenu">
+
+              <tasks ng-show="showmenu"></tasks></button>
+
+            <div id="tools" class="items" ng-click="">SHOPPING{{cars}} TOOLS</div>
+            <div id="why" class="items" ng-click="">WHY SUBARU</div>
+
       </div>
-    <div class="item">
-      <div id="tools" class="items" ng-click="">SHOPPING TOOLS</div>
-      <div id="why" class="items" ng-click="">WHY SUBARU</div>
-    </div>
   </div>
-  
+
     <div class="sideitems">
 
     <a class="side">
