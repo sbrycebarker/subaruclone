@@ -4,11 +4,13 @@ var Schema = mongoose.Schema;
 
 var ProductSchema = new Schema({
   name: { type: String},
+  year: {type: Number},
   package: { type: String },
-  imgurl: {type: String},
+  img: {type: String},
   description: { type: String},
   price: {type: String},
-  mpg: {type: Number},
+  hmpg: {type: Number},
+  cmpg: {type: Number},
   enginesize: {type: Number},
   awd: Boolean,
   dat: Boolean,

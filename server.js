@@ -18,11 +18,23 @@ const express = require('express'),
 
       var cars = require('./server/cars')
 
-      app.get('/getCars', cars.read)
+      app.get('/getCars', cars.read);
+      app.get('/getCars:id', cars.show);
+      app.post('/postcars', cars.create);
+      app.put('/postcars/:id', cars.update);
+      app.delete('/cars/:id', cars.destroy);
+
+
+
+
+
 
       mongoose.connect('mongodb://sbrycebarker:serg1234@ds129030.mlab.com:29030/subaru', function(err) {
           if (err) throw err;
       });
+
+
+
 
       app.use(express.static('./public'))
 

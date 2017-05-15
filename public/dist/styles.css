@@ -23,6 +23,7 @@ body {
   border-bottom: 1px black;
   height: 58px;
   width: 100%;
+  color: black;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -168,7 +169,8 @@ p {
   border: white; }
 
 .items:hover {
-  border-bottom: 3px solid #333333; }
+  border-bottom: 3px solid #333333;
+  cursor: pointer; }
 
 .links {
   height: 200px;
@@ -185,7 +187,7 @@ p {
   bottom: 400px;
   margin: 0 200px; }
 
-.vehiclelist {
+.vehicledropdown {
   position: relative;
   display: inline-block;
   top: 10px;
@@ -196,23 +198,96 @@ p {
   margin: 0;
   border: .5px solid black; }
 
-.vehiclepanel {
+.blah {
   position: absolute;
-  height: 400px;
-  width: 400px;
-  display: block;
-  background: url("../assets/imgs/brz.JPG") no-repeat center center; }
+  height: 455px;
+  width: 675px;
+  left: 240px;
+  padding: 20px;
+  top: 0; }
+
+.vehiclepanel {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: url("../assets/imgs/impreza.JPG") center 100% no-repeat; }
+
+.icon {
+  height: 40px;
+  width: 77px; }
+
+.vmodel {
+  width: 114px;
+  height: 20px; }
+
+.price {
+  width: 114px;
+  height: 20px; }
+
+.panelmenubut {
+  position: relative;
+  display: inline-block;
+  flex-direction: row;
+  height: 40px;
+  width: 158.5px;
+  top: 40px;
+  margin: auto;
+  background-color: #232323; }
+
+.panelmenubut:hover {
+  background-color: white;
+  color: black;
+  -webkit-transition: background-color 600ms ease-out;
+  -moz-transition: background-color 600ms ease-out;
+  transition: background-color 600ms ease-out;
+  cursor: pointer; }
 
 .vehicle {
-  width: 237px;
+  width: 238px;
   height: 69px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   border: .5px black solid;
   border-top: none;
+  border-left: none;
   background-color: #EFEFEF;
-  margin: 0; }
+  margin-right: 0; }
 
 .vehicle:hover {
-  background-color: white; }
+  background-color: white;
+  cursor: pointer;
+  -webkit-transition: background-color 600ms ease-out;
+  -moz-transition: background-color 600ms ease-out;
+  transition: background-color 600ms ease-out; }
+
+.model {
+  top: 20px;
+  display: flex;
+  flex-direction: row; }
+
+.modelyear h3 {
+  color: white;
+  font-size: 36px;
+  width: 300px;
+  font-family: sans-serif;
+  margin: 0; }
+
+.vehicleinfo {
+  color: white;
+  font-family: sans-serif;
+  height: 50px;
+  margin: 0; }
+
+.modelinfo h6 {
+  position: relative;
+  top: 30px;
+  margin: 0; }
+
+.modelinfo h2 {
+  position: relative;
+  top: 30px;
+  margin: 0; }
 
 .topbuttons {
   background-color: white;
@@ -220,7 +295,7 @@ p {
 
 .carheader {
   height: 855px;
-  width: auto;
+  width: 100%;
   position: relative;
   top: 96px;
   background: url("../assets/imgs/brz.JPG") no-repeat center center;

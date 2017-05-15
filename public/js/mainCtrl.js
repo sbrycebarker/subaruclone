@@ -10,4 +10,5 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
   $scope.getCars()
 
   $scope.showmenu = false;
+  
 })

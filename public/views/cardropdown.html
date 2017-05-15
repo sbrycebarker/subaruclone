@@ -1,10 +1,40 @@
-<div class="vehiclelist" style:" margin: 0;">
-<div class="vehicle" ng-repeat="car in cars" ui-sref="vehicles({vehicle: car.model})">
-  <div class="model">{{car.model}}</div>
-  <div class="price">{{car.price}}</div>
+<div class="vehicledropdown">
+  <div class="mainpanel">
+    <div class="vehicle" ng-repeat="car in cars" ng-mouseover="" ui-sref="vehicles({vehicle: car.model})" style="margin-right: 0">
+      <div class="vmodel" style="margin-right: 0">{{car.model}}</div>
+      <div class="price" style="margin-right: 0">{{car.price}}</div>
+      <img class="icon" src="{{car.icon}}">
+    </div>
 </div>
-<div class="vehiclepanel"></div>
+
+<div class="blah">
+  <div class="vehiclepanel">
+    <!-- <img src="../assets/imgs/impreza.JPG"> -->
+    <div class="vehicleinfo">
+      <div class="model">
+        <div class="modelyear">
+          <h3>{{cars[i].year}}
+          {{cars[0].model}}</h3>
+        </div>
+        <div class="modelinfo">
+          <h6>starting at</h6>
+          <h2>{{cars[0].price}}</h2>
+          msrp
+          Up to
+          {{cars[0].hmpg}}/
+          {{cars[0].cmpg}}
+          HwyCity
+        </div>
+
+    </div>
+
+      <div class="panelmenubut">Overview</div>
+      <div class="panelmenubut">Photos & Videos</div>
+      <div class="panelmenubut">Compare</div>
+      <div class="panelmenubut">Build & Price</div>
+
+
+  </div>
+</div>
 <div class="vehiclelistother" ui-sref="all">All Vehicles</div>
-
-
 </div>
