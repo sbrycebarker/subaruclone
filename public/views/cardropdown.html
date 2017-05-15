@@ -1,5 +1,5 @@
 <div class="vehiclelist" style:" margin: 0;">
-<div class="vehicle" ng-repeat="car in cars" ui-sref="vehicles({vehicle: 'brz'})">
+<div class="vehicle" ng-repeat="car in cars" ui-sref="vehicles({vehicle: car.model})">
   <div class="model">{{car.model}}</div>
   <div class="price">{{car.price}}</div>
 </div>
