@@ -9,6 +9,140 @@
   -moz-background-size: cover;
   background-size: cover; }
 
+html {
+  margin: 0; }
+
+body {
+  margin: 0;
+  display: grid; }
+
+.white {
+  position: relative;
+  margin: 0;
+  top: 38px;
+  border-bottom: 1px black;
+  height: 58px;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  z-index: 1; }
+
+.itemscon {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 20px;
+  width: 550px;
+  bottom: -5px; }
+
+.topitems {
+  height: 20px;
+  width: 115px;
+  margin: 0 5px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  bottom: 0; }
+
+.subaruhome {
+  margin: 11px 0 0 23px;
+  background: url("../assets/imgs/siteimgs.PNG") no-repeat -1px 0;
+  width: 150px;
+  height: 40px;
+  border: none;
+  position: relative; }
+
+.centermenu {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 25px;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 30px; }
+
+.sideitems {
+  height: 30px;
+  width: 320px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end; }
+
+.side {
+  height: 30px;
+  width: 150px;
+  position: relative;
+  display: flex;
+  flex-direction: row; }
+
+.side h4 {
+  font-size: 12px;
+  margin-left: 5px; }
+
+.byo {
+  background: url("../assets/imgs/byo.gif");
+  height: 30px;
+  width: 30px; }
+
+.byo:hover {
+  background: url("../assets/imgs/byo.gif") -30px;
+  height: 30px;
+  width: 30px; }
+
+.fad {
+  background: url("../assets/imgs/fad.gif");
+  height: 30px;
+  width: 30px; }
+
+.fad:hover {
+  background: url("../assets/imgs/fad.gif") -30px;
+  height: 30px;
+  width: 30px; }
+
+.footersociallinks {
+  position: relative; }
+
+.brz {
+  height: 855px;
+  width: auto;
+  position: relative;
+  top: 96px;
+  background: url("../assets/imgs/outback.JPG") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover; }
+
+/*.social {
+  background: url('../assets/imgs/fb.jpg');
+  background-color: blue;
+  height: 35px;
+  width: 35px; */
+.small-only {
+  display: none; }
+
+.ui-link {
+  position: relative;
+  display: inline-flex; }
+
+.zip_modal_input {
+  display: none; }
+
+p {
+  height: auto;
+  width: auto;
+  display: none; }
+
+.map_search_input {
+  display: none; }
+
+.change_retailer_modal {
+  display: none; }
+
+.zip_code.far_zipCode {
+  display: none; }
+
 .top {
   position: fixed;
   height: 38px;
@@ -31,10 +165,10 @@
   display: inline-block;
   text-align: center;
   background-color: white;
-  border-top: black; }
+  border: white; }
 
 .items:hover {
-  border-bottom: black; }
+  border-bottom: 3px solid #333333; }
 
 .links {
   height: 200px;
@@ -54,15 +188,31 @@
 .vehiclelist {
   position: relative;
   display: inline-block;
-  right: 250px;
-  width: 958px;
+  top: 10px;
+  right: 200px;
+  width: 956px;
   height: 568px;
   background-color: white;
-  margin: 0; }
+  margin: 0;
+  border: .5px solid black; }
+
+.vehiclepanel {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  display: block;
+  background: url("../assets/imgs/brz.JPG") no-repeat center center; }
 
 .vehicle {
-  width: 239px;
-  height: 69px; }
+  width: 237px;
+  height: 69px;
+  border: .5px black solid;
+  border-top: none;
+  background-color: #EFEFEF;
+  margin: 0; }
+
+.vehicle:hover {
+  background-color: white; }
 
 .topbuttons {
   background-color: white;
@@ -227,147 +377,12 @@
   justify-content: center;
   color: white; }
 
-html {
-  margin: 0; }
-
-body {
-  margin: 0;
-  display: grid; }
-
-.white {
-  position: relative;
-  margin: 0;
-  top: 38px;
-  border-bottom: 1px black;
-  height: 58px;
-  width: 100%;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  background-color: white;
-  z-index: 1; }
-
-.itemscon {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  height: 20px;
-  width: 550px;
-  float: right;
-  bottom: -5px; }
-
-.topitems {
-  height: 20px;
-  width: 115px;
-  margin: 0 5px;
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  bottom: 0; }
-
-.topitems:hover {
-  height: 20px;
-  width: 115px;
-  margin: 0 5px;
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  border-bottom: 3px white solid; }
-
 .subaruhome {
   margin: 11px 0 0 23px;
-  position: relative;
   background: url("../assets/imgs/siteimgs.PNG") no-repeat -1px 0;
   width: 150px;
   height: 40px;
-  border: none; }
-
-.centermenu {
-  position: relative;
-  display: flex;
-  height: 25px;
-  width: 500px;
-  margin: 0 auto;
-  bottom: -30px; }
-
-.sideitems {
-  height: 30px;
-  width: 320px;
-  position: relative;
-  display: flex;
-  justify-content: flex-end; }
-
-.side {
-  height: 30px;
-  width: 150px;
-  display: flex;
-  flex-direction: row; }
-
-.side h4 {
-  font-size: 12px;
-  margin-left: 5px; }
-
-.byo {
-  background: url("../assets/imgs/byo.gif");
-  height: 30px;
-  width: 30px; }
-
-.byo:hover {
-  background: url("../assets/imgs/byo.gif") -30px;
-  height: 30px;
-  width: 30px; }
-
-.fad {
-  background: url("../assets/imgs/fad.gif");
-  height: 30px;
-  width: 30px; }
-
-.fad:hover {
-  background: url("../assets/imgs/fad.gif") -30px;
-  height: 30px;
-  width: 30px; }
-
-.footersociallinks {
+  border: none;
   position: relative; }
-
-.brz {
-  height: 855px;
-  width: auto;
-  position: relative;
-  top: 96px;
-  background: url("../assets/imgs/outback.JPG") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover; }
-
-/*.social {
-  background: url('../assets/imgs/fb.jpg');
-  background-color: blue;
-  height: 35px;
-  width: 35px;
-}*/
-.small-only {
-  display: none; }
-
-.ui-link {
-  position: relative;
-  display: inline-flex; }
-
-.zip_modal_input {
-  display: none; }
-
-p {
-  height: auto;
-  width: auto;
-  display: none; }
-
-.map_search_input {
-  display: none; }
-
-.change_retailer_modal {
-  display: none; }
-
-.zip_code.far_zipCode {
-  display: none; }
 
 /*# sourceMappingURL=maps/styles.css.map */

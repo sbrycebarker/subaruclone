@@ -1,7 +1,10 @@
 <div class="vehiclelist" style:" margin: 0;">
-<div class="vehicle" ng-repeat="car in cars" ui-sref="vehicles({vehicle: 'brz'})">BRZ</div>
-
-<div class="options" ui-sref="all">All Vehicles</div>
+<div class="vehicle" ng-repeat="car in cars" ui-sref="vehicles({vehicle: 'brz'})">
+  <div class="model">{{car.model}}</div>
+  <div class="price">{{car.price}}</div>
+</div>
+<div class="vehiclepanel"></div>
+<div class="vehiclelistother" ui-sref="all">All Vehicles</div>
 
 
 </div>

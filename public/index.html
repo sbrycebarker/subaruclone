@@ -12,7 +12,7 @@
       <div class="itemscon">
       <ul>
         <b>
-      <div class="topitems"><img class="location">YOUR LOCATION <b>{{}}</b></div>
+      <div class="topitems"><img class="location">YOUR LOCATION <b></b></div>
       <div class="topitems"><img class="">FOR OWNERS</div>
       <div class="topitems"><img class="">CUSTOMER SUPPORT</div>
       <div class="topitems"><img class="">SEARCH</div>
@@ -26,26 +26,26 @@
 
     <div class="centermenu">
 
-            <button id="vehicles" class="items" ng-click="showmenu = !showmenu">
+            <div id="vehicles" class="items" ng-click="showmenu = !showmenu">
+              VEHICLES
+              <tasks ng-show="showmenu"></tasks></div>
 
-              <tasks ng-show="showmenu"></tasks></button>
-
-            <div id="tools" class="items" ng-click="">SHOPPING{{cars}} TOOLS</div>
+            <div id="tools" class="items" ng-click="">SHOPPING TOOLS</div>
             <div id="why" class="items" ng-click="">WHY SUBARU</div>
 
       </div>
+      <div class="sideitems">
+
+      <a class="side">
+          <div class="byo"></div>
+          <h4>BUILD & PRICE</h4>
+        </a>
+      <a class="side">
+          <div class="fad"></div>
+          <h4>FIND RETAILER</h4>
+        </a>
   </div>
 
-    <div class="sideitems">
-
-    <a class="side">
-        <div class="byo"></div>
-        <h4>BUILD & PRICE</h4>
-      </a>
-    <a class="side">
-        <div class="fad"></div>
-        <h4>FIND RETAILER</h4>
-      </a>
 
     </div>
   </div>
