@@ -44,7 +44,10 @@ body
   text-align: center
   bottom: 0
 
-
+.modelimg
+  height: 302px
+  width: 482px
+  background: url("../assets/imgs/legacyout.jpg") no-repeat
 
 .subaruhome
   margin: 11px 0 0 23px
@@ -275,28 +278,34 @@ p
   cursor: pointer
 
 .buildheader
+  display: flex
   height: 70px
   width: 100%
+  position: fixed
   background-color: #232323
-  position: relative
   top: 98px
+  font-family: sans-serif
+  color: white
+  opacity: 1
 
+.yearselector
+  font-size: .8125rem
 
 .buildbody
   width: 100%
-  height: 2800px
+  height: 2620px
 
 
 .choose
   position: relative
   margin: 0 auto
-  height: 115px
+  height: 100px
   width: 600px
-  margin-top: 98px
+  margin-top: 200px
   font-style: 14px
   color: #595959
   font-family: sans-serif
-  display: block
+  display: flex
 
 .yearselector
   height: 25px
@@ -305,12 +314,18 @@ p
 
 
 .modelcon
-  height: 362px
+  height: 302px
   width: 960px
   position: relative
   margin: auto
   margin-bottom: 40px
   box-shadow: 0 18px 25px 0 rgba(0,0,0,0.10)
+
+.modelbuildinfo
+  height: 100px
+  width: 100px
+  background-color: grey
+  position: relative
 
 .modeldetcon
   display: flex
@@ -403,7 +418,7 @@ p
   display: flex
   flex-flow: row
   justify-content: center
-  
+
 .tool
   margin: auto
   width: 400px

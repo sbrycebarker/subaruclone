@@ -47,6 +47,11 @@ body {
   text-align: center;
   bottom: 0; }
 
+.modelimg {
+  height: 302px;
+  width: 482px;
+  background: url("../assets/imgs/legacyout.jpg") no-repeat; }
+
 .subaruhome {
   margin: 11px 0 0 23px;
   background: url("../assets/imgs/siteimgs.PNG") no-repeat -1px 0;
@@ -249,26 +254,33 @@ p {
   cursor: pointer; }
 
 .buildheader {
+  display: flex;
   height: 70px;
   width: 100%;
+  position: fixed;
   background-color: #232323;
-  position: relative;
-  top: 98px; }
+  top: 98px;
+  font-family: sans-serif;
+  color: white;
+  opacity: 1; }
+
+.yearselector {
+  font-size: .8125rem; }
 
 .buildbody {
   width: 100%;
-  height: 2800px; }
+  height: 2620px; }
 
 .choose {
   position: relative;
   margin: 0 auto;
-  height: 115px;
+  height: 100px;
   width: 600px;
-  margin-top: 98px;
+  margin-top: 200px;
   font-style: 14px;
   color: #595959;
   font-family: sans-serif;
-  display: block; }
+  display: flex; }
 
 .yearselector {
   height: 25px;
@@ -276,12 +288,18 @@ p {
   margin: 0 auto; }
 
 .modelcon {
-  height: 362px;
+  height: 302px;
   width: 960px;
   position: relative;
   margin: auto;
   margin-bottom: 40px;
   box-shadow: 0 18px 25px 0 rgba(0, 0, 0, 0.1); }
+
+.modelbuildinfo {
+  height: 100px;
+  width: 100px;
+  background-color: grey;
+  position: relative; }
 
 .modeldetcon {
   display: flex;
@@ -533,11 +551,21 @@ p {
   width: 220px;
   margin: 10px 0;
   margin-right: 0;
-  position: absolute; }
+  position: absolute;
+  font-size: 1.5rem; }
 
 .buildheader h2 {
-  position: relative;
-  float: right; }
+  position: absolute;
+  right: 100px;
+  font-size: 12px;
+  top: 20px;
+  letter-spacing: 2px; }
+
+.modelequip {
+  width: 480px; }
+
+.modelequip h1 {
+  font-size: .99rem; }
 
 .subinfo h3 {
   font-size: 1.55rem;

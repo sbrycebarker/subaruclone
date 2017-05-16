@@ -1,4 +1,4 @@
-<div class="buildheader">
+<div class="buildheader" style="opacity: 1">
 <h1>Build & Price</h1>
 <h2>YOUR SAVED SUBARU</h2>
 </div>
@@ -10,20 +10,22 @@
 </div>
 </div>
 
-<div class="modelcon" ng-repeat="car in cars" >
+<div class="modelcon" ng-repeat="car in cars">
   <div class="modeldetcon">
-  <div class="modelimg"><img src="../assets/imgs/legacyout.jpg">
+  <div class="modelimg">
     <div>EXTERIOR</div>
     <div>INTERIOR</div>
   </div>
-  <div class="subinfo"><h3>{{car.year}}{{car.model}}{{car.price}}{{car.hmpg}}{{car.cmpg}}</h3></div>
-<h1>Symmetrical All-Wheel Drive</h1>
-<h1>SUBARU STARLINK™ Multimedia</h1>
-<h1>Vehicle Dynamics Control with Active Torque Vectoring</h1>
-<h1>Available SUBARU STARLINK™ Safety and Security</h1>
+
+  <div class="modelequip">
+      <div class="subinfo"><h3>{{car.year}}{{car.model}}{{car.price}}{{car.hmpg}}{{car.cmpg}}</h3></div>
+<h1>{{car.feature1}}</h1>
+<h1>{{car.feature2}}</h1>
+<h1>{{car.feature3}}</h1>
+<h1>{{car.feature4}}</h1>
 <div></div>
 <div></div>
-<div></div>
+<div class="build" ng-click="build()">BUILD</div>
 </div>
 </div>
 </div>

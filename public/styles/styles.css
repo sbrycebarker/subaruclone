@@ -35,12 +35,23 @@
   margin: 10px 0;
   margin-right: 0;
   position: absolute;
+  font-size: 1.5rem;
 }
 
 .buildheader h2 {
-  position: relative;
-  float: right;
+  position: absolute;
+  right: 100px;
+  font-size: 12px;
+  top: 20px;
+  letter-spacing: 2px;
 }
+.modelequip {
+  width: 480px
+}
+.modelequip h1 {
+  font-size: .99rem
+}
+
 
 .subinfo h3 {
   font-size: 1.55rem;
