@@ -248,6 +248,17 @@ p {
   transition: background-color 600ms ease-out;
   cursor: pointer; }
 
+.buildbody {
+  height: 600px;
+  width: 100%; }
+
+.legacy {
+  height: 400px;
+  width: 400px;
+  position: relative;
+  margin: auto;
+  background: blue; }
+
 .vehicle {
   width: 238px;
   height: 69px;
