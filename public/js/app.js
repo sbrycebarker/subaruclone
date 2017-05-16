@@ -12,6 +12,11 @@ angular.module('myApp', ['ui.router'])
             templateUrl: "../views/cars.html",
             controller: 'mainCtrl'
           })
+          .state('build', {
+            url: '/build',
+            templateUrl: "../views/build&price.html",
+            controller: 'mainCtrl'
+          })
 
 
 })

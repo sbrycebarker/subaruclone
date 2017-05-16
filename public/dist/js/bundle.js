@@ -10,6 +10,10 @@ angular.module('myApp', ['ui.router']).config(function ($stateProvider, $urlRout
     url: '/vehicles/:vehicle',
     templateUrl: "../views/cars.html",
     controller: 'mainCtrl'
+  }).state('build', {
+    url: '/build',
+    templateUrl: "../views/build&price.html",
+    controller: 'mainCtrl'
   });
 });
 'use strict';
@@ -47,4 +51,12 @@ angular.module('myApp').service('mainService', function ($http) {
     });
   };
 });
+// angular.module('myApp').directive('tasks', function() {
+//   return {
+//       restrict: 'E',
+//       templateUrl: "./views/panelview.html"
+//    }
+//
+//   })
+"use strict";
 //# sourceMappingURL=bundle.js.map

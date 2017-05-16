@@ -8,7 +8,7 @@
 <body ng-controller="mainCtrl">
 
   <header>
-    <div class="top">
+    <div id="top" class="top">
       <div class="itemscon">
       <ul>
         <b>
@@ -36,7 +36,7 @@
       </div>
       <div class="sideitems">
 
-      <a class="side">
+      <a class="side" ui-sref="build">
           <div class="byo"></div>
           <h4>BUILD & PRICE</h4>
         </a>
@@ -469,17 +469,17 @@
       </div>
   </main>
   <script>
-  window.onscroll = function() {
-    scrollFunction()
-  };
-  function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          document.getElementById("white").style.top = "0";
-      }
-      if (document.body.scrollTop < 10 || document.documentElement.scrollTop > 10) {
-          document.getElementById("white").style.top = "38";
-      }
-  }
+  // window.onscroll = function() {
+  //   scrollFunction()
+  // };
+  // function scrollFunction() {
+  //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  //         document.getElementById("top").style.height = "0";
+  //     }
+  //     else (document.body.scrollTop < 20 || document.documentElement.scrollTop > 20) {
+  //         document.getElementById("top").style.backgroundcolor = "black";
+  //     }
+  // }
   function topFunction() {
       document.body.scrollTop = 0; // For Chrome, Safari and Opera
       document.documentElement.scrollTop = 0;

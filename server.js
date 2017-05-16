@@ -19,10 +19,10 @@ const express = require('express'),
       var cars = require('./server/cars')
 
       app.get('/getCars', cars.read);
-      app.get('/getCars:id', cars.show);
-      app.post('/postcars', cars.create);
-      app.put('/postcars/:id', cars.update);
-      app.delete('/cars/:id', cars.destroy);
+      // app.get('/getCars:id', cars.show);
+      // app.post('/postcars', cars.create);
+      // app.put('/postcars/:id', cars.update);
+      // app.delete('/cars/:id', cars.destroy);
 
 
 

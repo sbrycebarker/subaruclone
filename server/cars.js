@@ -18,7 +18,7 @@ create: function(req, res, next) {
       if (err) {
         res.status(500).json(err);
       } else {
-        res.status(200).json(turbo);
+        res.status(200).json(response);
       }
     })
 },
@@ -51,7 +51,7 @@ destroy: function(req, res, next) {
     if(error) {
       return res.status(500).json(error)
     }else {
-      return res.json
+      return res.json(response)
     }
   })
 }
