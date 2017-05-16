@@ -6,3 +6,43 @@
   border: none;
   position: relative;
 }
+
+.choose h3 {
+  height: 23px;
+  width: 300px;
+  position: relative;
+  color: #595959;
+  margin: 0 auto;
+}
+
+.choose h1 {
+  height: 20px;
+  width: 150px;
+  position: relative;
+  font-size: 14px;
+  font-family: sans-serif;
+  margin: 0 auto;
+  display: inline-block;
+  color: #595959
+}
+.modelcon h1 {
+  font-size: 20px;
+}
+
+.buildheader h1 {
+  height: auto;
+  width: 220px;
+  margin: 10px 0;
+  margin-right: 0;
+  position: absolute;
+}
+
+.buildheader h2 {
+  position: relative;
+  float: right;
+}
+
+.subinfo h3 {
+  font-size: 1.55rem;
+  color: #333333;
+}
