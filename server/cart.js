@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var ProductSchema = new Schema({
   name: { type: String},
-  year: {type: Number},
+  year: { type: Number},
   package: { type: String },
   img: {type: String},
   description: { type: String},
@@ -19,6 +19,7 @@ var ProductSchema = new Schema({
   aaw: Boolean,
   gps: Boolean,
   ltu: Boolean,
+  data: { type: String},
 });
 
-module.exports = mongoose.model('cars', ProductSchema);
+module.exports = mongoose.model('cart', ProductSchema);

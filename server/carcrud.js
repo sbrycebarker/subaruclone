@@ -1,9 +1,9 @@
-var cars = require('./models.js');
+var Car = require('./carschema.js');
 
 module.exports = {
 
 read: function(req, res, next) {
-  cars.find().exec(function(err, response){
+  Car.find().exec(function(err, response){
       if(err) {
         res.status(500).json(err)
       } else {
@@ -12,26 +12,25 @@ read: function(req, res, next) {
     });
 },
 
-create: function(req, res, next) {
-  var car = new Car(req.body);
-    cars.save(function(err, response) {
-      if (err) {
-        res.status(500).json(err);
-      } else {
-        res.status(200).json(response);
-      }
-    })
-},
-
 show: function(req, res, next) {
-  console.log(req.params.id);
-    cars.findById(req.params.id, function(err, response){
+    Car.findById(req.params.id, function(err, response){
       if(err) {
         res.status(500).json(err)
       }else{
         res.json(response)
       }
     });
+},
+
+create: function(req, res, next) {
+  var Car = new Car(req.body);
+    Cars.save(function(err, response) {
+      if (err) {
+        res.status(500).json(err);
+      } else {
+        res.status(200).json(response);
+      }
+    })
 },
 
 update: function(req, res, next) {

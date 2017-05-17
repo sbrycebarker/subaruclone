@@ -15,12 +15,16 @@ const express = require('express'),
       app.use(bodyParser.json())
       app.use(cors());
 
-
-      var cars = require('./server/cars')
+      var cart = require('./server/cartcrud')
+      var cars = require('./server/carcrud')
 
       app.get('/getCars', cars.read);
+
+      app.get('/getCart', cart.read);
+
       // app.get('/getCars:id', cars.show);
-      // app.post('/postcars', cars.create);
+
+      app.post('/postCart', cart.create);
       // app.put('/postcars/:id', cars.update);
       // app.delete('/cars/:id', cars.destroy);
 

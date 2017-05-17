@@ -12,25 +12,28 @@
 
 <div class="modelcon" ng-repeat="car in cars">
   <div class="modeldetcon">
-<<<<<<< HEAD
-  <div class="modelimg"><img src="{{car.buildimg2}}">
-=======
-  <div class="modelimg">
->>>>>>> bb8b07e671ce37c2ac4b2a6511aff54e849ad6ed
-    <div>EXTERIOR</div>
-    <div>INTERIOR</div>
+  <div class="modelimg" style="background: url({{car.buildimg2}})">
+    <!-- <img src="{{car.buildimg2}}"> -->
+    <div class="views">
+    <div class="viewselect">EXTERIOR</div>
+    <div class="viewselect">INTERIOR</div>
+    </div>
   </div>
 
   <div class="modelequip">
       <div class="subinfo"><h3>{{car.year}}{{car.model}}{{car.price}}{{car.hmpg}}{{car.cmpg}}</h3></div>
-<h1>{{car.feature1}}</h1>
-<h1>{{car.feature2}}</h1>
-<h1>{{car.feature3}}</h1>
-<h1>{{car.feature4}}</h1>
-<div></div>
-<div></div>
-<div class="build" ng-click="build()">BUILD</div>
-</div>
+    <h1>
+      <li>{{car.feature1}}</li>
+      <li>{{car.feature2}}</li>
+      <li>{{car.feature3}}</li>
+      <li>{{car.feature4}}</li>
+    </h1>
+  <div class="bottomcontent">
+    <div class="modelbutton" ui-sref="accolades" style="border-right: 2px #EFEFEF solid">ACCOLADES</div>
+    <div class="modelbutton" ui-sref="compare">COMPARE</div>
+    <div class="modelbutton" ui-sref="build" style="border-left: 2px #EFEFEF solid" ng-click="build()">BUILD</div>
+  </div>
+  </div>
 </div>
 </div>
 
