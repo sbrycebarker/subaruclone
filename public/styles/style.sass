@@ -124,7 +124,7 @@ body
     width: auto
     position: relative
     top: 96px
-    background: url("../assets/imgs/outback.JPG") no-repeat center center
+    background: url("../assets/imgs/BRZ.JPG") no-repeat center center
     -webkit-background-size: cover
     -moz-background-size: cover
     background-size: cover
@@ -287,16 +287,15 @@ p
   width: 100%
   position: fixed
   background-color: #232323
-  top: 98px
+  top: 96px
   font-family: sans-serif
   color: white
-  opacity: 1
+  z-index: 1
 
 .bottomcontent
   position: relative
   height: 50px
   width: 100%
-  background:
   display: flex
   flex-direction: row
   color: #0099FF
@@ -305,6 +304,29 @@ p
   font-weight: bold
   font-family: sans-serif
 
+.cars
+  height: 170px
+  width: 1130px
+  background-color: white
+  position: relative
+  display: flex
+  margin: 0 auto
+  top: -85px
+  z-index: 1
+  flex-direction: row
+  box-shadow: 0 18px 25px 0 rgba(0, 0, 0, 0.1)
+
+.car
+  height: 70px
+  width: 145px
+  margin: auto
+  text-align: center
+  font-family: sans-serif
+  font-weight: bold
+
+.carbut
+  height: 100%
+  width: 100%
 
 .modelbutton
   width: 164px
@@ -348,6 +370,7 @@ p
   margin: 40px auto
   margin-bottom: 40px
   box-shadow: 0 18px 25px 0 rgba(0,0,0,0.10)
+  z-index: 0
 
 .modelbuildinfo
   height: 100px
@@ -457,6 +480,8 @@ p
   background-size: cover
   z-index: 0
   margin-top: 96px
+  display: flex
+  align-content: center
   //-o-background-size: cover
 
 .tools
@@ -467,6 +492,7 @@ p
   display: flex
   flex-flow: row
   justify-content: center
+  z-index: 0
 
 .tool
   margin: auto
