@@ -52,8 +52,20 @@
   font-size: .99rem
 }
 
+.cars a:visited {
+
+}
+
+.carbut:hover {
+  cursor: grab;
+}
 
 .subinfo h3 {
   font-size: 1.55rem;
   color: #333333;
+}
+
+.tool:hover {
+  cursor: grab;
+  color: #0FA4DC;
 }

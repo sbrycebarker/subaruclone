@@ -170,7 +170,7 @@ p {
 
 .items {
   height: 25px;
-  width: 150px;
+  width: 170px;
   font-size: 16px;
   font-family: sans-serif;
   display: inline-block;
@@ -186,16 +186,6 @@ p {
   height: 200px;
   width: 1130px;
   background-color: white; }
-
-.frontlinks {
-  height: 30px;
-  width: 300px;
-  position: absolute;
-  font-size: 14px;
-  color: white;
-  opacity: .8;
-  bottom: 400px;
-  margin: 0 200px; }
 
 .vehicledropdown {
   position: relative;
@@ -299,7 +289,13 @@ p {
   margin: auto;
   text-align: center;
   font-family: sans-serif;
-  font-weight: bold; }
+  font-weight: bold;
+  color: #20609F;
+  text-decoration: none; }
+
+.car:hover {
+  color: #414141;
+  cursor: pointer; }
 
 .carbut {
   height: 100%;
@@ -449,7 +445,42 @@ p {
   z-index: 0;
   margin-top: 96px;
   display: flex;
+  flex-wrap: wrap;
   align-content: center; }
+
+.special {
+  height: 60px;
+  width: 240px;
+  background-color: rgba(255, 255, 255, 0.25);
+  opacity: .8;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  margin: 0 auto;
+  padding: auto;
+  top: 200px;
+  text-align: center; }
+
+.frontlinks {
+  height: 30px;
+  width: 920px;
+  top: 600px;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+  margin: 0 auto; }
+
+.frontlinks h1 {
+  width: 200px;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  opacity: .8; }
 
 .tools {
   height: 425px;
@@ -459,7 +490,17 @@ p {
   display: flex;
   flex-flow: row;
   justify-content: center;
-  z-index: 0; }
+  z-index: 0;
+  text-align: center;
+  border: 1px black solid; }
+
+.tools h1 {
+  height: 20px;
+  position: absolute;
+  font-family: Helvetica;
+  color: #A2A2A2;
+  font-weight: normal;
+  font-size: 36px; }
 
 .tool {
   margin: auto;
@@ -468,11 +509,13 @@ p {
   display: flex;
   flex-direction: column;
   font-size: 18px;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  cursor: pointer; }
 
 .toolicon {
   margin: auto;
-  width: 76px; }
+  width: 76px;
+  cursor: pointer; }
 
 .promise {
   width: 100%;
@@ -481,14 +524,14 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: 6.3%;
-  padding-bottom: 6.3%; }
+  padding: 6.3% 8.45%;
+  margin-bottom: 40px; }
 
 .love {
   height: 22vw;
   width: 22vw;
   position: relative;
-  margin: auto;
+  margin: 0;
   background: url("../assets/imgs/lovepromise.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -500,6 +543,10 @@ p {
   position: relative;
   padding: 0 6%;
   text-align: center; }
+
+.tslp h2 {
+  font-size: 36px;
+  font-family: sans-serif; }
 
 .learn {
   height: 60px;
@@ -639,8 +686,15 @@ p {
 .modelequip h1 {
   font-size: .99rem; }
 
+.carbut:hover {
+  cursor: grab; }
+
 .subinfo h3 {
   font-size: 1.55rem;
   color: #333333; }
+
+.tool:hover {
+  cursor: grab;
+  color: #0FA4DC; }
 
 /*# sourceMappingURL=maps/styles.css.map */

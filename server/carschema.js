@@ -19,7 +19,6 @@ var ProductSchema = new Schema({
   aaw: Boolean,
   gps: Boolean,
   ltu: Boolean,
-  data: { type: String},
 });
 
 module.exports = mongoose.model('cars', ProductSchema);

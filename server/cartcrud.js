@@ -4,7 +4,6 @@ module.exports = {
 
 read: function(req, res, next) {
   Cart.find().exec(function(err, response){
-      console.log(response)
       if(err) {
         res.status(500).json(err)
       } else {

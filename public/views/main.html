@@ -1,4 +1,5 @@
 <div class="front">
+  <div class="special">SEE SPECIAL OFFERS</div>
   <div class="frontlinks">
     <a><h1>2017 IMPREZA</h1></a>
     <a><h1>SPECIAL OFFERS</h1></a>
@@ -7,15 +8,18 @@
 
 </div>
 <div class="cars">
-  <div class="car" ng-repeat= "car in cars">
+  <div class="car" ng-repeat= "car in cars" ui-sref="vehicles({vehicle: car.model})">
+
     {{car.model}}
     <img class="carbut" src="{{car.icon}}">
     {{car.price}}
+
   </div>
 </div>
 
 <div class="tools">
-  <div class="tool"><img class="toolicon" src="./assets/imgs/nut.PNG"><b>BUILD YOUR OWN</b></div>
+  <h1>SHOPPING TOOLS</h1>
+  <div class="tool"><img class="toolicon" src="./assets/imgs/nut.PNG"ui-sref="build"><b>BUILD YOUR OWN</b></div>
   <div class="tool"><img class="toolicon" src="./assets/imgs/dollar.PNG"><b>SPECIAL OFFERS</b></div>
   <div class="tool"><img class="toolicon" src="./assets/imgs/caricon.PNG"><b>LOCAL INVENTORY</b></div>
   <div class="tool"><img class="toolicon" src="./assets/imgs/dollarbubble.PNG"><b>GET A LOCAL PRICE</b></div>
@@ -24,7 +28,7 @@
 <div class="promise">
 <div class="love"></div>
 <div class="tslp">
-  <h1>THE SUBARU LOVE PROMISE</h1>
+  <h2>THE SUBARU LOVE PROMISE</h2>
   <h3>Subaru and its retailers believe in making the world a better place and the Subaru Love Promise is our vision
     of respecting all people. This is our promise to show love and respect to our customers and to work to make
      a positive impact in the world.
