@@ -20,6 +20,7 @@
     </div>
   </div>
 
+
   <div class="modelequip">
       <div class="subinfo"><h3>{{car.year}}{{car.model}}{{car.price}}{{car.hmpg}}{{car.cmpg}}</h3></div>
     <h1>
@@ -28,11 +29,11 @@
       <li>{{car.feature3}}</li>
       <li>{{car.feature4}}</li>
     </h1>
-  <div class="bottomcontent">
-    <div class="modelbutton" ui-sref="accolades" style="border-right: 2px #EFEFEF solid">ACCOLADES</div>
-    <div class="modelbutton" ui-sref="compare">COMPARE</div>
-    <div class="modelbutton" ui-sref="build" style="border-left: 2px #EFEFEF solid" ng-click="build()">BUILD</div>
-  </div>
+    <div class="bottomcontent">
+      <div class="modelbutton" ui-sref="accolades" style="border-right: 2px #EFEFEF solid">ACCOLADES</div>
+      <div class="modelbutton" ui-sref="compare">COMPARE</div>
+      <div class="modelbutton" id="build" ui-sref="build" style="border-left: 2px #EFEFEF solid;color: white; background-color: #0099FF;" ng-click="build()">BUILD</div>
+    </div>
   </div>
 </div>
 </div>

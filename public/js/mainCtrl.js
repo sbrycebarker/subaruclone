@@ -18,17 +18,16 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
 
   $scope.getCart()
 
-
   $scope.postCart = function( data ) {
     mainService.postCart( data )
     $scope.data.push( data )
   }
 
 
-  $scope.changeCart() = function( item, i ) {
-    mainService.changeCart( item );
-    $scope.data[i].options = item
-  }
+  // $scope.changeCart() = function( item, i ) {
+  //   mainService.changeCart( item );
+  //   $scope.data = item
+  // }
 
 
 
@@ -40,6 +39,12 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
       $scope.data.splice(i, 0, removedItem[0]);
     });
   }
+
+
+    $scope.changeCart = function( item, i ) {
+      mainService.changeCart( item );
+      $scope.data[i].option = item.addedoption
+    }
 
 
 

@@ -57,6 +57,10 @@ body {
   height: 302px;
   width: 482px; }
 
+.modelequip {
+  display: flex;
+  flex-direction: column; }
+
 .subaruhome {
   margin: 11px 0 0 23px;
   background: url("../assets/imgs/siteimgs.PNG") no-repeat -1px 0;
@@ -260,12 +264,13 @@ p {
   z-index: 1; }
 
 .bottomcontent {
-  position: relative;
+  position: absolute;
   height: 50px;
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: row;
   color: #0099FF;
+  margin: 0;
   bottom: 0;
   border-top: 2px #EFEFEF solid;
   font-weight: bold;

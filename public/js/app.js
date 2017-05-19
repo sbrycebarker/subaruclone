@@ -17,10 +17,10 @@ angular.module('myApp', ['ui.router'])
             templateUrl: "../views/build&price.html",
             controller: 'mainCtrl'
           })
-          .cart('cart', {
-            url:'/cart',
+          .state('cart', {
+            url: '/cart',
             templateUrl: "../views/cart.html",
-            controller:'mainCtrl'
+            controller: 'mainCtrl'
           })
 
 

@@ -14,7 +14,7 @@ angular.module('myApp', ['ui.router']).config(function ($stateProvider, $urlRout
     url: '/build',
     templateUrl: "../views/build&price.html",
     controller: 'mainCtrl'
-  }).cart('cart', {
+  }).state('cart', {
     url: '/cart',
     templateUrl: "../views/cart.html",
     controller: 'mainCtrl'
@@ -56,18 +56,21 @@ angular.module('myApp').controller('mainCtrl', function ($scope, mainService) {
 
   // $scope.changeCart() = function( item, i ) {
   //   mainService.changeCart( item );
-  //   $scope.data[i].options = options.things
-  // }
-  //
-  // $scope.deleteCart = function(id, i) {
-  //   var removeItem = $scope.data.splice(i, 1)
-  //   mainService.deleteCart(id).then(function(){
-  //
-  //   }, function(err) {
-  //     $scope.data.splice(i, 0, removedItem[0]);
-  //   });
+  //   $scope.data = item
   // }
 
+
+  $scope.deleteCart = function (id, i) {
+    var removeItem = $scope.data.splice(i, 1);
+    mainService.deleteCart(id).then(function () {}, function (err) {
+      $scope.data.splice(i, 0, removedItem[0]);
+    });
+  };
+
+  $scope.changeCart = function (item, i) {
+    mainService.changeCart(item);
+    $scope.data[i].option = item.addedoption;
+  };
 
   $scope.showmenu = false;
 });
@@ -103,14 +106,13 @@ angular.module('myApp').service('mainService', function ($http) {
   //     url:'/delete' + id
   //   })
   // }
-  // this.changeData = function(item) {
-  //   return $http({
-  //     method: 'PUT',
-  //     url: '/change' + item.id,
-  //     data: item
-  //   })
-  // }
-
+  this.changeCart = function (item) {
+    return $http({
+      method: 'PUT',
+      url: '/change' + item.id,
+      data: item
+    });
+  };
 });
 // angular.module('myApp').directive('tasks', function() {
 //   return {
