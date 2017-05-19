@@ -22,11 +22,13 @@ const express = require('express'),
 
       app.get('/getCart', cart.read);
 
-      // app.get('/getCars:id', cars.show);
+      app.get('/getCars/:id', cars.show);
+
+      app.get('/getCart/:id', cart.show)
 
       app.post('/postCart', cart.create);
-      // app.put('/postcars/:id', cars.update);
-      // app.delete('/cars/:id', cars.destroy);
+      app.put('/postcart/:id', cart.update);
+      app.delete('/deletecart/:id', cart.destroy);
 
 
 

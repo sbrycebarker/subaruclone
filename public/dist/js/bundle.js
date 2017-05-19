@@ -14,6 +14,10 @@ angular.module('myApp', ['ui.router']).config(function ($stateProvider, $urlRout
     url: '/build',
     templateUrl: "../views/build&price.html",
     controller: 'mainCtrl'
+  }).cart('cart', {
+    url: '/cart',
+    templateUrl: "../views/cart.html",
+    controller: 'mainCtrl'
   });
 });
 'use strict';

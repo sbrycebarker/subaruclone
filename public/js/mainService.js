@@ -29,13 +29,13 @@ angular.module('myApp').service('mainService', function($http) {
   //     url:'/delete' + id
   //   })
   // }
-  // this.changeData = function(item) {
-  //   return $http({
-  //     method: 'PUT',
-  //     url: '/change' + item.id,
-  //     data: item
-  //   })
-  // }
+  this.changeCart = function(item) {
+    return $http({
+      method: 'PUT',
+      url: '/change' + item.id,
+      data: item
+    })
+  }
 
 
 })
