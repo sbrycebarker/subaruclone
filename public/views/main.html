@@ -9,10 +9,11 @@
 </div>
 <div class="cars">
   <div class="car" ng-repeat= "car in cars" ui-sref="vehicles({vehicle: car.model})">
-
-    {{car.model}}
+    <h2>{{car.model}}</h2>
     <img class="carbut" src="{{car.icon}}">
-    {{car.price}}
+    <div>
+      <h3>starting at <span style="color: #414141;">{{car.price}}</span></h3>
+    </div>
 
   </div>
 </div>
