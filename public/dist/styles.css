@@ -175,16 +175,10 @@ p {
 .items {
   height: 25px;
   width: 170px;
-  font-size: 16px;
-  font-family: sans-serif;
   display: inline-block;
   text-align: center;
   background-color: white;
   border: white; }
-
-.items:hover {
-  border-bottom: 3px solid #333333;
-  cursor: pointer; }
 
 .links {
   height: 200px;
@@ -318,6 +312,14 @@ p {
 .buildbody {
   width: 100%;
   height: 2620px; }
+
+#build {
+  border-left: 2px #EFEFEF solid;
+  color: white;
+  background-color: #0099FF; }
+
+#build:hover {
+  background-color: #232323; }
 
 .choose {
   position: relative;
@@ -649,6 +651,15 @@ p {
   height: 40px;
   border: none;
   position: relative; }
+
+.items h1 {
+  width: 90px;
+  font-size: 16px;
+  font-family: sans-serif; }
+
+.items h1:hover {
+  border-bottom: 3px solid #333333;
+  cursor: pointer; }
 
 .choose h3 {
   height: 23px;

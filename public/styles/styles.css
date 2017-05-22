@@ -7,6 +7,17 @@
   position: relative;
 }
 
+.items h1 {
+  width: 90px;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.items h1:hover {
+border-bottom: 3px solid #333333;
+cursor: pointer;
+}
+
 .choose h3 {
   height: 23px;
   width: 300px;
