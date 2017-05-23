@@ -1,6 +1,7 @@
-angular.module('myApp').service('mainService', function($http) {
+angular.module('myApp').service('mainService', function($http, $stateParams) {
 
   this.getCars = function(cars) {
+    // console.log(car)
     return $http({
       method: 'GET',
       url: '/getCars'
@@ -13,8 +14,6 @@ angular.module('myApp').service('mainService', function($http) {
       url: '/getCart'
     })
   }
-
-
   this.postCart = function(data) {
     return $http({
       method: 'POST',
@@ -22,7 +21,15 @@ angular.module('myApp').service('mainService', function($http) {
       data: data
     })
   }
-  //
+
+  this.vehicleData = function (data) {
+    console.log( $stateParams.vehicle)
+    return  $http({
+    method: "GET",
+    url:'/getCars/' + $stateParams.id
+  })
+}
+
   // this.deleteCart = function(id) {
   //   return $http({
   //     method: 'DELETE',

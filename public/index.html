@@ -31,10 +31,12 @@
               <tasks ng-show="showmenu">
             </div>
 
-            <div id="tools" class="items" ng-click="">
+            <div id="tools" class="items" ng-click="showtools = !showtools">
               <h1>SHOPPING TOOLS<img class="arrow"></h1>
+              <shop ng-show="showtools">
             </div>
-            <div id="why" class="items" ng-click="">
+
+            <div id="why" class="items" ng-click="whysubaru = !whysubaru">
               <h1>WHY SUBARU<img class="arrow"></h1>
             </div>
 

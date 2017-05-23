@@ -1,4 +1,4 @@
-angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
+angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, mainService, $http) {
 
   $scope.getCars = function(results) {
     mainService.getCars().then(function(results){
@@ -11,7 +11,7 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
 
   $scope.getCart = function(results) {
     mainService.getCart().then(function(results) {
-      console.log(results.data)
+      // console.log(results.data)
       $scope.cart = results.data
     })
   }
@@ -23,13 +23,10 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
     $scope.data.push( data )
   }
 
-
   // $scope.changeCart() = function( item, i ) {
   //   mainService.changeCart( item );
   //   $scope.data = item
   // }
-
-
 
   $scope.deleteCart = function(id, i) {
     var removeItem = $scope.data.splice(i, 1)
@@ -40,14 +37,27 @@ angular.module('myApp').controller('mainCtrl', function($scope, mainService) {
     });
   }
 
-
     $scope.changeCart = function( item, i ) {
       mainService.changeCart( item );
       $scope.data[i].option = item.addedoption
     }
 
 
+    //
+    // $http({
+    //   url: "/vehicle/",
+    //   method: "GET",
+    //   params: { id: $stateParams.id}
+    // }).then(function (response) {
+    //   this.vehicle =response
+    // })
 
+    $scope.vehicleData = function(response) {
+      mainService.vehicleData().then(function(results){
+      $scope.vehicle = results.data
+      })
+    }
+    $scope.vehicleData();
 
 
   $scope.showmenu = false;

@@ -9,9 +9,10 @@ angular.module('myApp', ['ui.router'])
           })
           .state('vehicles', {
             url: '/vehicles/:vehicle',
-            templateUrl: "../views/cars.html",
-            controller: 'mainCtrl'
-          })
+            templateUrl: "../views/vehicles.html",
+            controller: 'mainCtrl',
+            controllerAs: 'mainCtrl'
+          })          
           .state('build', {
             url: '/build',
             templateUrl: "../views/build&price.html",

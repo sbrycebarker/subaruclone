@@ -8,8 +8,9 @@ angular.module('myApp', ['ui.router']).config(function ($stateProvider, $urlRout
     controller: 'mainCtrl'
   }).state('vehicles', {
     url: '/vehicles/:vehicle',
-    templateUrl: "../views/cars.html",
-    controller: 'mainCtrl'
+    templateUrl: "../views/vehicles.html",
+    controller: 'mainCtrl',
+    controllerAs: 'mainCtrl'
   }).state('build', {
     url: '/build',
     templateUrl: "../views/build&price.html",
@@ -30,7 +31,7 @@ angular.module('myApp').directive('tasks', function () {
 });
 'use strict';
 
-angular.module('myApp').controller('mainCtrl', function ($scope, mainService) {
+angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, mainService, $http) {
 
   $scope.getCars = function (results) {
     mainService.getCars().then(function (results) {
@@ -42,7 +43,7 @@ angular.module('myApp').controller('mainCtrl', function ($scope, mainService) {
 
   $scope.getCart = function (results) {
     mainService.getCart().then(function (results) {
-      console.log(results.data);
+      // console.log(results.data)
       $scope.cart = results.data;
     });
   };
@@ -59,7 +60,6 @@ angular.module('myApp').controller('mainCtrl', function ($scope, mainService) {
   //   $scope.data = item
   // }
 
-
   $scope.deleteCart = function (id, i) {
     var removeItem = $scope.data.splice(i, 1);
     mainService.deleteCart(id).then(function () {}, function (err) {
@@ -72,13 +72,30 @@ angular.module('myApp').controller('mainCtrl', function ($scope, mainService) {
     $scope.data[i].option = item.addedoption;
   };
 
+  //
+  // $http({
+  //   url: "/vehicle/",
+  //   method: "GET",
+  //   params: { id: $stateParams.id}
+  // }).then(function (response) {
+  //   this.vehicle =response
+  // })
+
+  $scope.vehicleData = function (response) {
+    mainService.vehicleData().then(function (results) {
+      $scope.vehicle = results.data;
+    });
+  };
+  $scope.vehicleData();
+
   $scope.showmenu = false;
 });
 'use strict';
 
-angular.module('myApp').service('mainService', function ($http) {
+angular.module('myApp').service('mainService', function ($http, $stateParams) {
 
   this.getCars = function (cars) {
+    // console.log(car)
     return $http({
       method: 'GET',
       url: '/getCars'
@@ -91,7 +108,6 @@ angular.module('myApp').service('mainService', function ($http) {
       url: '/getCart'
     });
   };
-
   this.postCart = function (data) {
     return $http({
       method: 'POST',
@@ -99,7 +115,15 @@ angular.module('myApp').service('mainService', function ($http) {
       data: data
     });
   };
-  //
+
+  this.vehicleData = function (data) {
+    console.log($stateParams.vehicle);
+    return $http({
+      method: "GET",
+      url: '/getCars/' + $stateParams.id
+    });
+  };
+
   // this.deleteCart = function(id) {
   //   return $http({
   //     method: 'DELETE',
@@ -112,6 +136,14 @@ angular.module('myApp').service('mainService', function ($http) {
       url: '/change' + item.id,
       data: item
     });
+  };
+});
+'use strict';
+
+angular.module('myApp').directive('shop', function () {
+  return {
+    restrict: 'E',
+    templateUrl: "./views/shopping.html"
   };
 });
 // angular.module('myApp').directive('tasks', function() {

@@ -177,7 +177,7 @@ p {
   width: 170px;
   display: inline-block;
   text-align: center;
-  background-color: white; }
+  background-color: #FAFAFA; }
 
 .items:hover {
   cursor: pointer;
@@ -186,16 +186,28 @@ p {
 .links {
   height: 200px;
   width: 1130px;
-  background-color: white; }
+  background-color: #FAFAFA; }
 
 .vehicledropdown {
+  transition: 600ms ease-out;
   position: relative;
   display: inline-block;
   top: 10px;
   right: 200px;
   width: 956px;
   height: 568px;
-  background-color: white;
+  background-color: #FAFAFA;
+  margin: 0;
+  border: .5px solid #CCCCCC; }
+
+.shoppingcon {
+  height: 387px;
+  width: 960px;
+  background-color: #FAFAFA;
+  position: relative;
+  display: inline-block;
+  right: 200px;
+  top: 10px;
   margin: 0;
   border: .5px solid #CCCCCC; }
 
@@ -242,7 +254,7 @@ p {
   background-color: #232323; }
 
 .panelmenubut:hover {
-  background-color: white;
+  background-color: #FAFAFA;
   color: black;
   -webkit-transition: background-color 600ms ease-out;
   -moz-transition: background-color 600ms ease-out;
@@ -257,7 +269,7 @@ p {
   background-color: #232323;
   top: 96px;
   font-family: sans-serif;
-  color: white;
+  color: #FAFAFA;
   z-index: 1; }
 
 .bottomcontent {
@@ -276,7 +288,7 @@ p {
 .cars {
   height: 170px;
   width: 1130px;
-  background-color: white;
+  background-color: #FAFAFA;
   position: relative;
   display: flex;
   margin: 0 auto;
@@ -446,14 +458,15 @@ p {
   margin: 0; }
 
 .topbuttons {
-  background-color: white;
+  background-color: #FAFAFA;
   border: none; }
 
 .carheader {
   height: 855px;
   width: 100%;
   position: relative;
-  top: 96px;
+  top: 60px;
+  background-color: #FAFAFA;
   background: url("../assets/imgs/brz.JPG") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;

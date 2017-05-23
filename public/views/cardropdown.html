@@ -1,6 +1,6 @@
 <div class="vehicledropdown">
   <div class="mainpanel">
-    <div class="vehicle" ng-repeat="car in cars" ui-sref="vehicles({vehicle: car.model})" style="margin-right: 0">
+    <div class="vehicle" ng-repeat="car in cars" ui-sref="vehicles({vehicle: car.id})" style="margin-right: 0">
       <div class="vmodel" style="margin-right: 0">{{car.model}}</div>
       <div class="price" style="margin-right: 0">{{car.price}}</div>
       <img class="icon" src="{{ car.icon }}">

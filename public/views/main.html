@@ -8,7 +8,7 @@
 
 </div>
 <div class="cars">
-  <div class="car" ng-repeat= "car in cars" ui-sref="vehicles({vehicle: car.model})">
+  <div class="car" ng-repeat= "car in cars" ui-sref="vehicles({vehicle: car.id})">
     <h2>{{car.model}}</h2>
     <img class="carbut" src="{{car.icon}}">
     <div>
@@ -20,7 +20,7 @@
 
 <div class="tools">
   <h1>SHOPPING TOOLS</h1>
-  <div class="tool"><img class="toolicon" src="./assets/imgs/nut.PNG"ui-sref="build"><b>BUILD YOUR OWN</b></div>
+  <div class="tool"><img class="toolicon" src="./assets/imgs/nut.PNG" ui-sref="build"><b>BUILD YOUR OWN</b></div>
   <div class="tool"><img class="toolicon" src="./assets/imgs/dollar.PNG"><b>SPECIAL OFFERS</b></div>
   <div class="tool"><img class="toolicon" src="./assets/imgs/caricon.PNG"><b>LOCAL INVENTORY</b></div>
   <div class="tool"><img class="toolicon" src="./assets/imgs/dollarbubble.PNG"><b>GET A LOCAL PRICE</b></div>

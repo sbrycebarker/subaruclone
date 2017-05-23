@@ -23,6 +23,7 @@ const express = require('express'),
       app.get('/getCart', cart.read);
 
       app.get('/getCars/:id', cars.show);
+      app.get('/getCars/:model', cars.show);
 
       app.get('/getCart/:id', cart.show)
 
