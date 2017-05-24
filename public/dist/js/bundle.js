@@ -13,10 +13,10 @@ angular.module('myApp', ['ui.router']).config(function ($stateProvider, $urlRout
     controllerAs: 'mainCtrl'
   }).state('build', {
     url: '/build',
-    templateUrl: "../views/build&price.html",
+    templateUrl: "../views/build-your-own.html",
     controller: 'mainCtrl'
   }).state('cart', {
-    url: '/cart',
+    url: '/cart/:vehicle',
     templateUrl: "../views/cart.html",
     controller: 'mainCtrl'
   });
@@ -83,7 +83,6 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
 
   $scope.vehicleData = function (response) {
     mainService.vehicleData().then(function (results) {
-      console.log(results);
       $scope.vehicle = results.data;
     });
   };
@@ -146,12 +145,12 @@ angular.module('myApp').directive('shop', function () {
     templateUrl: "./views/shopping.html"
   };
 });
-// angular.module('myApp').directive('tasks', function() {
-//   return {
-//       restrict: 'E',
-//       templateUrl: "./views/panelview.html"
-//    }
-//
-//   })
-"use strict";
+'use strict';
+
+angular.module('myApp').directive('panel', function () {
+  return {
+    restrict: 'E',
+    templateUrl: "./views/panel.html"
+  };
+});
 //# sourceMappingURL=bundle.js.map

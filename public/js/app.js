@@ -12,14 +12,14 @@ angular.module('myApp', ['ui.router'])
             templateUrl: "../views/vehicles.html",
             controller: 'mainCtrl',
             controllerAs: 'mainCtrl'
-          })          
+          })
           .state('build', {
             url: '/build',
-            templateUrl: "../views/build&price.html",
+            templateUrl: "../views/build-your-own.html",
             controller: 'mainCtrl'
           })
           .state('cart', {
-            url: '/cart',
+            url: '/cart/:vehicle',
             templateUrl: "../views/cart.html",
             controller: 'mainCtrl'
           })

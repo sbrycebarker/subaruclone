@@ -1,7 +1,7 @@
-// angular.module('myApp').directive('tasks', function() {
-//   return {
-//       restrict: 'E',
-//       templateUrl: "./views/panelview.html"
-//    }
-//
-//   })
+angular.module('myApp').directive('panel', function() {
+  return {
+      restrict: 'E',
+      templateUrl: "./views/panel.html"
+   }
+
+  })

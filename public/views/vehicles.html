@@ -1,5 +1,22 @@
 <body> <img class="vimg">
-<div class="carheader" style="color: #FAFAFA;">
+<div id="carheader" class="carheader">
+
+<h4>{{vehicle.year}} {{vehicle.model}}</h4>
+<h4>{{vehicle.price}} starting MSRP</h4>
+<h4>{{vehicle.hmpg}}/{{vehicle.cmpg}}** MPG Up to</h4>
+
+<div class="carheaderitems">
+  <div id="overview" class="caritem">Overview</div>
+  <div class="caritem">Gallery</div>
+  <div class="caritem">Features</div>
+  <div class="caritem">Accolades</div>
+  <div class="caritem">models</div>
+  <!-- <div id="shopcar"><h4>Shop {{vehicle.model}}</h4></div> -->
+</div>
+<div id="shopcar"><h4>Shop {{vehicle.model}}</h4></div>
+
+</div>
+<div class="carmain" style="color: #FAFAFA;">
   <h1>
     <ul>{{vehicle.model}}</ul>
     <ul>

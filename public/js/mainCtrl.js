@@ -54,7 +54,6 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
 
     $scope.vehicleData = function(response) {
       mainService.vehicleData().then(function(results){
-        console.log(results)
       $scope.vehicle = results.data
       })
     }
