@@ -23,10 +23,9 @@ angular.module('myApp').service('mainService', function($http, $stateParams) {
   }
 
   this.vehicleData = function (data) {
-    console.log( $stateParams.vehicle)
     return  $http({
     method: "GET",
-    url:'/getCars/' + $stateParams.id
+    url:'/getCars/' + $stateParams.vehicle
   })
 }
 

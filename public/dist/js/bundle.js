@@ -83,6 +83,7 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
 
   $scope.vehicleData = function (response) {
     mainService.vehicleData().then(function (results) {
+      console.log(results);
       $scope.vehicle = results.data;
     });
   };
@@ -117,10 +118,9 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
   };
 
   this.vehicleData = function (data) {
-    console.log($stateParams.vehicle);
     return $http({
       method: "GET",
-      url: '/getCars/' + $stateParams.id
+      url: '/getCars/' + $stateParams.vehicle
     });
   };
 
