@@ -548,19 +548,56 @@ p {
   top: 94px;
   background-color: #222;
   color: white;
-  opacity: .9; }
+  opacity: .9;
+  display: flex; }
 
 .title h1 {
   opacity: none; }
 
+.change {
+  margin: auto;
+  position: fixed;
+  color: #09f;
+  font-family: Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: .8125rem;
+  font-weight: bold;
+  left: -300px; }
+
+.options {
+  height: 100%;
+  width: 50%;
+  right: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 0; }
+
 .foot {
   height: 70px;
-  width: 100%;
+  width: 50%;
   position: absolute;
   background-color: #222;
   opacity: .9;
   bottom: 0;
-  color: white; }
+  color: white;
+  display: inline-block; }
+
+.viewcon {
+  height: 100%;
+  width: 650px;
+  position: absolute;
+  left: 150px;
+  border: 1px dotted white;
+  display: inline-block;
+  vertical-align: middle;
+  margin: auto 0; }
+
+.view {
+  height: 100%;
+  width: 100px;
+  position: relative;
+  display: inline-block;
+  text-align: center; }
 
 .carmain {
   height: 855px;

@@ -1,19 +1,24 @@
 <div class="title">
   <div><h1>Build & Price {{vehicle.model}}</h1></div>
+  <div class="change"><h3>CHANGE VEHICLE</h3></div>
 </div>
 <body>
   <div class="cartmain">
     <div class="update" type="text" name="update" ng-model="item">
 
-
+    <div class="options"></div>
   <button class="change" ng-click="changeData( { id : data.text_id , newtask: item }, $index )"> Change Task</button>
     </div>
+
     <div class="foot">
-      <div id="int" class="view">EXTERIOR</div>
-      <div id="ext" class="view">INTERIOR</div>
-      <div id="fron" class="view">FRONT</div>
-      <div id="ang" class="view">ANGLE</div>
-      <div id="sid" class="view">SIDE</div>
-      <div id="back" class="view">BACK</div>
+      <div class="viewcon">
+      <div id="int" class="view"><h3>EXTERIOR</h3></div>
+      <div id="ext" class="view"><h3>INTERIOR</h3></div>
+      <div id="fron" class="view"><h3>FRONT</h3></div>
+      <div id="ang" class="view"><h3>ANGLE</h3></div>
+      <div id="sid" class="view"><h3>SIDE</h3></div>
+      <div id="back" class="view"><h3>BACK</h3></div>
+      </div>
     </div>
+
 </body>
