@@ -17,10 +17,14 @@ const express = require('express'),
 
       var cart = require('./server/cartcrud')
       var cars = require('./server/carcrud')
+      var options = require('./server/optionscrud')
 
       app.get('/getCars', cars.read);
+      // app.get('/getCars', options.read)
 
       app.get('/getCart', cart.read);
+
+      app.get('/getoptions', options.read)
 
       app.get('/getCars/:id', cars.show);
 

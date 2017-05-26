@@ -346,10 +346,17 @@ p {
 #build {
   border-left: 2px #EFEFEF solid;
   color: white;
-  background-color: #0099FF; }
+  background-color: #0099FF;
+  cursor: pointer; }
 
 #build:hover {
-  background-color: #232323; }
+  background-color: #232323;
+  color: white; }
+
+#compare:hover {
+  background: #232323;
+  cursor: pointer;
+  color: white; }
 
 .choose {
   position: relative;
@@ -925,6 +932,22 @@ p {
   position: relative;
   display: inline-flex;
   justify-content: center;
+  color: white; }
+
+.social {
+  background-color: white;
+  position: absolute; }
+
+.footercolumn {
+  height: auto;
+  width: auto;
+  position: relative;
+  color: white; }
+
+.column {
+  height: auto;
+  width: auto;
+  position: relative;
   color: white; }
 
 .subaruhome {

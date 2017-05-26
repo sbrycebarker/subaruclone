@@ -6,18 +6,11 @@ var ProductSchema = new Schema({
   name: { type: String },
   model: { type: String },
   year: { type: Number },
-  icon: { type: String },
+  accessory: { type: String },
   package: { type: String },
   img: { type: String },
-  buildimg1: { type: String },
-  buildimg2: { type: String },
-  feature1: { type: String },
-  feature2: { type: String },
-  feature3: { type: String },
-  feature4: { type: String },
-  description: { type: String },
-  price: { type: String },
-  cost: { type : Number },
+  info: { type: String },
+  price: { type: Number },
   hmpg: { type: Number },
   cmpg: { type: Number },
   enginesize: { type: Number },
@@ -30,4 +23,4 @@ var ProductSchema = new Schema({
   ltu: Boolean,
 });
 
-module.exports = mongoose.model('cars', ProductSchema);
+module.exports = mongoose.model('options', ProductSchema);
