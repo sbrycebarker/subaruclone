@@ -41,6 +41,15 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
 
   $scope.getCars();
 
+  $scope.getOptions = function (results) {
+    mainService.getOptions().then(function (results) {
+      console.log(results);
+      $scope.options = results.data;
+    });
+  };
+
+  $scope.getOptions();
+
   $scope.getCart = function (results) {
     mainService.getCart().then(function (results) {
       // console.log(results.data)
@@ -99,6 +108,14 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
     return $http({
       method: 'GET',
       url: '/getCars'
+
+    });
+  };
+  this.getOptions = function (options) {
+    // console.log(car)
+    return $http({
+      method: 'GET',
+      url: '/getoptions'
 
     });
   };

@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var ProductSchema = new Schema({
+var CarsSchema = new Schema({
   name: { type: String },
   model: { type: String },
   year: { type: Number },
@@ -20,6 +20,7 @@ var ProductSchema = new Schema({
   cost: { type : Number },
   hmpg: { type: Number },
   cmpg: { type: Number },
+  accessory: [{ type: mongoose.Schema.Types.ObjectId, ref: 'options' }],
   enginesize: { type: Number },
   awd: Boolean,
   dat: Boolean,
@@ -30,4 +31,4 @@ var ProductSchema = new Schema({
   ltu: Boolean,
 });
 
-module.exports = mongoose.model('cars', ProductSchema);
+module.exports = mongoose.model('cars', CarsSchema);

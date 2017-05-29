@@ -24,7 +24,8 @@ const express = require('express'),
 
       app.get('/getCart', cart.read);
 
-      app.get('/getoptions', options.read)
+      app.get('/getOptions', options.read);
+      app.get('/getOptions/:id', options.show);
 
       app.get('/getCars/:id', cars.show);
 

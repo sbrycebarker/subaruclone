@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var ProductSchema = new Schema({
+var cartSchema = new Schema({
   name: { type: String},
   model: { type: String},
   year: { type: Number},
@@ -30,4 +30,4 @@ var ProductSchema = new Schema({
   data: { type: String},
 });
 
-module.exports = mongoose.model('cart', ProductSchema);
+module.exports = mongoose.model('cart', cartSchema);

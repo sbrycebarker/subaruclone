@@ -8,6 +8,15 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
 
   $scope.getCars()
 
+  $scope.getOptions = function(results) {
+    mainService.getOptions().then(function(results){
+          console.log(results)
+      $scope.options = results.data
+    })
+  }
+
+  $scope.getOptions()
+
 
   $scope.getCart = function(results) {
     mainService.getCart().then(function(results) {
