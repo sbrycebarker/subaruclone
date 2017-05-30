@@ -35,6 +35,7 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
 
   $scope.getCars = function (results) {
     mainService.getCars().then(function (results) {
+      console.log(results);
       $scope.cars = results.data;
     });
   };
@@ -43,7 +44,6 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
 
   $scope.getOptions = function (results) {
     mainService.getOptions().then(function (results) {
-      console.log(results);
       $scope.options = results.data;
     });
   };

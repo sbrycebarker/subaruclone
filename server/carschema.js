@@ -20,7 +20,7 @@ var CarsSchema = new Schema({
   cost: { type : Number },
   hmpg: { type: Number },
   cmpg: { type: Number },
-  accessory: [{ type: mongoose.Schema.Types.ObjectId, ref: 'options' }],
+  options: [{ type: mongoose.Schema.Types.ObjectId, ref: 'options'}],
   enginesize: { type: Number },
   awd: Boolean,
   dat: Boolean,

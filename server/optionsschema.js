@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var optionsSchema = new Schema({
   accessory: { type: String },
-  // accessories: [{ type: mongoose.Schema.Types.Array, ref : 'options' }],
+  // cars: [{ type: mongoose.Schema.Types.ObjectId, ref : 'cars' }],
   package: { type: String },
   img: { type: String },
   info: { type: String },
