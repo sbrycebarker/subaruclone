@@ -3,8 +3,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var optionsSchema = new Schema({
+  _id: { type: Array, ref: 'cars'},
   accessory: { type: String },
-  // cars: [{ type: mongoose.Schema.Types.ObjectId, ref : 'cars' }],
   package: { type: String },
   img: { type: String },
   info: { type: String },
