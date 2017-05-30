@@ -44,9 +44,9 @@ update: function(req, res, next) {
 },
 
 destroy: function(req, res, next) {
-  console.log(req.params.body);
+  // console.log(req.params.body);
   cars.findByIdAndRemove(req.params.id, function(error, response){
-    console.log(response);
+    // console.log(response);
     if(error) {
       return res.status(500).json(error)
     }else {

@@ -8,12 +8,10 @@ angular.module('myApp').service('mainService', function($http, $stateParams) {
 
     })
   }
-  this.getOptions = function(options) {
-    // console.log(car)
+  this.getOptions = function (data) {
     return $http({
-      method: 'GET',
-      url: '/getoptions'
-
+      method: "GET",
+      url:'/getCars/' + $stateParams.options
     })
   }
   this.getCart = function(cars) {

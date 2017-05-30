@@ -8,7 +8,7 @@
 
     <div class="options">
       <div class="finalbuild">
-        <div id="price" class="builddets">$$$$$$</div>
+        <div id="price" class="builddets"><h1>${{vehicle.cost}}</h1></div>
         <div id="testd" class="builddets">SCHEDULE</div>
         <div id="checkout" class="builddets">CHECKOUT</div>
       </div>
@@ -35,12 +35,14 @@
 
     <h1>Packages</h1>
 
-    <div class="packages"></div>
+    <div class="packages">
+
+    </div>
 
     <h1>Accessories</h1>
 
-    <div class="accessories" ng-repeat="car in cars">
-
+    <div class="accessory" ng-repeat="accessory in options">
+    {{acessory}}
     </div>
 
     <h5>Manufacturer's suggested retail price for accessories installed by the manufacturer. Actual <br>
@@ -57,7 +59,6 @@
     <h1>Shop {{vehicle.model}}</h1>
 <div class="shopcon">
     <div class="shop">
-      <img class="inven">
       <h5>LOCAL INVENTORY</h5>
     </div>
     <div class="shop">

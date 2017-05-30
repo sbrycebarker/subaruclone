@@ -41,14 +41,6 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
 
   $scope.getCars();
 
-  $scope.getOptions = function (results) {
-    mainService.getOptions().then(function (results) {
-      $scope.options = results;
-    });
-  };
-
-  $scope.getOptions();
-
   $scope.getCart = function (results) {
     mainService.getCart().then(function (results) {
       // console.log(results.data)
@@ -91,10 +83,19 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
 
   $scope.vehicleData = function (response) {
     mainService.vehicleData().then(function (results) {
+      // console.log(results.data.options)
       $scope.vehicle = results.data;
     });
   };
   $scope.vehicleData();
+
+  $scope.getOptions = function (response) {
+    mainService.getOptions().then(function (results) {
+      console.log(results.data);
+      $scope.accessories = results.data;
+    });
+  };
+  $scope.getOptions();
 
   $scope.showmenu = false;
 });
@@ -110,12 +111,10 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
 
     });
   };
-  this.getOptions = function (options) {
-    // console.log(car)
+  this.getOptions = function (data) {
     return $http({
-      method: 'GET',
-      url: '/getoptions'
-
+      method: "GET",
+      url: '/getCars/' + $stateParams.options
     });
   };
   this.getCart = function (cars) {
