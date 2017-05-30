@@ -2,20 +2,19 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
 
   $scope.getCars = function(results) {
     mainService.getCars().then(function(results){
-      console.log(results)
       $scope.cars = results.data
     })
   }
 
-  $scope.getCars()
+  $scope.getCars();
 
   $scope.getOptions = function(results) {
     mainService.getOptions().then(function(results){
-      $scope.options = results.data
+      $scope.options = results
     })
   }
 
-  $scope.getOptions()
+  $scope.getOptions();
 
 
   $scope.getCart = function(results) {
