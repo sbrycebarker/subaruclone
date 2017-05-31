@@ -1,20 +1,18 @@
 <div class="vehicledropdown">
   <div class="mainpanel">
-    <div class="vehicle" ng-mouseover="vehicles({vehicles: car._id })" ng-repeat="car in cars" ui-sref="vehicles({vehicle: car._id})" style="margin-right: 0">
+    <div class="vehicle" ng-mouseover="showhide(car.model)" ng-repeat="car in cars" ui-sref="vehicles({vehicle: car._id})" style="margin-right: 0">
       <div class="vmodel" style="margin-right: 0">{{car.model}}</div>
       <div class="price" style="margin-right: 0">${{car.price}}</div>
       <img class="icon" src="{{ car.icon }}">
     </div>
 </div>
 
-<div class="blah">
+<div class="blah" ng-init="Outback = true">
 
 
-  <div class="vehiclepanel">
-
+  <div class="vehiclepanel" ng-if="Outback" style="background: url('../assets/imgs/obk.jpg'); center 100% no-repeat;">
     <div class="vehicleinfo">
-      <panel ng-show="showpanel">
-      <!-- <div class="model">
+      <div class="model">
         <div class="modelyear">
           <h3>{{cars[0].year}}
           {{cars[0].model}}</h3>
@@ -30,16 +28,184 @@
         </h4>
         </div>
 
-      </div> -->
+      </div>
 
       <div class="panelmenubut">Overview</div>
       <div class="panelmenubut">Photos & Videos</div>
       <div class="panelmenubut">Compare</div>
       <div class="panelmenubut" ui-sref="build" >Build & Price</div>
-
-
   </div>
 </div>
+
+<div class="vehiclepanel" ng-if="Impreza" style="background: url('../assets/imgs/impreza.jpg') center 100% no-repeat;">
+  <div class="vehicleinfo">
+    <div class="model">
+      <div class="modelyear">
+        <h3>{{cars[1].year}}
+        {{cars[1].model}}</h3>
+      </div>
+      <div class="modelinfo">
+        <h5>starting at<br> {{cars[1].price}} msrp</h5>
+        <h4>
+      Up to<br>
+        {{cars[1].hmpg}}/
+        {{cars[1].cmpg}}
+        HwyCity
+      </h4>
+      </div>
+    </div>
+    <div class="panelmenubut">Overview</div>
+    <div class="panelmenubut">Photos & Videos</div>
+    <div class="panelmenubut">Compare</div>
+    <div class="panelmenubut" ui-sref="build" >Build & Price</div>
+</div>
+</div>
+
+<div class="vehiclepanel"  ng-if="BRZ" style="background: url('../assets/imgs/brzpanel.jpg') center 100% no-repeat;">
+  <div class="vehicleinfo">
+    <div class="model">
+      <div class="modelyear">
+        <h3>{{cars[2].year}}
+        {{cars[2].model}}</h3>
+      </div>
+      <div class="modelinfo">
+        <h5>starting at<br> {{cars[2].price}} msrp</h5>
+
+        <h4>
+      Up to<br>
+        {{cars[2].hmpg}}/
+        {{cars[2].cmpg}}
+        HwyCity
+      </h4>
+      </div>
+
+    </div>
+
+    <div class="panelmenubut">Overview</div>
+    <div class="panelmenubut">Photos & Videos</div>
+    <div class="panelmenubut">Compare</div>
+    <div class="panelmenubut" ui-sref="build" >Build & Price</div>
+
+
+</div>
+</div>
+<div class="vehiclepanel" ng-if="Legacy" style="background: url('../assets/imgs/leg.jpg') center 100% no-repeat;">
+  <div class="vehicleinfo">
+    <div class="model">
+      <div class="modelyear">
+        <h3>{{cars[3].year}}
+        {{cars[3].model}}</h3>
+      </div>
+      <div class="modelinfo">
+        <h5>starting at<br> {{cars[3].price}} msrp</h5>
+
+        <h4>
+      Up to<br>
+        {{cars[3].hmpg}}/
+        {{cars[3].cmpg}}
+        HwyCity
+      </h4>
+      </div>
+
+    </div>
+
+    <div class="panelmenubut">Overview</div>
+    <div class="panelmenubut">Photos & Videos</div>
+    <div class="panelmenubut">Compare</div>
+    <div class="panelmenubut" ui-sref="build" >Build & Price</div>
+
+
+</div>
+</div>
+<div class="vehiclepanel" ng-if="Forester" style="background: url('../assets/imgs/for.jpg') center 100% no-repeat;">
+  <div class="vehicleinfo">
+    <div class="model">
+      <div class="modelyear">
+        <h3>{{cars[4].year}}
+        {{cars[4].model}}</h3>
+      </div>
+      <div class="modelinfo">
+        <h5>starting at<br> {{cars[4].price}} msrp</h5>
+
+        <h4>
+      Up to<br>
+        {{cars[4].hmpg}}/
+        {{cars[4].cmpg}}
+        HwyCity
+      </h4>
+      </div>
+
+    </div>
+
+    <div class="panelmenubut">Overview</div>
+    <div class="panelmenubut">Photos & Videos</div>
+    <div class="panelmenubut">Compare</div>
+    <div class="panelmenubut" ui-sref="build" >Build & Price</div>
+
+
+</div>
+</div>
+<div class="vehiclepanel" ng-if="WRX" style="background: url('../assets/imgs/wrxpanel.jpg') center 100% no-repeat;">
+  <div class="vehicleinfo">
+    <div class="model">
+      <div class="modelyear">
+        <h3>{{cars[5].year}}
+        {{cars[5].model}}</h3>
+      </div>
+      <div class="modelinfo">
+        <h5>starting at<br> {{cars[5].price}} msrp</h5>
+
+        <h4>
+      Up to<br>
+        {{cars[5].hmpg}}/
+        {{cars[5].cmpg}}
+        HwyCity
+      </h4>
+      </div>
+
+    </div>
+
+    <div class="panelmenubut">Overview</div>
+    <div class="panelmenubut">Photos & Videos</div>
+    <div class="panelmenubut">Compare</div>
+    <div class="panelmenubut" ui-sref="build" >Build & Price</div>
+
+
+</div>
+</div>
+
+<div class="vehiclepanel" ng-if="Crosstrek" style="background: url('../assets/imgs/ctk.jpg') center 100% no-repeat;">
+  <div class="vehicleinfo">
+    <div class="model">
+      <div class="modelyear">
+        <h3>{{cars[6].year}}
+        {{cars[6].model}}</h3>
+      </div>
+      <div class="modelinfo">
+        <h5>starting at<br> {{cars[6].price}} msrp</h5>
+
+        <h4>
+      Up to<br>
+        {{cars[6].hmpg}}/
+        {{cars[6].cmpg}}
+        HwyCity
+      </h4>
+      </div>
+
+    </div>
+
+    <div class="panelmenubut">Overview</div>
+    <div class="panelmenubut">Photos & Videos</div>
+    <div class="panelmenubut">Compare</div>
+    <div class="panelmenubut" ui-sref="build" >Build & Price</div>
+
+
+</div>
+</div>
+
+
+
+
 <div class="vehiclelistother" ui-sref="all">All Vehicles</div>
 <div class="vehiclelistother" ui-sref="all">Certified Pre-Owned</div>
 <div class="vehiclelistother" ui-sref="all">Future Vehicles and Concepts</div>

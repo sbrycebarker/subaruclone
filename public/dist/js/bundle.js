@@ -92,8 +92,18 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
   };
   $scope.getOptions();
 
+  $scope.showhide = function (param) {
+    $scope.BRZ = false;
+    $scope.WRX = false;
+    $scope.Crosstrek = false;
+    $scope.Legacy = false;
+    $scope.Forester = false;
+    $scope.Outback = false;
+    $scope.Impreza = false;
+    $scope[param] = true;
+  };
+
   $scope.showmenu = false;
-  $scope.showpanel = false;
 });
 'use strict';
 
@@ -104,7 +114,6 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
     return $http({
       method: 'GET',
       url: '/getCars'
-
     });
   };
   this.getOptions = function (data) {

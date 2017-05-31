@@ -77,6 +77,29 @@ body {
   width: 500px;
   margin: 0 auto; }
 
+.items {
+  height: auto;
+  display: inline-block;
+  text-align: center;
+  background-color: #FAFAFA;
+  margin: 15px; }
+
+.items h1 {
+  position: absolute; }
+
+.items:hover {
+  cursor: pointer;
+  border-bottom: 3px solid #333333; }
+
+#vehicles {
+  width: 80px; }
+
+#tools {
+  width: 125px; }
+
+#why {
+  width: 104px; }
+
 .sideitems {
   height: 30px;
   width: 320px;
@@ -172,20 +195,6 @@ p {
   color: white;
   z-index: 1; }
 
-.items {
-  height: 100%;
-  width: 170px;
-  display: inline-block;
-  text-align: center;
-  background-color: #FAFAFA; }
-
-.items h1 {
-  position: absolute; }
-
-.items:hover {
-  cursor: pointer;
-  border-bottom: 3px solid #333333; }
-
 .links {
   height: 200px;
   width: 1130px;
@@ -195,7 +204,7 @@ p {
   transition: 600ms ease-out;
   position: relative;
   display: inline-block;
-  top: 55px;
+  top: 40px;
   right: 200px;
   width: 956px;
   height: 568px;
@@ -210,7 +219,7 @@ p {
   position: relative;
   display: flex;
   right: 200px;
-  top: 55px;
+  top: 40px;
   margin: 0;
   border: .5px solid #CCCCCC; }
 
@@ -234,8 +243,7 @@ p {
 .vehiclepanel {
   position: relative;
   height: 100%;
-  width: 100%;
-  background: url("../assets/imgs/impreza.JPG") center 100% no-repeat; }
+  width: 100%; }
 
 .icon {
   height: 40px;

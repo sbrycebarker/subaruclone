@@ -64,8 +64,17 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
     }
     $scope.getOptions();
 
+    $scope.showhide = function (param) {
+      $scope.BRZ = false
+      $scope.WRX = false
+      $scope.Crosstrek = false
+      $scope.Legacy = false
+      $scope.Forester = false
+      $scope.Outback = false
+      $scope.Impreza = false
+      $scope[param] = true
+    }
 
   $scope.showmenu = false;
-  $scope.showpanel = false;
 
 })

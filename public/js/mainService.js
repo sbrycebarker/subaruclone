@@ -5,7 +5,6 @@ angular.module('myApp').service('mainService', function($http, $stateParams) {
     return $http({
       method: 'GET',
       url: '/getCars'
-
     })
   }
   this.getOptions = function (data) {
