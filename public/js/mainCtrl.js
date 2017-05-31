@@ -18,10 +18,10 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
 
   $scope.getCart()
 
-  $scope.postCart = function( data ) {
-    mainService.postCart( data )
-    $scope.data.push( data )
-  }
+  // $scope.postCart = function( data ) {
+  //   mainService.postCart( data )
+  //   $scope.data.push( data )
+  // }
 
   // $scope.changeCart() = function( item, i ) {
   //   mainService.changeCart( item );
@@ -37,10 +37,6 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
     });
   }
 
-    $scope.changeCart = function( item, i ) {
-      mainService.changeCart( item );
-      $scope.data[i].option = item.addedoption
-    }
 
 
     //
@@ -54,21 +50,22 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
 
     $scope.vehicleData = function(response) {
       mainService.vehicleData().then(function(results){
-        // console.log(results.data.options)
+        console.log(results.data.options)
       $scope.vehicle = results.data
       })
     }
     $scope.vehicleData();
 
     $scope.getOptions = function(response) {
-      mainService.getOptions().then(function(results){
+      mainService.vehicleData().then(function(results){
         console.log(results.data)
-        $scope.accessories = results.data
+        $scope.accessories = results.data.options
       })
     }
     $scope.getOptions();
 
 
   $scope.showmenu = false;
+  $scope.showpanel = false;
 
 })

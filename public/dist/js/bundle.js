@@ -50,10 +50,10 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
 
   $scope.getCart();
 
-  $scope.postCart = function (data) {
-    mainService.postCart(data);
-    $scope.data.push(data);
-  };
+  // $scope.postCart = function( data ) {
+  //   mainService.postCart( data )
+  //   $scope.data.push( data )
+  // }
 
   // $scope.changeCart() = function( item, i ) {
   //   mainService.changeCart( item );
@@ -67,11 +67,6 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
     });
   };
 
-  $scope.changeCart = function (item, i) {
-    mainService.changeCart(item);
-    $scope.data[i].option = item.addedoption;
-  };
-
   //
   // $http({
   //   url: "/vehicle/",
@@ -83,21 +78,22 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
 
   $scope.vehicleData = function (response) {
     mainService.vehicleData().then(function (results) {
-      // console.log(results.data.options)
+      console.log(results.data.options);
       $scope.vehicle = results.data;
     });
   };
   $scope.vehicleData();
 
   $scope.getOptions = function (response) {
-    mainService.getOptions().then(function (results) {
+    mainService.vehicleData().then(function (results) {
       console.log(results.data);
-      $scope.accessories = results.data;
+      $scope.accessories = results.data.options;
     });
   };
   $scope.getOptions();
 
   $scope.showmenu = false;
+  $scope.showpanel = false;
 });
 'use strict';
 
@@ -114,7 +110,7 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
   this.getOptions = function (data) {
     return $http({
       method: "GET",
-      url: '/getCars/' + $stateParams.options
+      url: '/getOptions/' + $stateParams.options
     });
   };
   this.getCart = function (cars) {
@@ -123,13 +119,13 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
       url: '/getCart'
     });
   };
-  this.postCart = function (data) {
-    return $http({
-      method: 'POST',
-      url: '/postCart',
-      data: data
-    });
-  };
+  // this.postCart = function(data) {
+  //   return $http({
+  //     method: 'POST',
+  //     url: '/postCart',
+  //     data: data
+  //   })
+  // }
 
   this.vehicleData = function (data) {
     return $http({
@@ -144,13 +140,7 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
   //     url:'/delete' + id
   //   })
   // }
-  this.changeCart = function (item) {
-    return $http({
-      method: 'PUT',
-      url: '/change' + item.id,
-      data: item
-    });
-  };
+
 });
 'use strict';
 
