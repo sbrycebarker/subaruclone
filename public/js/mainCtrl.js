@@ -8,10 +8,6 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
 
   $scope.getCars();
 
-
-
-
-
   $scope.getCart = function(results) {
     mainService.getCart().then(function(results) {
       // console.log(results.data)
@@ -42,25 +38,14 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
   $scope.colors()
 
 
-  $scope.deleteCart = function(id, i) {
-    var removeItem = $scope.data.splice(i, 1)
-    mainService.deleteCart(id).then(function(){
-
-    }, function(err) {
-      $scope.data.splice(i, 0, removedItem[0]);
-    });
-  }
-
-
-
-    //
-    // $http({
-    //   url: "/vehicle/",
-    //   method: "GET",
-    //   params: { id: $stateParams.id}
-    // }).then(function (response) {
-    //   this.vehicle =response
-    // })
+  // $scope.deleteCart = function(id, i) {
+  //   var removeItem = $scope.data.splice(i, 1)
+  //   mainService.deleteCart(id).then(function(){
+  //
+  //   }, function(err) {
+  //     $scope.data.splice(i, 0, removedItem[0]);
+  //   });
+  // }
 
     $scope.vehicleData = function(response) {
       mainService.vehicleData().then(function(results){
@@ -78,6 +63,17 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
         $scope.accessories = results.data.options
       })
     }
+
+    $scope.carOptions = function(results) {
+      mainService.carOptions(results).then(function(results) {
+        console.log(results)
+        $scope.options = results
+      })
+    }
+    $scope.carOptions();
+
+
+
 
     $scope.showhide = function (param) {
       $scope.BRZ = false

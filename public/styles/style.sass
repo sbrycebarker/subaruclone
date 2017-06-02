@@ -81,7 +81,7 @@ body
   margin: 0 auto
 
 .items
-  height: auto
+  height: 41px
   display: inline-block
   text-align: center
   background-color: #FAFAFA
@@ -237,6 +237,7 @@ p
   background-color: #FAFAFA
   margin: 0
   border: .5px solid #CCCCCC
+  z-index: 10
 
 
 .shoppingcon
@@ -259,8 +260,6 @@ p
   line-height: 16px
   color: #0099FF
 
-
-
 // .mainpanel
 //   height: 499px
 //   width: 680px
@@ -268,11 +267,12 @@ p
 //   left: 300px
 .blah
   position: absolute
-  height: 455px
+  height: 449px
   width: 675px
   left: 240px
   padding: 20px
   top: 0
+  border-bottom: .5px #CCCCCC solid
 
 .vehiclepanel
   position: relative
@@ -340,22 +340,25 @@ p
   font-weight: bold
   font-family: sans-serif
 
+// .carsdiv
+//   margin: auto 0
+
 .cars
-  height: 170px
+  height: 140px
+  padding: 15px 0
   width: 1130px
   background-color: #FAFAFA
   position: relative
   display: flex
-  margin: 0 auto
+  margin: auto
   top: -85px
-  z-index: 10
+  z-index: 0
   flex-direction: row
   box-shadow: 0 18px 25px 0 rgba(0, 0, 0, 0.1)
 
 .car
-  height: 170px
   width: 145px
-  margin: auto
+  margin: 12px auto
   text-align: center
   font-family: sans-serif
   font-weight: bold
@@ -364,7 +367,7 @@ p
 
 .car h2
   font-size: 14px
-  margin: 0 auto
+  margin: auto
   width: 80px
 
 
@@ -475,6 +478,15 @@ p
   // font-size: .9rem
   font-weight: bold
   font-family: sans-serif
+
+.vehiclelist
+  height: 80px
+  width: 33%
+  position: relative
+  display: inline-block
+  bottom: 0
+  vertical-align: center
+  // border: .5px #CCCCCC solid
 
 
 .vehicle
@@ -689,6 +701,7 @@ p
 .packages
   height: 256px
   width: 615px
+  margin: 0 auto
   background-color: white
 
 .accessory
@@ -830,9 +843,8 @@ p
   opacity: .8
   color: white
   font-weight: bold
-  position: absolute
+  position: relative
   margin: 0 auto
-  padding: auto
   top: 200px
   text-align: center
 
@@ -870,6 +882,7 @@ p
   padding-top: 116px
   border: 1px black solid
   top: -170px
+  z-index: -1
 
 .tools h1
  height: 42px
