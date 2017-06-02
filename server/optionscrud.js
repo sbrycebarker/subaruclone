@@ -3,6 +3,8 @@ var option = require('./optionsschema.js');
 module.exports = {
 
 read: function(req, res, next) {
+  console.log("req.body", req.body)
+  console.log("req.body", req.body[3])
   option.find().exec(function(err, response){
       if(err) {
         res.status(500).json(err)

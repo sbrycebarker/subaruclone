@@ -60,6 +60,16 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
   //   $scope.data = item
   // }
 
+
+  $scope.colors = function (results) {
+    mainService.colors().then(function (results) {
+      $scope.colors = results.data.color;
+      $scope.ints = results.data.interior;
+    });
+  };
+
+  $scope.colors();
+
   $scope.deleteCart = function (id, i) {
     var removeItem = $scope.data.splice(i, 1);
     mainService.deleteCart(id).then(function () {}, function (err) {
@@ -78,19 +88,19 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
 
   $scope.vehicleData = function (response) {
     mainService.vehicleData().then(function (results) {
-      console.log(results.data.options);
+
       $scope.vehicle = results.data;
+      $scope.getOptions($scope.vehicle.options);
     });
   };
   $scope.vehicleData();
 
-  $scope.getOptions = function (response) {
-    mainService.vehicleData().then(function (results) {
+  $scope.getOptions = function (options) {
+    mainService.getOptions(options).then(function (results) {
       console.log(results.data);
       $scope.accessories = results.data.options;
     });
   };
-  $scope.getOptions();
 
   $scope.showhide = function (param) {
     $scope.BRZ = false;
@@ -118,10 +128,12 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
   };
   this.getOptions = function (data) {
     return $http({
-      method: "GET",
-      url: '/getOptions/' + $stateParams.options
+      method: "POST",
+      url: '/getOptions/',
+      data: data
     });
   };
+
   this.getCart = function (cars) {
     return $http({
       method: 'GET',
@@ -137,6 +149,13 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
   // }
 
   this.vehicleData = function (data) {
+    return $http({
+      method: "GET",
+      url: '/getCars/' + $stateParams.vehicle
+    });
+  };
+
+  this.colors = function (color) {
     return $http({
       method: "GET",
       url: '/getCars/' + $stateParams.vehicle

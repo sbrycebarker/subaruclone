@@ -605,11 +605,14 @@ p
   margin: auto
   background-color: inherit
 
+.cartbackground
+  height: 100%
+  width: 100%
+  position: fixed
+
 .cartmain
   width: 100%
   height: 100vh
-  // position: inherit
-  background: url("../assets/imgs/background.jpg") no-repeat center center
   -webkit-background-size: cover
   -moz-background-size: cover
   background-size: cover
@@ -638,7 +641,7 @@ p
   left: -300px
 
 .options
-  height: 3560px
+  height: 3387px
   width: 50%
   right: 0
   position: absolute
@@ -667,16 +670,21 @@ p
 .color
   height: 50px
   width: 50px
-  background-color: white
+  margin: 0 5px
+  background-color: green
   position: relative
   display: inline-block
+  border-radius: 50%
+  border: 2px white solid
 
 .leather
   height: 50px
   width: 50px
-  background-color: brown
+  margin: 0 5px
   position: relative
   display: inline-block
+  border-radius: 50%
+  border: 2px white solid
 
 .packages
   height: 256px
@@ -691,6 +699,7 @@ p
   background-color: white
   display: inline-block
   color: black
+  z-index: 0
 
 .summary
   height: 620px
@@ -760,6 +769,7 @@ p
   position: fixed
   background-color: #FAFAFA
   display: inline-block
+  z-index: 2
 
 .finalbuild h1
   color: black

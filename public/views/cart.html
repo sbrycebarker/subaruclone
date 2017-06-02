@@ -1,9 +1,11 @@
+<title>Build & Price</title>
+<img class="cartbackground" style="background: url('{{vehicle.cartback}}') no-repeat center center;">
 <div class="title">
   <div><h1>Build & Price {{vehicle.model}}</h1></div>
   <div class="change"><h3>CHANGE VEHICLE</h3></div>
 </div>
 <body>
-  <div class="cartmain">
+  <div class="cartmain" >
     <div class="update" type="text" name="update" ng-model="item">
 
     <div class="options">
@@ -15,28 +17,22 @@
       <h1>Transmission</h1>
     <div class="transmition">
 
-      Automatic Lineartronic® CVT
+
     </div>
 
     <h3>EXTERIOR</h3>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
+    <div class="color" ng-repeat="color in colors" style="background-color: {{color}}"></div>
+    {{color}}
 
     <h3>INTERIOR</h3>
-    <div class="leather"></div>
-    <div class="leather"></div>
+    <div class="leather" ng-repeat="int in ints" style="background: url('{{int}}');">
+    </div>
+
 
     <h1>Packages</h1>
 
     <div class="packages">
-
+        {{int}}
     </div>
 
     <h1>Accessories</h1>

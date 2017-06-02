@@ -9,10 +9,12 @@ angular.module('myApp').service('mainService', function($http, $stateParams) {
   }
   this.getOptions = function (data) {
     return $http({
-      method: "GET",
-      url:'/getOptions/' + $stateParams.options
+      method: "POST",
+      url:'/getOptions/',
+      data: data
     })
   }
+
   this.getCart = function(cars) {
     return $http({
       method: 'GET',
@@ -31,6 +33,13 @@ angular.module('myApp').service('mainService', function($http, $stateParams) {
     return  $http({
     method: "GET",
     url:'/getCars/' + $stateParams.vehicle
+  })
+}
+
+this.colors = function(color) {
+  return $http({
+    method: "GET",
+    url: '/getCars/' + $stateParams.vehicle
   })
 }
 
