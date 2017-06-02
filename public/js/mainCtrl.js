@@ -64,13 +64,13 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
       })
     }
 
-    $scope.carOptions = function(results) {
-      mainService.carOptions(results).then(function(results) {
-        console.log(results)
-        $scope.options = results
-      })
-    }
-    $scope.carOptions();
+    // $scope.carOptions = function(results) {
+    //   mainService.carOptions(results).then(function(results) {
+    //     console.log(results)
+    //     $scope.options = results
+    //   })
+    // }
+    // $scope.carOptions();
 
 
 

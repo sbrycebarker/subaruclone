@@ -102,7 +102,6 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
   //   })
   // }
   // $scope.carOptions();
-  //
 
 
   $scope.showhide = function (param) {
