@@ -7,20 +7,22 @@ angular.module('myApp').service('mainService', function($http, $stateParams) {
       url: '/getCars'
     })
   }
+
   this.getOptions = function (data) {
+    console.log(data)
     return $http({
       method: "POST",
       url:'/getOptions/',
       data: data
     })
   }
-
-  this.getCart = function(cars) {
-    return $http({
-      method: 'GET',
-      url: '/getCart'
-    })
-  }
+  //
+  // this.getCart = function(cars) {
+  //   return $http({
+  //     method: 'GET',
+  //     url: '/getCart'
+  //   })
+  // }
   // this.postCart = function(data) {
   //   return $http({
   //     method: 'POST',
@@ -43,6 +45,13 @@ this.colors = function(color) {
   })
 }
 
+this.accessories = function (access) {
+  console.log(access)
+  return $http({
+    method: "GET",
+    url: "/getOptions/" + $stateParams.id
+  })
+}
   // this.deleteCart = function(id) {
   //   return $http({
   //     method: 'DELETE',

@@ -38,17 +38,16 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
       $scope.cars = results.data;
     });
   };
-
   $scope.getCars();
 
-  $scope.getCart = function (results) {
-    mainService.getCart().then(function (results) {
-      // console.log(results.data)
-      $scope.cart = results.data;
-    });
-  };
-
-  $scope.getCart();
+  // $scope.getCart = function(results) {
+  //   mainService.getCart().then(function(results) {
+  //     // console.log(results.data)
+  //     $scope.cart = results.data
+  //   })
+  // }
+  //
+  // $scope.getCart()
 
   // $scope.postCart = function( data ) {
   //   mainService.postCart( data )
@@ -102,7 +101,13 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
   //   })
   // }
   // $scope.carOptions();
-
+  $scope.accessories = function (access) {
+    console.log(results);
+    mainService.accessories(access).then(function (results) {
+      $scope.options = results.data;
+    });
+  };
+  $scope.accessories();
 
   $scope.showhide = function (param) {
     $scope.BRZ = false;
@@ -128,20 +133,22 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
       url: '/getCars'
     });
   };
+
   this.getOptions = function (data) {
+    console.log(data);
     return $http({
       method: "POST",
       url: '/getOptions/',
       data: data
     });
   };
-
-  this.getCart = function (cars) {
-    return $http({
-      method: 'GET',
-      url: '/getCart'
-    });
-  };
+  //
+  // this.getCart = function(cars) {
+  //   return $http({
+  //     method: 'GET',
+  //     url: '/getCart'
+  //   })
+  // }
   // this.postCart = function(data) {
   //   return $http({
   //     method: 'POST',
@@ -164,6 +171,13 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
     });
   };
 
+  this.accessories = function (access) {
+    console.log(access);
+    return $http({
+      method: "GET",
+      url: "/getOptions/" + $stateParams.id
+    });
+  };
   // this.deleteCart = function(id) {
   //   return $http({
   //     method: 'DELETE',

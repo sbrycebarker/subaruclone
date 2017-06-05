@@ -8,7 +8,7 @@ const express = require('express'),
       mongoose =require('mongoose'),
       request = require('request');
 
-      var app = express()
+      var app = express();
 
 
 
@@ -21,15 +21,12 @@ const express = require('express'),
 
       app.get('/getCars', cars.read);
       app.get('/getCars/:id', cars.show);
-      // app.get('/getCars', options.read)
-
-      app.get('/getCart', cart.read);
 
       app.post('/getOptions', options.read);
       app.get('/getOptions/:id', options.show);
 
-
-      app.get('/getCart/:id', cart.show)
+      app.get('/getCart', cart.read);
+      app.get('/getCart/:id', cart.show);
 
       // app.post('/postCart', cart.create);
       // app.put('/postcart/:id', cart.update);

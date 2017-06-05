@@ -5,17 +5,16 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
       $scope.cars = results.data
     })
   }
-
   $scope.getCars();
 
-  $scope.getCart = function(results) {
-    mainService.getCart().then(function(results) {
-      // console.log(results.data)
-      $scope.cart = results.data
-    })
-  }
-
-  $scope.getCart()
+  // $scope.getCart = function(results) {
+  //   mainService.getCart().then(function(results) {
+  //     // console.log(results.data)
+  //     $scope.cart = results.data
+  //   })
+  // }
+  //
+  // $scope.getCart()
 
   // $scope.postCart = function( data ) {
   //   mainService.postCart( data )
@@ -71,7 +70,13 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
     //   })
     // }
     // $scope.carOptions();
-
+    $scope.accessories = function (access) {
+      console.log(results)
+      mainService.accessories(access).then(function(results) {
+        $scope.options = results.data
+      })
+    }
+    $scope.accessories();
 
 
 

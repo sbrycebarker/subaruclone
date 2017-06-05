@@ -5,7 +5,7 @@ module.exports = {
 read: function(req, res, next) {
   Car.find().exec(function(err, response){
       if(err) {
-        res.status(500).json(err)
+        console.log(err)
       } else {
         res.json(response)
       }
@@ -15,7 +15,7 @@ read: function(req, res, next) {
 show: function(req, res, next) {
     Car.findById(req.params.id, function(err, response){
       if(err) {
-        res.status(500).json(err)
+        console.log("findById=err")
       }else{
         res.json(response)
       }
