@@ -45,7 +45,7 @@ this.colors = function(color) {
   })
 }
 
-this.accessories = function (access) {
+this.carOptions = function (access) {
   console.log(access)
   return $http({
     method: "GET",

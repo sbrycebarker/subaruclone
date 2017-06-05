@@ -101,13 +101,14 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
   //   })
   // }
   // $scope.carOptions();
-  $scope.accessories = function (access) {
-    console.log(results);
-    mainService.accessories(access).then(function (results) {
+  $scope.carOptions = function (options) {
+    mainService.carOptions(options).then(function (results) {
+      console.log(results);
+      // $scope.getOptions($scope.vehicle.options)
       $scope.options = results.data;
     });
   };
-  $scope.accessories();
+  $scope.carOptions();
 
   $scope.showhide = function (param) {
     $scope.BRZ = false;
@@ -171,7 +172,7 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
     });
   };
 
-  this.accessories = function (access) {
+  this.carOptions = function (access) {
     console.log(access);
     return $http({
       method: "GET",

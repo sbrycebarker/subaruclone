@@ -70,13 +70,14 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
     //   })
     // }
     // $scope.carOptions();
-    $scope.accessories = function (access) {
-      console.log(results)
-      mainService.accessories(access).then(function(results) {
+    $scope.carOptions = function (options) {
+      mainService.carOptions(options).then(function(results) {
+              console.log(results)
+      // $scope.getOptions($scope.vehicle.options)
         $scope.options = results.data
       })
     }
-    $scope.accessories();
+    $scope.carOptions();
 
 
 
