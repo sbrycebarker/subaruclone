@@ -13,9 +13,10 @@ read: function(req, res, next) {
 },
 
 show: function(req, res, next) {
-    Car.findById(req.params.id, function(err, response){
+    Car.findById(req.params.id)
+    .exec(function(err, response){
       if(err) {
-        console.log("findById=err")
+        // console.log("findById=err")
       }else{
         res.json(response)
       }

@@ -40,26 +40,6 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
   };
   $scope.getCars();
 
-  // $scope.getCart = function(results) {
-  //   mainService.getCart().then(function(results) {
-  //     // console.log(results.data)
-  //     $scope.cart = results.data
-  //   })
-  // }
-  //
-  // $scope.getCart()
-
-  // $scope.postCart = function( data ) {
-  //   mainService.postCart( data )
-  //   $scope.data.push( data )
-  // }
-
-  // $scope.changeCart() = function( item, i ) {
-  //   mainService.changeCart( item );
-  //   $scope.data = item
-  // }
-
-
   $scope.colors = function (results) {
     mainService.colors().then(function (results) {
       $scope.colors = results.data.color;
@@ -68,15 +48,6 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
   };
 
   $scope.colors();
-
-  // $scope.deleteCart = function(id, i) {
-  //   var removeItem = $scope.data.splice(i, 1)
-  //   mainService.deleteCart(id).then(function(){
-  //
-  //   }, function(err) {
-  //     $scope.data.splice(i, 0, removedItem[0]);
-  //   });
-  // }
 
   $scope.vehicleData = function (response) {
     mainService.vehicleData().then(function (results) {
@@ -89,22 +60,14 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
 
   $scope.getOptions = function (options) {
     mainService.getOptions(options).then(function (results) {
-      console.log(results.data);
-      $scope.accessories = results.data.options;
+      console.log("access", results.data);
+      $scope.accessories = results.data;
     });
   };
 
-  // $scope.carOptions = function(results) {
-  //   mainService.carOptions(results).then(function(results) {
-  //     console.log(results)
-  //     $scope.options = results
-  //   })
-  // }
-  // $scope.carOptions();
   $scope.carOptions = function (options) {
     mainService.carOptions(options).then(function (results) {
-      console.log(results);
-      // $scope.getOptions($scope.vehicle.options)
+      console.log("ops", results.data);
       $scope.options = results.data;
     });
   };
@@ -123,6 +86,34 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
 
   $scope.showmenu = false;
 });
+
+// $scope.getCart = function(results) {
+//   mainService.getCart().then(function(results) {
+//     // console.log(results.data)
+//     $scope.cart = results.data
+//   })
+// }
+//
+// $scope.getCart()
+
+// $scope.postCart = function( data ) {
+//   mainService.postCart( data )
+//   $scope.data.push( data )
+// }
+
+// $scope.changeCart() = function( item, i ) {
+//   mainService.changeCart( item );
+//   $scope.data = item
+// }
+
+// $scope.deleteCart = function(id, i) {
+//   var removeItem = $scope.data.splice(i, 1)
+//   mainService.deleteCart(id).then(function(){
+//
+//   }, function(err) {
+//     $scope.data.splice(i, 0, removedItem[0]);
+//   });
+// }
 'use strict';
 
 angular.module('myApp').service('mainService', function ($http, $stateParams) {
@@ -136,7 +127,6 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
   };
 
   this.getOptions = function (data) {
-    console.log(data);
     return $http({
       method: "POST",
       url: '/getOptions/',
@@ -171,12 +161,11 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
       url: '/getCars/' + $stateParams.vehicle
     });
   };
-
-  this.carOptions = function (access) {
-    console.log(access);
+  this.carOptions = function (options) {
     return $http({
-      method: "GET",
-      url: "/getOptions/" + $stateParams.id
+      method: "POST",
+      url: "/getOptions/",
+      data: options
     });
   };
   // this.deleteCart = function(id) {

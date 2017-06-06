@@ -1,4 +1,5 @@
 var option = require('./optionsschema.js');
+var ObjectId = require('mongoose').Types.ObjectId;
 
 module.exports = {
 
@@ -14,14 +15,21 @@ read: function(req, res, next) {
 },
 
 show: function(req, res, next) {
-  var id = "5928a3b3734d1d687a57c228";
-  console.log("show", req.params)
-    option.findById(req.params.id, function(err, response){
-      console.log(req.params)
+  const optionIds = []
+  for (let key in req.body) {
+    optionIds.push(ObjectId(req.body[key]))
+  }
+    option.find({_id: {$in: optionIds}} , function(err, response){
+      // console.log("findById", response)
       if(err) {
-        res.status(500).json(err)
+        throw err
+        return res.status(500).json(err)
+      }
+      if (response){
+        // console.log("found", response)
+        return res.send(response)
       }else{
-        res.json(response)
+        return res.send("No option found with that ID")
       }
     });
 },
@@ -48,9 +56,9 @@ update: function(req, res, next) {
 },
 
 destroy: function(req, res, next) {
-  console.log(req.params.body);
+  // console.log(req.params.body);
   option.findByIdAndRemove(req.params.id, function(error, response){
-    console.log(response);
+    // console.log(response);
     if(error) {
       return res.status(500).json(error)
     }else {
