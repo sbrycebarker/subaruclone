@@ -4,4 +4,4 @@ angular.module('myApp').directive('tasks', function() {
       templateUrl: "./views/cardropdown.html"
    }
 
-  })
+ })

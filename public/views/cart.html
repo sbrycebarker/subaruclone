@@ -41,7 +41,9 @@
 
     <div class="accessories">
       <div class="accessory" ng-repeat="accessory in accessories">
+        <img class="accimg" src="{{accessory.img}}">
         <h4>{{accessory.accessory}}</h4>
+        <h4>${{accessory.price}}</h4>
       </div>
     </div>
 

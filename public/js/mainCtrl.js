@@ -35,7 +35,7 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
 
     $scope.carOptions = function (options) {
       mainService.carOptions(options).then(function(results) {
-      console.log("ops", results.data)
+      // console.log("ops", results.data)
       $scope.options = results.data
       })
     }

@@ -687,6 +687,11 @@ p {
   color: black;
   z-index: 0; }
 
+.accimg {
+  height: 177px;
+  width: 100%;
+  position: relative; }
+
 .accessory h4 {
   position: relative; }
 
@@ -798,7 +803,7 @@ p {
 
 .front {
   height: 855px;
-  width: 100%;
+  width: 100vw;
   position: relative;
   background: url("../assets/imgs/outback.JPG") no-repeat center center;
   -webkit-background-size: cover;
@@ -810,6 +815,11 @@ p {
   flex-wrap: wrap;
   align-content: center; }
 
+.owl-carousel {
+  height: 855px;
+  width: 100%;
+  background-color: blue; }
+
 .special {
   height: 60px;
   width: 240px;
@@ -818,8 +828,8 @@ p {
   color: white;
   font-weight: bold;
   position: relative;
-  margin: 0 auto;
-  top: 200px;
+  display: flex;
+  margin: auto;
   text-align: center; }
 
 .frontlinks {
