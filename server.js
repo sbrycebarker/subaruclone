@@ -27,11 +27,10 @@ const express = require('express'),
       app.get('/getOptions/:id', options.show);
 
       app.get('/getCart', cart.read);
-      app.get('/getCart/:id', cart.show);
-
-      // app.post('/postCart', cart.create);
-      // app.put('/postcart/:id', cart.update);
-      // app.delete('/deletecart/:id', cart.destroy);
+      // app.get('/getCart/:id', cart.show);
+      app.post('/postCart', cart.create);
+      app.put('/postcart/:id', cart.update);
+      app.delete('/deletecart/:id', cart.destroy);
 
 
 

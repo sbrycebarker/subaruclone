@@ -15,21 +15,6 @@ angular.module('myApp').service('mainService', function($http, $stateParams) {
       data: data
     })
   }
-  //
-  // this.getCart = function(cars) {
-  //   return $http({
-  //     method: 'GET',
-  //     url: '/getCart'
-  //   })
-  // }
-  // this.postCart = function(data) {
-  //   return $http({
-  //     method: 'POST',
-  //     url: '/postCart',
-  //     data: data
-  //   })
-  // }
-
   this.vehicleData = function (data) {
     return  $http({
     method: "GET",
@@ -51,12 +36,26 @@ this.carOptions = function (options) {
     data: options
   })
 }
-  // this.deleteCart = function(id) {
-  //   return $http({
-  //     method: 'DELETE',
-  //     url:'/delete' + id
-  //   })
-  // }
+this.getCart = function(cars) {
+  return $http({
+    method: 'GET',
+    url: '/getCart'
+  })
+}
+this.postCart = function(data) {
+  console.log("post", data)
+  return $http({
+    method: 'POST',
+    url: '/postCart',
+    data: data
+  })
+}
+  this.deleteCart = function(id) {
+    return $http({
+      method: 'DELETE',
+      url:'/delete' + id
+    })
+  }
 
 
 })

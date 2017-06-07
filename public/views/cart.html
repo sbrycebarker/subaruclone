@@ -14,14 +14,13 @@
         <div id="testd" class="builddets">SCHEDULE</div>
         <div id="checkout" class="builddets">CHECKOUT</div>
       </div>
-      <h1>Transmission</h1>
-    <div class="transmition">
+    <!-- <div class="transcont"> -->
+      <h1 class="t">Transmission</h1>
+    <div class="transmission">
+      <img class="transimg" src="{{vehicle.tranimg}}">
         {{vehicle.transmission}}
-        {{vehicle.tranimg}}
-        <!-- {{vehicle.transdesc}} -->
-
     </div>
-
+    <!-- </div> -->
     <h3>EXTERIOR</h3>
     <div class="color" ng-repeat="color in colors" style="background-color: {{color}}"></div>
     {{color}}
@@ -44,6 +43,7 @@
         <img class="accimg" src="{{accessory.img}}">
         <h4>{{accessory.accessory}}</h4>
         <h4>${{accessory.price}}</h4>
+        <button class="add" ng-click="postCart( { data: accessory } )"></button>
       </div>
     </div>
 

@@ -16,7 +16,8 @@ create: function(req, res, next) {
   var cart = new Cart(req.body);
     cart.save(function(err, response) {
       if (err) {
-        res.status(500).json(err);
+        console.log("already added")
+        // res.status(500).json(err);
       } else {
         res.status(200).json(response);
       }
