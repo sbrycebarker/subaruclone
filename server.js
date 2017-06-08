@@ -6,6 +6,7 @@ const express = require('express'),
       moment = require('moment'),
       foundation = require('foundation-cli'),
       mongoose =require('mongoose'),
+      MongoStore = require('connect-mongo')(session),
       request = require('request');
 
       var app = express();
@@ -32,16 +33,19 @@ const express = require('express'),
       app.put('/postcart/:id', cart.update);
       app.delete('/deletecart/:id', cart.destroy);
 
-
-
-
-
-
+      app.use(express.session({
+        secret: 'foo',
+        store: new MongoStore(options)
+      }));
 
 
       mongoose.connect('mongodb://sbrycebarker:serg1234@ds129030.mlab.com:29030/subaru', function(err) {
           if (err) throw err;
       });
+
+      app.use(session({
+        store: new MongoStore({ mongooseConnection: mongoose.connection })
+      }))
 
 
 

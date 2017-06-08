@@ -56,6 +56,12 @@
     <h1>Summary</h1>
     <div class="summary">
       <h5>{{vehicle.model}}</h5>
+      <div class="addlist">
+        <h2>ACCESSORIES</h2>
+          <div class="add" ng-repeat="item in cart" | orderBy: 'text_id'>
+            <h4>{{item.accessory}}</h4>
+          </div>
+      </div>
     </div>
 
     <h1>Shop {{vehicle.model}}</h1>

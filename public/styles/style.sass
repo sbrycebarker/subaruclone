@@ -875,9 +875,6 @@ p
   background-size: cover
   z-index: 0
   margin-top: 96px
-  display: flex
-  flex-wrap: wrap
-  align-content: center
 
 // .background2
 //   height: 855px
@@ -893,25 +890,41 @@ p
 //   height: 855px
 //   width: 100%
 //   background-color: blue
+.fronttext
+  height: 100px
+  width: 700px
+  top: 50px
+  position: relative
+  color: white
+  font-size: 16px
+  font-family: sans-serif
+  // border: solid 1px black
+  display: flex
+  flex-wrap:
 
 .special
   height: 60px
   width: 240px
+  top: 100px
   background-color: rgba(255,255,255,0.25)
   opacity: .8
   color: white
   font-weight: bold
   position: relative
-  display: flex
-  margin: auto
   text-align: center
+  vertical-align: middle
+  margin: 0 auto
+
+.special h4
+  position: relative
+  margin: auto
+  top: 22px
 
 .frontlinks
   height: 30px
   width: 920px
-  top: 600px
+  top: 500px
   position: relative
-  display: inline-block
   font-weight: bold
   font-family: sans-serif
   text-align: center
@@ -920,10 +933,9 @@ p
 
 .frontlinks h1
   width: 200px
-  margin: 0
-  position: relative
   display: inline-block
   text-align: center
+  vertical-align: middle
   font-size: 16px
   opacity: .8
   //-o-background-size: cover

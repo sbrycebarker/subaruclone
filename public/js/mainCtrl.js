@@ -57,8 +57,10 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
   $scope.showmenu = false;
 
   $scope.postCart = function( data ) {
-    console.log("mainpost", data)
-    mainService.postCart( data.data )
+    console.log("scope", data)
+    mainService.postCart(data.data)
+    $scope.cart.push(data.data)
+
   }
 
   $scope.deleteCart = function(id, i) {

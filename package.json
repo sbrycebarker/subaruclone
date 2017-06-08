@@ -23,7 +23,7 @@
     "cors": "^2.8.3",
     "del": "^2.2.2",
     "express": "^4.15.2",
-    "express-session": "^1.15.2",
+    "express-session": "^1.15.3",
     "foundation-cli": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
@@ -38,6 +38,7 @@
     "moment": "^2.18.1",
     "mongodb": "^2.2.26",
     "mongoose": "^4.9.8",
+    "mongoose-session": "0.0.4",
     "owl.carousel": "^2.2.0",
     "request": "^2.81.0"
   },

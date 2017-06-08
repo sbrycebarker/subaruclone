@@ -24,5 +24,9 @@ angular.module('myApp', ['ui.router'])
             controller: 'mainCtrl'
           })
 
-
 })
+// .filter('startFrom', function() {
+//             return function(data, start) {
+//               return data.slice(start);
+//             }
+//           })
