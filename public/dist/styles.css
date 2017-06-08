@@ -829,11 +829,6 @@ p {
   flex-wrap: wrap;
   align-content: center; }
 
-.owl-carousel {
-  height: 855px;
-  width: 100%;
-  background-color: blue; }
-
 .special {
   height: 60px;
   width: 240px;
