@@ -715,7 +715,8 @@ p {
   background-color: black;
   color: white;
   margin: auto;
-  opacity: .8; }
+  opacity: .8;
+  font-family: sans-serif; }
 
 .shopcon {
   height: auto;

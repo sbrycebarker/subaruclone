@@ -9,7 +9,8 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
 
   $scope.colors = function(results) {
     mainService.colors().then(function(results) {
-      $scope.colors = results.data.color
+      console.log("colorslist", results.data.colors)
+      $scope.colors = results.data.colors
       $scope.ints = results.data.interior
     })
   }
@@ -58,10 +59,16 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
 
   $scope.postCart = function( data ) {
     console.log("scope", data)
-    mainService.postCart(data.data)
+    mainService.postCart(data)
     $scope.cart.push(data.data)
 
   }
+
+  $scope.addOption = function(option){
+    $scope.cart.push({accessory:option});
+  }
+
+
 
   $scope.deleteCart = function(id, i) {
     var removeItem = $scope.data.splice(i, 1)
@@ -73,10 +80,11 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
   }
 
   $scope.getCart = function(results) {
-    mainService.getCart().then(function(results) {
-      console.log("cart", results.data)
-      $scope.cart = results.data
-    })
+    $scope.cart = [];
+    // mainService.getCart().then(function(results) {
+    //   console.log("postcart", results.data)
+    //   $scope.cart = results.data
+    // })
   }
   $scope.getCart();
 

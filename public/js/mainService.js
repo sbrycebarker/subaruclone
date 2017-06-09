@@ -42,7 +42,13 @@ this.getCart = function(cars) {
     url: '/getCart'
   })
 }
+// "_id": {
+//     "$oid": "5928a3b3734d1d687a57c228"
+// }
+
 this.postCart = function(data) {
+  let num = Math.floor(Math.random() * 100 + 15)
+  data._id = num
   console.log("post", data)
   return $http({
     method: 'POST',

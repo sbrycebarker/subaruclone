@@ -14,11 +14,13 @@ read: function(req, res, next) {
 
 create: function(req, res, next) {
   var cart = new Cart(req.body);
+  console.log("save", req.body);
     cart.save(function(err, response) {
       if (err) {
-        console.log("already added")
+        console.log(err)
         // res.status(500).json(err);
       } else {
+        console.log("cart in server", cart)
         res.status(200).json(response);
       }
     })

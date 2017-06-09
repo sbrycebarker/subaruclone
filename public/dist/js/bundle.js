@@ -53,7 +53,8 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
 
   $scope.colors = function (results) {
     mainService.colors().then(function (results) {
-      $scope.colors = results.data.color;
+      console.log("colorslist", results.data.colors);
+      $scope.colors = results.data.colors;
       $scope.ints = results.data.interior;
     });
   };
@@ -99,8 +100,12 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
 
   $scope.postCart = function (data) {
     console.log("scope", data);
-    mainService.postCart(data.data);
+    mainService.postCart(data);
     $scope.cart.push(data.data);
+  };
+
+  $scope.addOption = function (option) {
+    $scope.cart.push({ accessory: option });
   };
 
   $scope.deleteCart = function (id, i) {
@@ -111,10 +116,11 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
   };
 
   $scope.getCart = function (results) {
-    mainService.getCart().then(function (results) {
-      console.log("cart", results.data);
-      $scope.cart = results.data;
-    });
+    $scope.cart = [];
+    // mainService.getCart().then(function(results) {
+    //   console.log("postcart", results.data)
+    //   $scope.cart = results.data
+    // })
   };
   $scope.getCart();
 });
@@ -172,7 +178,13 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
       url: '/getCart'
     });
   };
+  // "_id": {
+  //     "$oid": "5928a3b3734d1d687a57c228"
+  // }
+
   this.postCart = function (data) {
+    var num = Math.floor(Math.random() * 100 + 15);
+    data._id = num;
     console.log("post", data);
     return $http({
       method: 'POST',
