@@ -4,7 +4,7 @@
   <div><h1>Build & Price {{vehicle.model}}</h1></div>
   <div class="change"><h3>CHANGE VEHICLE</h3></div>
 </div>
-<body>
+<body onload="myFunction()">
   <div class="cartmain" >
     <div class="update" type="text" name="update" ng-model="item">
       <div class="carviewcon">
@@ -16,7 +16,7 @@
     <div class="transmission">
       <img class="transimg" src="{{vehicle.tranimg}}">
         {{vehicle.transmission}}
-        <button class="addtran" ng-click="postCart( { data: vehicle.transmission } )"></button>
+        <button class="addtran"></button>
     </div>
     <!-- </div> -->
     <h3>EXTERIOR</h3>
@@ -24,7 +24,9 @@
     {{color}}
 
     <h3>INTERIOR</h3>
-    <div class="leather" ng-repeat="int in ints" style="background: url('{{int}}');">
+
+    <div class="leather" ng-repeat="int in ints" style="background: url('{{int.intimg}}'); color: white">
+      {{int.name}}
     </div>
 
 
@@ -53,37 +55,50 @@
 
     <h1>Summary</h1>
     <div class="summary">
-      <div class="car">
-      <h5>{{vehicle.model}}</h5>
-      <h5>Base MSRP*</h5><h5>{{vehicle.price}}</h5>
-      <h5>820</h5>
+      <div id="leftsum" class="sumlist">
+        <div class="carsum">
+          <h4>{{vehicle.model}}</4>
+          <hr style="color: white">
+          <div class="msrp">
+            <h5>Base MSRP*</h5><h5>{{vehicle.price}}</h5>
+            </div>
+            <h5>820</h5>
+          </div>
+        <div class="cartran">
+            <h4>Transmission</h4>
+            <hr style="color: white">
+            <h4>{{vehicle.transmission}}</h4>
+        </div>
+        <div class="cartcolor">
+          <h4>COLOR CHANGE</h4>
+          <hr style="color: white">
+            <h4>Exteior</h4>
+            {{vehicle.color}}
+            <h4>Interior</h4>
+            {{vehicle.interior}}
+        </div>
+        <div class="contpackages">
+          <h4>Packages</h4>
+          <hr style="color: white">
+          <!-- {{vehicle.model}} -->
+        </div>
       </div>
-      <div class="cartran">
-        <h2>Transmission</h2>
-        <h6>{{vehicle.transmission}}</h6>
-      </div>
-      <div class="cartcolor">
-        <h2>Exteior</h2>
-        {{vehicle.color}}
-        <h2>Interior</h2>
-        {{vehicle.interior}}
-      </div>
-      <div class="contpackages">
-        <h1>Packages</h1>
-        {{vehicle.model}}
-      </div>
-      <div class="addlist">
-        <h2>ACCESSORIES</h2>
-          <div class="add" ng-repeat="item in cart" | orderBy: 'text_id'>
+
+      <div id="addlist" class="sumlist">
+        <h4>ACCESSORIES CHANGE</h4>
+        <hr style="color: white">
+        <h4></h4>STANDARD
+        <hr style="color: white">
+          <div class="added" ng-repeat="item in cart" | orderBy: 'text_id'>
             <h4>{{item.accessory.accessory}}</h4>
           </div>
       </div>
       <div class="yourtot">
-        {{vehicle.price}}
+        YOUR TOTAL {{vehicle.price}}
       </div>
     </div>
 
-    <h1>Shop {{vehicle.model}}</h1>
+
 <div class="shopcon">
     <div class="shop">
       <h5>LOCAL INVENTORY</h5>
@@ -98,8 +113,8 @@
     <h5>Legal Disclaimers</h5>
 
     <div class="finalbuild">
-      <div id="price" class="builddets"><h1>${{vehicle.cost}}</h1></div>
-      <div id="checkout" class="builddets"><h3>CHECKOUT</h3></div>
+      <div id="price" class="builddets"><h1>${{vehicle.cost}}</h1>TOTAL</div>
+      <div id="checkout" class="builddets" ng-click="postCart( { accessory: vehicle.transmission } )"><h3>CHECKOUT</h3></div>
       <div id="testd" class="builddets"><h3>SCHEDULE A TEST DRIVE</h3></div>
     </div>
 
@@ -119,4 +134,17 @@
       </div>
     </div>
 
-</body>
+    <script>
+    var myVar;
+
+    function myFunction() {
+        myVar = setTimeout(showPage, 3000);
+    }
+
+    function showPage() {
+      document.getElementById("body").style.display = "none";
+      document.getElementById("body").style.display = "block";
+    }
+    </script>
+
+</body id="body">

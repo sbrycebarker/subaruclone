@@ -19,7 +19,7 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
 
     $scope.vehicleData = function(response) {
       mainService.vehicleData().then(function(results){
-
+        console.log("car", results.data)
       $scope.vehicle = results.data
       $scope.getOptions($scope.vehicle.options)
       })
@@ -60,7 +60,7 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
   $scope.postCart = function( data ) {
     console.log("scope", data)
     mainService.postCart(data)
-    $scope.cart.push(data.data)
+    $scope.cart.push(data)
 
   }
 

@@ -1,5 +1,5 @@
 <!Doctype html>
-<html ng-app="myApp">
+<html ng-app="myApp" onload="myFunction()">
 <head>
 <!-- <title>Subaru Cars, Sedans, SUVs, Crossovers, Wagons | Subaru of America</title> -->
 <link rel="stylesheet" href="./dist/styles.css" media="screen" title="no title" charset="utf-8">
@@ -71,7 +71,21 @@ $( window ).on( "load", function() {
   <main>
 
       <ui-view></ui-view>
+      <script>
+      var myVar;
 
+
+      function myFunction() {
+          document.getElementById("html").style.display = "none";
+          myVar = setTimeout(showPage, 3000);
+          myVar();
+      }
+
+      function showPage() {
+        document.getElementById("html").style.display = "block";
+      }
+
+      </script>
 
 
       <script>
@@ -87,8 +101,8 @@ $( window ).on( "load", function() {
       //     }
       // }
       function topFunction() {
-          document.body.scrollTop = 0; // For Chrome, Safari and Opera
-          document.documentElement.scrollTop = 0;
+          setTimeout(function(){document.body.scrollTop = 0}, 2000); // For Chrome, Safari and Opera
+
 
       }
       </script>
@@ -98,4 +112,4 @@ $( window ).on( "load", function() {
 <script src="/node_modules/jquery/dist/jquery.js"></script>
 <script src="./dist/js/bundle.js"></script>
 </body>
-</html>
+</html id="html">

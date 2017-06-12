@@ -3,7 +3,7 @@
 <h1>Build & Price</h1>
 <h2>YOUR SAVED SUBARU</h2>
 </div>
-<div class="buildbody">
+<div class="buildbody" onload="myFunction()" >
 <div class="choose">
   <h3>Choose a Subaru to Build</h3>
   <div class="yearselector">
@@ -59,4 +59,17 @@
 <div class="WRX"></div>
 
 <div class="BRZ"></div>
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
 </div>
