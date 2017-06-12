@@ -333,7 +333,7 @@ p {
   display: flex;
   margin: auto;
   top: -85px;
-  z-index: 0;
+  z-index: 1;
   flex-direction: row;
   box-shadow: 0 18px 25px 0 rgba(0, 0, 0, 0.1); }
 
@@ -344,7 +344,8 @@ p {
   font-family: sans-serif;
   font-weight: bold;
   color: #20609F;
-  text-decoration: none; }
+  text-decoration: none;
+  z-index: 1; }
 
 .car h2 {
   font-size: 14px;
@@ -886,7 +887,7 @@ p {
   padding-top: 116px;
   border: 1px black solid;
   top: -170px;
-  z-index: -1; }
+  z-index: 0; }
 
 .tools h1 {
   height: 42px;
@@ -907,6 +908,10 @@ p {
   font-family: sans-serif;
   cursor: pointer;
   padding-top: 40px; }
+
+.tool a {
+  text-decoration: none;
+  color: inherit; }
 
 .tool b {
   margin: 18px; }
@@ -976,19 +981,19 @@ p {
   margin-top: -2px; }
 
 #left {
-  background: url("../assets/imgs/MY18_OBK_HP_FMA.jpg") no-repeat center center;
+  background: url("../assets/imgs/ALG.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover; }
 
 #mid {
-  background: url("../assets/imgs/MY18_WRX_HP_FMA.jpg") no-repeat center center;
+  background: url("../assets/imgs/MY18_OBK_HP_FMA.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover; }
 
 #right {
-  background: url("../assets/imgs/Homepage_FMA_Spring_Service.jpg") no-repeat center center;
+  background: url("../assets/imgs/MY18_WRX_HP_FMA.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover; }
