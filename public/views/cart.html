@@ -7,13 +7,10 @@
 <body>
   <div class="cartmain" >
     <div class="update" type="text" name="update" ng-model="item">
-
-    <div class="options">
-      <div class="finalbuild">
-        <div id="price" class="builddets"><h1>${{vehicle.cost}}</h1></div>
-        <div id="testd" class="builddets">SCHEDULE</div>
-        <div id="checkout" class="builddets">CHECKOUT</div>
+      <div class="carviewcon">
+        <img class="carview" src="{{vehicle.carback}}">
       </div>
+    <div class="options">
     <!-- <div class="transcont"> -->
       <h1 class="t">Transmission</h1>
     <div class="transmission">
@@ -63,7 +60,7 @@
       </div>
       <div class="cartran">
         <h2>Transmission</h2>
-        <h6>{{vehicle.transmission}}</6>
+        <h6>{{vehicle.transmission}}</h6>
       </div>
       <div class="cartcolor">
         <h2>Exteior</h2>
@@ -78,11 +75,11 @@
       <div class="addlist">
         <h2>ACCESSORIES</h2>
           <div class="add" ng-repeat="item in cart" | orderBy: 'text_id'>
-            <h4>{{item.accessory}}</h4>
+            <h4>{{item.accessory.accessory}}</h4>
           </div>
       </div>
       <div class="yourtot">
-        {{vehicle.price}} {{cart}}
+        {{vehicle.price}}
       </div>
     </div>
 
@@ -99,6 +96,12 @@
     </div>
 </div>
     <h5>Legal Disclaimers</h5>
+
+    <div class="finalbuild">
+      <div id="price" class="builddets"><h1>${{vehicle.cost}}</h1></div>
+      <div id="checkout" class="builddets"><h3>CHECKOUT</h3></div>
+      <div id="testd" class="builddets"><h3>SCHEDULE A TEST DRIVE</h3></div>
+    </div>
 
     </div>
 
