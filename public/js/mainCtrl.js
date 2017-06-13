@@ -31,6 +31,7 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
       mainService.getOptions(options).then(function(results){
         console.log("access", results.data)
         $scope.accessories = results.data
+
       })
     }
 
@@ -63,9 +64,25 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
     $scope.cart.push(data)
 
   }
+$scope.chooseColor = function(color) {
+  console.log("chosencolor", color)
+$scope.color = color
+}
+$scope.chooseColor()
 
   $scope.addOption = function(option){
+    console.log("adding", option)
+    let flag = true
+    for (var i = 0; i < $scope.cart.length; i++) {
+      if (option._id[0] === $scope.cart[i].accessory._id[0]){
+        console.log("matchfound")
+        $scope.cart.splice(i, 1);
+        flag = false
+      }
+    }
+    if (flag) {
     $scope.cart.push({accessory:option});
+}
   }
 
 
@@ -88,6 +105,15 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
   }
   $scope.getCart();
 
+  $scope.getTotal = function(obj) {
+    $scope.cart.filter(function(obj) {
+      $scope.total = obj.accessory.price
+      console.log(obj)
+    })
+
+
+  }
+$scope.getTotal()
 
 })
 

@@ -19,7 +19,8 @@ body
   display: flex
   justify-content: center
   background-color: #FAFAFA
-  z-index: 1
+  z-index: 2
+
   // -webkit-transition: top 300ms ease-out
   // -moz-transition: top 300ms ease-out
   // transition: top 300ms ease-out
@@ -89,6 +90,7 @@ body
   position: relative
   display: flex
   flex-direction: row
+  justify-content: center
   height: 100%
   width: 500px
   margin: 0 auto
@@ -120,10 +122,17 @@ body
 .sideitems
   height: 30px
   width: 320px
+  right: 50px
   position: relative
   display: flex
   justify-content: flex-end
+  // border: 1px solid black
+  top: 10px
 
+.sideitems a
+ text-decoration: none
+ color: inherit
+ cursor: grab
 
 .side
   height: 30px
@@ -143,24 +152,37 @@ body
   background: url("../assets/imgs/byo.gif")
   height: 30px
   width: 30px
+  position: relative
+  top: 5px
+  text-decoration: none
 
 
 .byo:hover
   background: url("../assets/imgs/byo.gif") -30px
   height: 30px
   width: 30px
+  position: relative
+  top: 5px
+  text-decoration: none
+
 
 
 .fad
   background: url("../assets/imgs/fad.gif")
   height: 30px
   width: 30px
+  position: relative
+  top: 5px
+  text-decoration: none
 
 
 .fad:hover
   background: url("../assets/imgs/fad.gif") -30px
   height: 30px
   width: 30px
+  position: relative
+  top: 5px
+  text-decoration: none
 
 
 .footersociallinks
@@ -230,7 +252,7 @@ p
   justify-content: flex-end
   flex-direction: row
   color: white
-  z-index: 1
+  z-index: 2
 
 
 .links
@@ -647,7 +669,7 @@ p
 
 .carview
   position: fixed
-  width: 1000px
+  width: 50vw
   top: 210px
   left: -25px
 
@@ -731,11 +753,24 @@ p
   height: 50px
   width: 50px
   margin: 0 5px
-  background-color: green
+  // background-color: green
   position: relative
   display: inline-block
   border-radius: 50%
   border: 2px white solid
+
+.color:hover
+  height: 50px
+  width: 50px
+  margin: 0 5px
+  // background-color: green
+  position: relative
+  display: inline-block
+  border-radius: 50%
+  border: 2px white solid
+  background: url("../assets/imgs/checkmark.png") center
+
+
 
 .leather
   height: 50px
@@ -839,7 +874,11 @@ p
   display: inline-flex
   margin: auto
   text-align: center
-  border-top: 1px solid white
+
+.shopcon h1
+  height: auto
+  position: absolute
+  width: 100%
 
 .shop
   height: 130px
@@ -852,6 +891,13 @@ p
   display: inline-block
   color: white
   border-radius: 15px
+  vertical-align: middle
+
+.shop
+
+.img
+  position: relative
+  top: 25px
 
 .shop:hover
   opacity: 1
@@ -861,7 +907,8 @@ p
   width: auto
   margin: 0 auto
   position: relative
-  bottom: 0
+  top: 25px
+
 
 .foot
   height: 70px
@@ -974,7 +1021,11 @@ p
   z-index: 0
   margin-top: 96px
   display: inline-block
+  text-align: center
 
+.fronttext
+  position: relative
+  margin: 0 auto
 // .background2
 //   height: 855px
 //   width: 100vw

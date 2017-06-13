@@ -19,6 +19,7 @@ var CarsSchema = new Schema({
   description: { type: String },
   price: { type: String },
   cost: { type: Number },
+  colors: {type: Array },
   interior: { type: Object },
   hmpg: { type: Number },
   cmpg: { type: Number },

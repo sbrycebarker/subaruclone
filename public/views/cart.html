@@ -15,18 +15,17 @@
       <h1 class="t">Transmission</h1>
     <div class="transmission">
       <img class="transimg" src="{{vehicle.tranimg}}">
-        {{vehicle.transmission}}
+        <yh4>{{vehicle.transmission}}</h4>
+        <h4>${{vehicle.transmissionprice}}</h4>
         <button class="addtran"></button>
     </div>
     <!-- </div> -->
     <h3>EXTERIOR</h3>
-    <div class="color" ng-repeat="color in colors" ng-click="postCart( color )" style="background-color: {{color.colorid}}"></div>
-    {{color}}
+    <div class="color" ng-repeat="color in colors" ng-click="chooseColor( color )" style="background-color: {{color.colorid}}"></div>
 
     <h3>INTERIOR</h3>
 
     <div class="leather" ng-repeat="int in ints" style="background: url('{{int.intimg}}'); color: white">
-      {{int.name}}
     </div>
 
 
@@ -60,22 +59,22 @@
           <h4>{{vehicle.model}}</4>
           <hr style="color: white">
           <div class="msrp">
-            <h5>Base MSRP*</h5><h5>{{vehicle.price}}</h5>
+            <h5>Base MSRP*</h5><h5>${{vehicle.price}}</h5>
             </div>
-            <h5>820</h5>
+            <h5>Destination & Delivery</h5><h5>$820</h5>
           </div>
         <div class="cartran">
             <h4>Transmission</h4>
             <hr style="color: white">
             <h4>{{vehicle.transmission}}</h4>
         </div>
-        <div class="cartcolor">
-          <h4>COLOR CHANGE</h4>
+        <div class="cartcolor" style="color: white">
+          <h4>COLOR <span style="color: #0FA4DC ">CHANGE</span></h4>
           <hr style="color: white">
             <h4>Exteior</h4>
-            {{vehicle.color.name}}
+            {{color.name}}
             <h4>Interior</h4>
-            {{vehicle.interior.name}}
+            <!-- {{vehicle.interior.name}} -->
         </div>
         <div class="contpackages">
           <h4>Packages</h4>
@@ -85,32 +84,40 @@
       </div>
 
       <div id="addlist" class="sumlist">
-        <h4>ACCESSORIES CHANGE</h4>
+        <h4>ACCESSORIES <span style="color: #0FA4DC "> CHANGE</span></h4>
         <hr style="color: white">
         <h4></h4>STANDARD
         <hr style="color: white">
-          <div class="added" ng-repeat="item in cart" | orderBy: 'text_id'>
-            <h4>{{item.accessory.accessory}}</h4>
+        <h4 style="font-style: italic">Selected</h4>
+          <div class="added" ng-repeat="item in cart" orderBy: 'text_id'>
+
+            <h4>
+              {{item.accessory.accessory}}
+
+            </h4>
+
           </div>
       </div>
-      <div class="yourtot">
+      <div class="yourtot" ng-click="getTotal()">
         YOUR TOTAL {{vehicle.price}}
+
+        {{total}}
+
       </div>
     </div>
 
-  <h1>Shop {{vehicle.model}}</h1>
+  <h1 style="border-top: 1px solid">Shop {{vehicle.model}}</h1>
 <div class="shopcon">
-  <h1>Shop {{vehicle.model}}</h1>
     <div class="shop">
-      <img src="../assets/imgs/caricon.png">
+      <img class="img" src="../assets/imgs/caricon.png">
       <h5>LOCAL INVENTORY</h5>
     </div>
     <div class="shop">
-      <img src="../assets/imgs/special-offers.png">
+      <img class="img" src="../assets/imgs/special-offers.png">
       <h5>SPECIAL OFFERS</h5>
     </div>
     <div class="shop">
-      <img src="../assets/imgs/request-quote.png">
+      <img class="img" src="../assets/imgs/request-quote.png">
       <h5>APPLY FOR FINANCING</h5>
     </div>
 </div>

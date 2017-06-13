@@ -64,46 +64,25 @@
         </a>
       </div>
 
-
     </div>
   </div>
   </header>
   <main>
-
       <ui-view></ui-view>
       <script>
       var myVar;
-
-
       function myFunction() {
           document.getElementById("html").style.display = "none";
           myVar = setTimeout(showPage, 3000);
           myVar();
       }
-
       function showPage() {
         document.getElementById("html").style.display = "block";
       }
-
       </script>
-
-
       <script>
-      // window.onscroll = function() {
-      //   scrollFunction()
-      // };
-      // function scrollFunction() {
-      //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      //         document.getElementById("top").style.height = "0";
-      //     }
-      //     else (document.body.scrollTop < 20 || document.documentElement.scrollTop > 20) {
-      //         document.getElementById("top").style.backgroundcolor = "black";
-      //     }
-      // }
       function topFunction() {
           $("html, body").animate({ scrollTop: "0" }, 1500); // For Chrome, Safari and Opera
-
-
       }
       </script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
