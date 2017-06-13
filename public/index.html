@@ -3,15 +3,15 @@
 <head>
 <!-- <title>Subaru Cars, Sedans, SUVs, Crossovers, Wagons | Subaru of America</title> -->
 <link rel="stylesheet" href="./dist/styles.css" media="screen" title="no title" charset="utf-8">
-<link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+<!-- <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" /> -->
 <script>
-$( document ).load(function() {
-    console.log( "document loaded" );
-});
-
-$( window ).on( "load", function() {
-    console.log( "window loaded" );
-});
+// $( document ).load(function() {
+//     console.log( "document loaded" );
+// });
+//
+// $( window ).on( "load", function() {
+//     console.log( "window loaded" );
+// });
 </script>
 
 
@@ -101,7 +101,7 @@ $( window ).on( "load", function() {
       //     }
       // }
       function topFunction() {
-          setTimeout(function(){document.body.scrollTop = 0}, 2000); // For Chrome, Safari and Opera
+          $("html, body").animate({ scrollTop: "0" }, 1500); // For Chrome, Safari and Opera
 
 
       }
@@ -109,7 +109,7 @@ $( window ).on( "load", function() {
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="crossorigin="anonymous"></script>
-<script src="/node_modules/jquery/dist/jquery.js"></script>
+<!-- <script src="/node_modules/jquery/dist/jquery.js"></script> -->
 <script src="./dist/js/bundle.js"></script>
 </body>
 </html id="html">

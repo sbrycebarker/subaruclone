@@ -73,9 +73,9 @@
           <h4>COLOR CHANGE</h4>
           <hr style="color: white">
             <h4>Exteior</h4>
-            {{vehicle.color}}
+            {{vehicle.color.name}}
             <h4>Interior</h4>
-            {{vehicle.interior}}
+            {{vehicle.interior.name}}
         </div>
         <div class="contpackages">
           <h4>Packages</h4>
@@ -98,15 +98,19 @@
       </div>
     </div>
 
-
+  <h1>Shop {{vehicle.model}}</h1>
 <div class="shopcon">
+  <h1>Shop {{vehicle.model}}</h1>
     <div class="shop">
+      <img src="../assets/imgs/caricon.png">
       <h5>LOCAL INVENTORY</h5>
     </div>
     <div class="shop">
+      <img src="../assets/imgs/special-offers.png">
       <h5>SPECIAL OFFERS</h5>
     </div>
     <div class="shop">
+      <img src="../assets/imgs/request-quote.png">
       <h5>APPLY FOR FINANCING</h5>
     </div>
 </div>
