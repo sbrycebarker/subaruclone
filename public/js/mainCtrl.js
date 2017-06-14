@@ -58,12 +58,13 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
 
   $scope.showmenu = false;
 
-  $scope.postCart = function( data ) {
-    console.log("scope", data)
-    mainService.postCart(data)
-    $scope.cart.push(data)
+  // $scope.postCart = function( data ) {
+  //   console.log("scope", data)
+  //   mainService.postCart(data)
+  //   $scope.cart.push(data)
+  //   $scope.total.push(data)
+  // }
 
-  }
 $scope.chooseColor = function(color) {
   console.log("chosencolor", color)
 $scope.color = color
@@ -97,7 +98,8 @@ $scope.chooseColor()
   }
 
   $scope.getCart = function(results) {
-    $scope.cart = [];
+    $scope.cart = []
+    // $scope.total = []
     // mainService.getCart().then(function(results) {
     //   console.log("postcart", results.data)
     //   $scope.cart = results.data
@@ -105,15 +107,19 @@ $scope.chooseColor()
   }
   $scope.getCart();
 
-  $scope.getTotal = function(obj) {
-    $scope.cart.filter(function(obj) {
-      $scope.total = obj.accessory.price
-      console.log(obj)
-    })
+  $scope.getTotal = function() {
 
+    function total(price) {
+      $scope.total = [];
+      $scope.total.push(price)
+      for (var i = 0; i < $scope.total.length; i++) {
+        console.log("this", [0])
+      }
+    }
+    $scope.cart.filter(total)
 
   }
-$scope.getTotal()
+// $scope.getTotal()
 
 })
 

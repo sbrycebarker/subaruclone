@@ -99,8 +99,7 @@
           </div>
       </div>
       <div class="yourtot" ng-click="getTotal()">
-        YOUR TOTAL {{vehicle.price}}
-
+        YOUR TOTAL <h3 ng-repeat="price in cart">{{price.accessory.price}}</h3>
         {{total}}
 
       </div>
@@ -125,7 +124,7 @@
 
     <div class="finalbuild">
       <div id="price" class="builddets"><h1>${{vehicle.cost}}</h1>TOTAL</div>
-      <div id="checkout" class="builddets" ng-click="postCart( { accessory: vehicle.transmission } )"><h3>CHECKOUT</h3></div>
+      <div id="checkout" class="builddets"><h3>CHECKOUT</h3></div>
       <div id="testd" class="builddets"><h3>SCHEDULE A TEST DRIVE</h3></div>
     </div>
 
