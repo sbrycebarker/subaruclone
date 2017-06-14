@@ -22,6 +22,7 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
         console.log("car", results.data)
       $scope.vehicle = results.data
       $scope.getOptions($scope.vehicle.options)
+      $scope.total = $scope.vehicle.cost += 820;
       })
     }
     $scope.vehicleData();
@@ -58,12 +59,17 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
 
   $scope.showmenu = false;
 
-  // $scope.postCart = function( data ) {
-  //   console.log("scope", data)
-  //   mainService.postCart(data)
-  //   $scope.cart.push(data)
-  //   $scope.total.push(data)
-  // }
+  $scope.postCart = function( data ) {
+      let order = [];
+      let cart = $scope.cart
+      let finalcost = [];
+      let car = $scope.vehicle;
+      finalcost.push($scope.total)
+      order.push(car, cart, finalcost)
+      data = order
+      console.log("car to order", data)
+      mainService.postCart(data)
+  }
 
 $scope.chooseColor = function(color) {
   console.log("chosencolor", color)
@@ -71,18 +77,22 @@ $scope.color = color
 }
 $scope.chooseColor()
 
+
   $scope.addOption = function(option){
     console.log("adding", option)
+
     let flag = true
     for (var i = 0; i < $scope.cart.length; i++) {
       if (option._id[0] === $scope.cart[i].accessory._id[0]){
         console.log("matchfound")
         $scope.cart.splice(i, 1);
+        $scope.total -= option.price
         flag = false
       }
     }
     if (flag) {
     $scope.cart.push({accessory:option});
+    $scope.total += option.price;
 }
   }
 
@@ -106,19 +116,6 @@ $scope.chooseColor()
     // })
   }
   $scope.getCart();
-
-  $scope.getTotal = function() {
-
-    function total(price) {
-      $scope.total = [];
-      $scope.total.push(price)
-      for (var i = 0; i < $scope.total.length; i++) {
-        console.log("this", [0])
-      }
-    }
-    $scope.cart.filter(total)
-
-  }
 // $scope.getTotal()
 
 })

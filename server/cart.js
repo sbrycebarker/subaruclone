@@ -3,13 +3,9 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var cartSchema = new Schema({
-  _id: { type: String},
-  accessory: { type: String },
-  // car:{type:}
-  package: { type: String },
-  price: { type: Number },
-  transmission: { type: String },
-  color: { colorid:'String',name:'String', _id:'String' },
+  car: { type: Array},
+  cart: { type: Array },
+  finalprice: { type: Array },
 });
 
-module.exports = mongoose.model('cart', cartSchema);
+module.exports = mongoose.model('Cart', cartSchema);

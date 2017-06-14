@@ -47,15 +47,14 @@ this.getCart = function(cars) {
 // }
 
 this.postCart = function(data) {
-  let num = Math.floor(Math.random() * 100 + 15)
-  data._id = num
-  console.log("post", data)
+  console.log("postCart service", data)
   return $http({
     method: 'POST',
     url: '/postCart',
     data: data
   })
 }
+
   this.deleteCart = function(id) {
     return $http({
       method: 'DELETE',

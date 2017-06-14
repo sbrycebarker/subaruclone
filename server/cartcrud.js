@@ -13,15 +13,21 @@ read: function(req, res, next) {
 },
 
 create: function(req, res, next) {
-  var cart = new Cart(req.body);
-  console.log("save", req.body);
+  console.log(req.body[1])
+  var car = req.body[0];
+  var finalprice = req.body[2];
+  var cart = req.body[1];
+  // console.log("car data", req.body)
+  var cart = new Cart({car, cart, finalprice})
+  console.log("cart", cart)
     cart.save(function(err, response) {
       if (err) {
-        console.log(err)
-        // res.status(500).json(err);
+        console.log(err, response)
+        res.status(500).json(err);
       } else {
-        console.log("cart in server", cart)
-        res.status(200).json(response);
+        console.log("response", response)
+        // console.log("cart in server", req.body)
+        res.status(200).json(req.body);
       }
     })
 },
