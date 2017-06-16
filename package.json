@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/sbrycebarker/subaruclone#readme",
   "dependencies": {
-    "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.17.1",
     "connect-mongo": "^1.3.2",
@@ -40,6 +39,7 @@
     "mongodb": "^2.2.26",
     "mongoose": "^4.9.8",
     "mongoose-session": "0.0.4",
+    "npm ins": "^6.24.1",
     "owl.carousel": "^2.2.0",
     "request": "^2.81.0",
     "session": "^0.1.0"
