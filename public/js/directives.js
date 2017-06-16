@@ -5,3 +5,10 @@ angular.module('myApp').directive('tasks', function() {
    }
 
  })
+
+ .directive('pop', function(){
+   return {
+     restrict: 'E',
+     templateUrl: "./views/finalorder.html"
+   }
+ })

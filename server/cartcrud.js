@@ -17,8 +17,9 @@ create: function(req, res, next) {
   var car = req.body[0];
   var finalprice = req.body[2];
   var cart = req.body[1];
+  var email = req.body[3]
   // console.log("car data", req.body)
-  var cart = new Cart({car, cart, finalprice})
+  var cart = new Cart({car, cart, finalprice, email})
   console.log("cart", cart)
     cart.save(function(err, response) {
       if (err) {

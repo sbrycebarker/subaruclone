@@ -1,0 +1,44 @@
+<div class="finalorder">
+  <div class="carimg">
+    <img src="../assets/imgs/stiangle.png" style="height: 200px">
+  </div>
+  <div class="orderdetails">
+    <ul>
+      <h2>
+      {{vehicle.year}}
+      {{vehicle.model}}
+      ${{total}}
+      </h2>
+      <h5 class="addedoptions" ng-repeat="item in cart">{{item.accessory.accessory}}</h5>
+      <!-- {{finalorder}} -->
+    </ul>
+</div>
+
+<div class="features">
+  <h2>FEATURES</2>
+    <h4>
+  <ul>{{vehicle.feature1}}</ul>
+  <ul>{{vehicle.feature2}}</ul>
+  <ul>{{vehicle.feature3}}</ul>
+  <ul>{{vehicle.feature3}}</ul>
+    </h4>
+</div>
+<div class="emailform">
+  <h3>Send us your car and a dealer will contact you shortly</h3>
+  <input type="email" class="data" name="email" ng-model="email" placeholder="yourEmail">
+  <button class="submit" ng-click="postCart( { email: email}) ; validate({email: email})">Submit</button>
+
+</div>
+</div>
+<script>
+function validate(email) {
+
+           var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+           var address = document.getElementById[email].value;
+           if (reg.test(email) == false)
+           {
+               alert('Invalid Email Address');
+               return (false);
+           }
+}
+</script>

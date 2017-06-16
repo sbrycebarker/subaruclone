@@ -55,6 +55,14 @@ this.postCart = function(data) {
   })
 }
 
+this.getOrder = function() {
+  console.log()
+  return $http({
+    method: 'GET',
+    url: '/getCart'
+  })
+}
+
   this.deleteCart = function(id) {
     return $http({
       method: 'DELETE',

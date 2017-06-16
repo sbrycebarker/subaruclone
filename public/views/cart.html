@@ -1,7 +1,20 @@
 <title>Build & Price</title>
+<head><script>
+var myEvent = window.attachEvent || window.addEventListener;
+var chkevent = window.attachEvent ? 'onbeforeunload' : 'beforeunload'; /// make IE7, IE8 compatable
+
+myEvent(chkevent, function(e) { // For >=IE7, Chrome, Firefox
+    var confirmationMessage = ' ';  // a space
+    (e || window.event).returnValue = confirmationMessage;
+    return confirmationMessage;
+});
+</script>
+</head>
+
+
 <img class="cartbackground" style="background: url('{{vehicle.cartback}}') no-repeat center center;">
 <div class="title">
-  <div><h1>Build & Price {{vehicle.model}}</h1></div>
+  <div><h1>Build & Price {{vehicle.model}}</h1><pop ng-show="orderpop"></div>
   <div class="change"><h3>CHANGE VEHICLE</h3></div>
 </div>
 <body onload="myFunction()">
@@ -11,6 +24,7 @@
         <img class="carview" src="{{vehicle.carback}}">
       </div>
     <div class="options">
+
     <!-- <div class="transcont"> -->
       <h1 class="t">Transmission</h1>
     <div class="transmission">
@@ -120,9 +134,11 @@
 </div>
     <h5>Legal Disclaimers</h5>
 
+    <div class="order">
     <div class="finalbuild">
+
       <div id="price" class="builddets"><h1>${{total}}</h1>TOTAL</div>
-      <div id="checkout" class="builddets" ng-click="postCart()"><h3>CHECKOUT</h3></div>
+      <div id="checkout" class="builddets" ng-click="orderpop = !orderpop"><h3>CHECKOUT</h3></div>
       <div id="testd" class="builddets"><h3>SCHEDULE A TEST DRIVE</h3></div>
     </div>
 
@@ -153,6 +169,7 @@
       document.getElementById("body").style.display = "none";
       document.getElementById("body").style.display = "block";
     }
+
     </script>
 
 </body id="body">

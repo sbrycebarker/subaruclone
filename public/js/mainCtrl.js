@@ -58,17 +58,27 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
     }
 
   $scope.showmenu = false;
+  $scope.orderpop = false;
 
   $scope.postCart = function( data ) {
+    console.log("pre-data", data)
+      let email = data
       let order = [];
       let cart = $scope.cart
-      let finalcost = [];
+      let finalcost = $scope.total;
       let car = $scope.vehicle;
-      finalcost.push($scope.total)
-      order.push(car, cart, finalcost)
+      order.push(car, cart, finalcost, email)
       data = order
       console.log("car to order", data)
+      // let flag = true
+      // for (var i  = 0; i < $scope.finalorder.length; i++){
+      //   if ($scope.order[0]._id === $scope.finalorder[0]._id){
+      //     console.log("ALREADY THERE")
+      //     flag = false
+      //   }
+      // }
       mainService.postCart(data)
+      $scope.order = order
   }
 
 $scope.chooseColor = function(color) {
@@ -109,23 +119,17 @@ $scope.chooseColor()
 
   $scope.getCart = function(results) {
     $scope.cart = []
-    // $scope.total = []
-    // mainService.getCart().then(function(results) {
-    //   console.log("postcart", results.data)
-    //   $scope.cart = results.data
-    // })
+
   }
   $scope.getCart();
 // $scope.getTotal()
 
+  $scope.getOrder = function(order) {
+    mainService.getOrder().then(function(order){
+      $scope.finalorder = order.data[0]
+    })
+  }
+  $scope.getOrder();
+
+
 })
-
-  //
-  // $scope.getCart()
-
-
-
-  // $scope.changeCart() = function( item, i ) {
-  //   mainService.changeCart( item );
-  //   $scope.data = item
-  // }
