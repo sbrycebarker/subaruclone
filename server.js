@@ -40,9 +40,7 @@ const express = require('express'),
       // }));
 
 
-      mongoose.connect('mongodb://sbrycebarker:serg1234@ds129030.mlab.com:29030/subaru', function(err) {
-          if (err) throw err;
-      });
+      mongoose.connect('mongodb://sbrycebarker:serg1234@ds129030.mlab.com:29030/subaru');
 
       // app.use(session({
       //   store: new MongoStore({ mongooseConnection: mongoose.connection })
