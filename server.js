@@ -11,8 +11,6 @@ const express = require('express'),
 
       var app = express();
 
-
-
       app.use(bodyParser.json())
       app.use(cors());
 
@@ -22,40 +20,18 @@ const express = require('express'),
 
       app.get('/getCars', cars.read);
       app.get('/getCars/:id', cars.show);
-
-      // app.post('/getOptions', options.read);
       app.post('/getOptions', options.show);
       app.get('/getOptions/:id', options.show);
-
       app.get('/getCart', cart.read);
       app.get('/getOrder/', cart.read);
-      // app.get('/getCart/:id', cart.show);
       app.post('/postCart', cart.create);
       app.put('/postcart/:id', cart.update);
       app.delete('/deletecart/:id', cart.destroy);
-
-      // app.use(express.session({
-      //   secret: 'foo',
-      //   store: new MongoStore(options)
-      // }));
-
-
-      mongoose.connect('mongodb://sbrycebarker:serg1234@ds129030.mlab.com:29030/subaru');
-
-      // app.use(session({
-      //   store: new MongoStore({ mongooseConnection: mongoose.connection })
-      // }))
-
-
-
+// sbrycebarker:serg1234@ds129030.mlab.com:29030
+      mongoose.connect('mongodb://sbrycebarker:serg1234@ds129030.mlab.com:29030/subaru/');
 
       app.use(express.static('./public'))
-
             var port = 3030
-
-
         app.listen(port, function() {
-
           console.log("listining on port " + port)
-
         })

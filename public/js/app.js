@@ -10,18 +10,18 @@ angular.module('myApp', ['ui.router'])
           .state('vehicles', {
             url: '/vehicles/:vehicle',
             templateUrl: "../views/vehicles.html",
-            controller: 'mainCtrl',
-            controllerAs: 'mainCtrl'
+            controller: 'buildCtrl',
+            controllerAs: 'buildCtrl'
           })
           .state('build', {
             url: '/build',
             templateUrl: "../views/build-your-own.html",
-            controller: 'mainCtrl'
+            controller: 'buildCtrl'
           })
           .state('cart', {
             url: '/cart/:vehicle',
             templateUrl: "../views/cart.html",
-            controller: 'mainCtrl'
+            controller: 'buildCtrl'
           })
 
 })

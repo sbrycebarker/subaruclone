@@ -1,4 +1,4 @@
-<div class="vehicledropdown">
+<div id="vehicledropdown" class="vehicledropdown">
   <div class="mainpanel">
     <div class="vehicle" ng-mouseover="showhide(car.model)" ng-repeat="car in cars" ui-sref="vehicles({vehicle: car._id})" style="margin-right: 0">
       <div class="vmodel" style="margin-right: 0">{{car.model}}</div>
@@ -204,7 +204,9 @@
 </div>
 
 </div>
+<script>
 
+</script>
 <div class="vehiclelist" ui-sref="all"><h4>All Vehicles</h4></div>
 <div class="vehiclelist" id="certified" ui-sref="all"><h4>Certified Pre-Owned</h4></div>
 <div class="vehiclelist" ui-sref="all"><h4>Future Vehicles and Concepts</h4></div>

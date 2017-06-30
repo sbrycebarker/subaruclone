@@ -66,6 +66,6 @@ destroy: function(req, res, next) {
     }
   })
 }
-
+// Closures, promises, context, apply/call/bind, this, prototypes
 
 }

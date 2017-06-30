@@ -12,8 +12,9 @@
     "express-session": "^1.15.3",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
-    "mongoose-session": "^0.0.4",
+    "mongo-client-connect": "^1.0.6",
     "mongoose": "^4.11.0",
+    "mongoose-session": "^0.0.4",
     "owl.carousel": "^2.2.0",
     "session": "^0.1.0"
   },

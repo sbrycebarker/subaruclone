@@ -3,7 +3,7 @@
 <h1>Build & Price</h1>
 <h2>YOUR SAVED SUBARU</h2>
 </div>
-<div class="buildbody" onload="myFunction()" >
+<div class="buildbody" onload="myFunction()" ng-controller="buildCtrl">
 <div class="choose">
   <h3>Choose a Subaru to Build</h3>
   <div class="yearselector">
@@ -25,7 +25,7 @@
   <div class="modelequip">
       <div class="subinfo">
         <div class="subinfocar">
-          <h3>{{car.year}}{{car.model}}</h3>
+          <h3>{{car.year}} {{car.model}}</h3>
         </div>
         <div class="subinfoprice">
           <h4>Starting at</h4>

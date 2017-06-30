@@ -3,21 +3,19 @@
 var myEvent = window.attachEvent || window.addEventListener;
 var chkevent = window.attachEvent ? 'onbeforeunload' : 'beforeunload'; /// make IE7, IE8 compatable
 
-myEvent(chkevent, function(e) { // For >=IE7, Chrome, Firefox
-    var confirmationMessage = ' ';  // a space
+myEvent(chkevent, function(e) {
+    var confirmationMessage = ' ';
     (e || window.event).returnValue = confirmationMessage;
     return confirmationMessage;
 });
 </script>
 </head>
-
-
-<img class="cartbackground" style="background: url('{{vehicle.cartback}}') no-repeat center center;">
-<div class="title">
-  <div><h1>Build & Price {{vehicle.model}}</h1><pop ng-show="orderpop"></div>
-  <div class="change"><h3>CHANGE VEHICLE</h3></div>
-</div>
-<body onload="myFunction()">
+<body ng-controller="buildCtrl">
+  <img class="cartbackground" style="background: url('{{vehicle.cartback}}') no-repeat center center;">
+  <div class="title">
+    <div><h1>Build & Price {{vehicle.model}}</h1><pop ng-show="orderpop"></div>
+    <div class="change"><h3>CHANGE VEHICLE</h3></div>
+  </div>
   <div class="cartmain" >
     <div class="update" type="text" name="update" ng-model="item">
       <div class="carviewcon">
@@ -70,12 +68,18 @@ myEvent(chkevent, function(e) { // For >=IE7, Chrome, Firefox
     <div class="summary" >
       <div id="leftsum" class="sumlist">
         <div class="carsum">
-          <h4>{{vehicle.model}}</4>
+          <h4>{{vehicle.model}}</h4>
           <hr style="color: white">
           <div class="msrp">
-            <h5>Base MSRP*</h5><h5>${{vehicle.price}}</h5>
+            <h5>Base MSRP*</h5>
+            <h5>${{vehicle.price}}</h5>
             </div>
-            <h5>Destination & Delivery</h5><h5>$820</h5>
+            <hr style="color: white">
+            <div class="dest">
+            <h5>Destination & Delivery</h5>
+            <h5>$820</h5>
+            </div>
+            <hr style="color: white">
           </div>
         <div class="cartran">
             <h4>Transmission</h4>
@@ -90,30 +94,26 @@ myEvent(chkevent, function(e) { // For >=IE7, Chrome, Firefox
         </div>
         <div class="contpackages">
           <h4>Packages</h4>
-          <hr style="color: white">
-          <!-- {{vehicle.model}} -->
         </div>
+        <hr style="color: white">
       </div>
 
       <div id="addlist" class="sumlist">
         <h4>ACCESSORIES <span style="color: #0FA4DC "> CHANGE</span></h4>
         <hr style="color: white">
-        <h4></h4>STANDARD
+        <h4>
+          STANDARD
+        </h4>
         <hr style="color: white">
         <h4 style="font-style: italic">Selected</h4>
           <div class="added" ng-repeat="item in cart" orderBy: 'text_id'>
-
             <h4>
               {{item.accessory.accessory}}
-
             </h4>
-
           </div>
       </div>
       <div class="yourtot">
         YOUR TOTAL <h3>{{total}}</h3>
-
-
       </div>
     </div>
 
@@ -160,16 +160,16 @@ myEvent(chkevent, function(e) { // For >=IE7, Chrome, Firefox
     </div>
 
     <script>
-    var myVar;
-
-    function myFunction() {
-        myVar = setTimeout(showPage, 3000);
-    }
-
-    function showPage() {
-      document.getElementById("body").style.display = "none";
-      document.getElementById("body").style.display = "block";
-    }
+    // var myVar;
+    //
+    // function myFunction() {
+    //     myVar = setTimeout(showPage, 3000);
+    // }
+    //
+    // function showPage() {
+    //   document.getElementById("body").style.display = "none";
+    //   document.getElementById("body").style.display = "block";
+    // }
 
     </script>
 

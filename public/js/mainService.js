@@ -1,7 +1,6 @@
 angular.module('myApp').service('mainService', function($http, $stateParams) {
 
   this.getCars = function(cars) {
-    // console.log(car)
     return $http({
       method: 'GET',
       url: '/getCars'
@@ -12,20 +11,23 @@ angular.module('myApp').service('mainService', function($http, $stateParams) {
     return $http({
       method: "POST",
       url:'/getOptions/',
-      data: data
+      data: data,
+      controller: "buildCtrl"
     })
   }
   this.vehicleData = function (data) {
     return  $http({
     method: "GET",
-    url:'/getCars/' + $stateParams.vehicle
+    url:'/getCars/' + $stateParams.vehicle,
+    controller: "buildCtrl"
   })
 }
 
 this.colors = function(color) {
   return $http({
     method: "GET",
-    url: '/getCars/' + $stateParams.vehicle
+    url: '/getCars/' + $stateParams.vehicle,
+    controller: "buildCtrl"
   })
 }
 ;
@@ -33,13 +35,15 @@ this.carOptions = function (options) {
   return $http({
     method: "POST",
     url: "/getOptions/",
-    data: options
+    data: options,
+    controller: "buildCtrl"
   })
 }
 this.getCart = function(cars) {
   return $http({
     method: 'GET',
-    url: '/getCart'
+    url: '/getCart',
+    controller: "buildCtrl"
   })
 }
 // "_id": {
@@ -51,7 +55,8 @@ this.postCart = function(data) {
   return $http({
     method: 'POST',
     url: '/postCart',
-    data: data
+    data: data,
+    controller: "buildCtrl"
   })
 }
 
@@ -59,14 +64,16 @@ this.getOrder = function() {
   console.log()
   return $http({
     method: 'GET',
-    url: '/getCart'
+    url: '/getCart',
+    controller: "buildCtrl"
   })
 }
 
   this.deleteCart = function(id) {
     return $http({
       method: 'DELETE',
-      url:'/delete' + id
+      url:'/delete' + id,
+      controller: "buildCtrl"
     })
   }
 

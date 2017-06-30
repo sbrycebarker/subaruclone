@@ -70,24 +70,16 @@
   </header>
   <main>
       <ui-view></ui-view>
-      <script>
-      var myVar;
-      function myFunction() {
-          document.getElementById("html").style.display = "none";
-          myVar = setTimeout(showPage, 3000);
-          myVar();
-      }
-      function showPage() {
-        document.getElementById("html").style.display = "block";
-      }
-      </script>
-      <script>
+      <script type="text/javascript">
       function topFunction() {
           $("html, body").animate({ scrollTop: "0" }, 1000); // For Chrome, Safari and Opera
       }
-      // $(document).click(function(){
-      //   $(".cardropdown").hide();
-      // });
+      function boxCloser(e){
+        if(e.target.id != '#vehicledropdown'){
+           document.body.removeEventListener('click', boxCloser, false);
+           $('#vehicledropdown').hide();
+        }
+      }
       </script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>

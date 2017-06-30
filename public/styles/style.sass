@@ -73,7 +73,7 @@ body
   position: relative
   font-size: 10px
   display: inline-block
-  border: solid 1px black
+  border-bottom : solid 1px #EFEFEF
 
 .subinfocar
   height: 50px
@@ -84,6 +84,10 @@ body
   margin: 0
   display: inline-block
   // border: 1px solid black
+
+.subinfocar h3
+  left: 10px
+  position: relative
 
 .subinfoprice
   height: 50px
@@ -100,6 +104,7 @@ body
 
 .subinfo h4
   margin: 0
+  color: #666
 
 .subinfompg
   height: 50px
@@ -115,6 +120,8 @@ body
   position: relative
   top: 25px
   left: 10px
+  color: #666
+  font-weight: lighter
   // border: 1px solid black
 
 .carfeat li
@@ -864,7 +871,7 @@ p
 .summary
   height: 620px
   width: 891px
-  left: 100px
+  left: 25px
   position: relative
   display: inline-flex
   flex-direction: row
@@ -874,23 +881,40 @@ p
   opacity: .8
   font-family: sans-serif
 
-.cartcolor h4
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+.summary hr
+  width: 400px
 
 .carsum h4
   height: 50px
   margin: 0
-  font-family: 14px
+  font-size: 14px
 
 .msrp
-  height: 14px
-  width: 200px
+  height: 30px
+  width: 100%
   display: flex
   flex-direction: row
 
 .msrp h5
+  height: 30px
+  width: 100px
+  margin: 0
   display: inline-block
   font-family: 14px
+
+.dest
+  height: 30px
+  width: 100%
+  display: flex
+  flex-direction: row
+
+.dest h5
+  height: 30px
+  width: 150px
+  margin: 0
+  display: inline-block
+  font-family: 14px
+
 #leftsum
   height: 80%
   width: 50%
@@ -901,11 +925,13 @@ p
 #addlist
   height: 80%
   width: 50%
+  margin: 0
   position: relative
   display: inline-block
 
-#addlist h3
-  height: 20px
+#addlist h4
+  height: 50px
+  margin: 0
 
 .yourtot
   height: 19%
@@ -924,6 +950,7 @@ p
   display: inline-flex
   margin: auto
   text-align: center
+  left: -75px
 
 .shopcon h1
   height: auto
@@ -981,6 +1008,7 @@ p
 .view
   height: 100%
   width: auto
+  margin: 10px 25px
   position: relative
   display: inline-block
   text-align: center
