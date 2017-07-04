@@ -1,3 +1,12 @@
+html, body, main, div, .tool
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+
 
 @media only screen and (max-width:650px)
   html
@@ -168,3 +177,52 @@
     text-align: center
     position: relative
     margin: 0 auto
+
+  .tools
+    height: 592px
+    width: 100%
+    background-color: white
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    text-align: center
+    padding-top: 116px
+    border: 1px black solid
+    top: -125px
+    z-index: 0
+
+  .tools h1
+   height: 42px
+   width: 100%
+   position: absolute
+   font-family: Helvetica
+   color: #A2A2A2
+   font-weight: normal
+   font-size: 36px
+
+  .tool
+    height: 130px
+    width: 218px
+    position: relative
+    text-align: center
+    display: flex
+    flex-direction: column
+    font-size: 18px
+    font-family: sans-serif
+    cursor: pointer
+    border: 1px solid black
+    margin: 10px
+
+  .tool a
+    text-decoration: none
+    color: inherit
+    position: relative
+
+  .tool b
+    margin: 18px
+
+  .toolicon
+    margin: auto
+    width: 76px
+    cursor: pointer
