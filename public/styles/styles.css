@@ -37,13 +37,6 @@ time, mark, audio, video {
   font-family: sans-serif;
 }
 
-/*.vehiclelist h4 {
-  position: relative;
-  height: 15px;
-  width: auto;
-  margin: auto;
-}*/
-
 .choose h3 {
   height: 23px;
   width: 300px;
@@ -62,6 +55,7 @@ time, mark, audio, video {
   display: inline-block;
   color: #595959
 }
+
 .modelcon h1 {
   font-size: 20px;
 }

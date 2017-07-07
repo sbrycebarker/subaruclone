@@ -35,3 +35,5 @@ const express = require('express'),
         app.listen(port, function() {
           console.log("listining on port " + port)
         })
+
+// Closures, promises, context, apply/call/bind, this, prototypes
