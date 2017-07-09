@@ -12,3 +12,10 @@ angular.module('myApp').directive('tasks', function() {
      templateUrl: "./views/finalorder.html"
    }
  })
+
+ .directive('ty', function() {
+   return {
+     restrict: 'E',
+     templateUrl: "./views/thankyou.html"
+   }
+ })

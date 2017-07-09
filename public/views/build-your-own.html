@@ -10,10 +10,12 @@
   <!-- <h1>CURRENT YEAR</h1><h1>PREVIOUS YEAR</h1> -->
 </div>
 </div>
-
+<div class="vehiclecardscon">
 <div class="modelcon" ng-repeat="car in cars">
   <div class="modeldetcon">
-  <div class="modelimg" style="background: url({{car.buildimg2}})">
+  <div class="modelimg" style="background: url({{car.buildimg2}})no-repeat center; -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover">
     <!-- <img src="{{car.buildimg2}}"> -->
     <div class="views">
     <div class="viewselect">EXTERIOR</div>
@@ -53,7 +55,7 @@
   </div>
 </div>
 </div>
-
+</div>
 <div class="Outback"></div>
 
 <div class="Forest"></div>
