@@ -1,13 +1,6 @@
 <title>Build & Price</title>
 <head><script>
-var myEvent = window.attachEvent || window.addEventListener;
-var chkevent = window.attachEvent ? 'onbeforeunload' : 'beforeunload'; /// make IE7, IE8 compatable
 
-myEvent(chkevent, function(e) {
-    var confirmationMessage = ' ';
-    (e || window.event).returnValue = confirmationMessage;
-    return confirmationMessage;
-});
 </script>
 </head>
 <body ng-controller="buildCtrl">
@@ -29,7 +22,7 @@ myEvent(chkevent, function(e) {
       <img class="transimg" src="{{vehicle.tranimg}}">
         <yh4>{{vehicle.transmission}}</h4>
         <h4>${{vehicle.transmissionprice}}</h4>
-        <button class="addtran"></button>
+        <div class="addtran"></div>
     </div>
     <!-- </div> -->
     <h3>EXTERIOR</h3>
@@ -40,7 +33,7 @@ myEvent(chkevent, function(e) {
     <div class="leather" ng-repeat="int in ints" style="background: url('{{int.intimg}}'); color: white">
     </div>
 
-<!-- 
+<!--
     <h1>Packages</h1>
 
     <div class="packages">

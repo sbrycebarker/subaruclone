@@ -204,10 +204,15 @@
 </div>
 
 </div>
-<script>
-
-</script>
 <div class="vehiclelist" ui-sref="all"><h4>All Vehicles</h4></div>
 <div class="vehiclelist" id="certified" ui-sref="all"><h4>Certified Pre-Owned</h4></div>
 <div class="vehiclelist" ui-sref="all"><h4>Future Vehicles and Concepts</h4></div>
 </div>
+<script>
+function boxCloser(e){
+  if(e.target.id != '#vehicledropdown'){
+     document.body.removeEventListener('click', boxCloser, false);
+     $('#vehicledropdown').hide();
+  }
+}
+</script>
