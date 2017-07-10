@@ -21,8 +21,7 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
       $scope.Impreza = false
       $scope[param] = true
     }
-
   $scope.showmenu = false;
   $scope.orderpop = false;
-
+  $scope.ty = false
 })
