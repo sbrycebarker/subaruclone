@@ -41,8 +41,9 @@ angular.module('myApp').controller('buildCtrl', function($scope, $stateParams, m
       let order = [];
       let cart = $scope.cart
       let finalcost = $scope.total;
-      let car = $scope.vehicle;
-      order.push(car, cart, finalcost, email)
+      let car = $scope.vehicle.model;
+      let color = $scope.color.name
+      order.push(car, color, cart, finalcost, email)
       data = order
       console.log("car to order", data)
       // let flag = true
@@ -57,10 +58,10 @@ angular.module('myApp').controller('buildCtrl', function($scope, $stateParams, m
   }
 
   $scope.chooseColor = function(color) {
-    console.log("chosencolor", color)
+    console.log("chosencolor", color.name)
   $scope.color = color
   }
-  $scope.chooseColor()
+
 
   $scope.addOption = function(option){
     console.log("adding", option)

@@ -26,13 +26,16 @@
         <h4>${{vehicle.transmissionprice}}</h4>
         <div class="addtran"></div>
     </div>
-    <!-- </div> -->
+
+    <div class="visual">
+      <h1>COLORS</h1>
     <h3>EXTERIOR</h3>
-    <div class="color" ng-repeat="color in colors" ng-click="chooseColor( color )" style="background-color: {{color.colorid}}"></div>
+    <h4 class="colorname">{{color.name}}</h4>
+    <div class="color" ng-repeat="color in colors" ng-click="chooseColor( color ); chosencolor()" style="background-color: {{color.colorid}}"></div>
 
     <h3>INTERIOR</h3>
-
-    <div class="leather" ng-repeat="int in ints" style="background: url('{{int.intimg}}'); color: white">
+    <h4>Warm Ivory Leather</h4>
+    <div class="leather" ng-repeat="int in ints" style="background: url('{{int.intimg}}'); color: white"></div>
     </div>
 
 <!--

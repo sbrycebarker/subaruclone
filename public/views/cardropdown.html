@@ -3,7 +3,7 @@
     <div class="vehicle" ng-mouseover="showhide(car.model)" ng-repeat="car in cars" ui-sref="vehicles({vehicle: car._id})" style="margin-right: 0">
       <div class="vmodel" style="margin-right: 0">{{car.model}}</div>
       <div class="price" style="margin-right: 0">${{car.price}}</div>
-      <img class="icon" src="{{ car.icon }}">
+      <img class="icon" src="{{ car.carback }}" style="height: 50px; width: 84px;">
     </div>
 </div>
 

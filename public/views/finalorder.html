@@ -1,6 +1,6 @@
 <div class="finalorder">
   <div class="carimg">
-    <img src="../assets/imgs/stiangle.png" style="height: 200px">
+    <img src="{{vehicle.icon}}" style="height: 200px">
   </div>
   <div class="orderdetails">
     <ul>
@@ -8,6 +8,7 @@
       {{vehicle.year}}
       {{vehicle.model}}
       ${{total}}
+      {{color.name}}
       </h2>
       <h5 class="addedoptions" ng-repeat="item in cart">{{item.accessory.accessory}}</h5>
       <!-- {{finalorder}} -->
