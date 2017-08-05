@@ -1,5 +1,6 @@
 angular.module('myApp')
-  .directive('tasks', function() {
+
+.directive('tasks', function() {
   return {
       restrict: 'E',
       templateUrl: "./views/cardropdown.html"

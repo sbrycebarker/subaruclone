@@ -6,7 +6,10 @@
 <body ng-controller="buildCtrl">
   <img class="cartbackground" style="background: url('{{vehicle.cartback}}') no-repeat center center;">
   <div class="title">
-    <div><h1>Build & Price {{vehicle.model}}</h1><pop ng-show="orderpop"></div>
+    <div>
+      <h1>Build & Price {{vehicle.model}}</h1>
+      <pop ng-show="orderpop"></pop>
+      </div>
     <div class="change"><h3>CHANGE VEHICLE</h3></div>
   </div>
   <div class="cartmain" >
@@ -15,7 +18,6 @@
         <img class="carview" src="{{vehicle.carback}}">
       </div>
     <div class="options">
-
     <!-- <div class="transcont"> -->
       <h1 class="t">Transmission</h1>
     <div class="transmission">
@@ -24,13 +26,16 @@
         <h4>${{vehicle.transmissionprice}}</h4>
         <div class="addtran"></div>
     </div>
-    <!-- </div> -->
+
+    <div class="visual">
+      <h1>COLORS</h1>
     <h3>EXTERIOR</h3>
-    <div class="color" ng-repeat="color in colors" ng-click="chooseColor( color )" style="background-color: {{color.colorid}}"></div>
+    <h4 class="colorname">{{color.name}}</h4>
+    <div class="color" ng-repeat="color in colors" ng-click="chooseColor( color ); chosencolor()" style="background-color: {{color.colorid}}"></div>
 
     <h3>INTERIOR</h3>
-
-    <div class="leather" ng-repeat="int in ints" style="background: url('{{int.intimg}}'); color: white">
+    <h4>Warm Ivory Leather</h4>
+    <div class="leather" ng-repeat="int in ints" style="background: url('{{int.intimg}}'); color: white"></div>
     </div>
 
 <!--
@@ -127,15 +132,12 @@
     </div>
 </div>
     <h5>Legal Disclaimers</h5>
-
     <div class="order">
     <div class="finalbuild">
-
       <div id="price" class="builddets"><h1>${{total}}</h1>TOTAL</div>
       <div id="checkout" class="builddets" ng-click="orderpop = !orderpop"><h3>CHECKOUT</h3></div>
       <div id="testd" class="builddets"><h3>SCHEDULE A TEST DRIVE</h3></div>
     </div>
-
     </div>
 
   <button class="change" ng-click="changeData( { id : data.text_id , newtask: item }, $index )"> Change Task</button>
@@ -167,3 +169,4 @@
     </script>
 
 </body id="body">
+<ty ng-show="ty"></ty>

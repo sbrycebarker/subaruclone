@@ -13,14 +13,14 @@ read: function(req, res, next) {
 },
 
 create: function(req, res, next) {
-  console.log(req.body[1])
+  console.log("stuff", req.body)
   var car = req.body[0];
-  var finalprice = req.body[2];
-  var cart = req.body[1];
-  var email = req.body[3]
+  var finalprice = req.body[3];
+  var color = req.body[1]
+  var cart = req.body[2];
+  var email = req.body[4]
   // console.log("car data", req.body)
-  var cart = new Cart({car, cart, finalprice, email})
-  console.log("cart", cart)
+  var cart = new Cart({car, color, cart, finalprice, email})
     cart.save(function(err, response) {
       if (err) {
         console.log(err, response)
