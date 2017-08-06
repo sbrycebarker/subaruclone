@@ -18,7 +18,7 @@
 
 
 </head>
-<body ng-controller="mainCtrl">
+<body ng-controller="mainCtrl" data-spy="scroll" data-target=".white" data-offset="50">
 
   <header>
     <div id="top" class="top">
@@ -34,7 +34,7 @@
       </div>
     </div>
 
-  <div id="white" class="white">
+  <nav id="white" class="white" data-spy="affix" data-offset-top="50">
     <a ui-sref="home" class="subaruhome"></a>
 
     <div id="centermenu" class="centermenu">
@@ -65,9 +65,7 @@
           <h4>FIND RETAILER</h4>
         </a>
       </div>
-
-    </div>
-  </div>
+    </nav>
   </header>
   <main>
       <ui-view></ui-view>
