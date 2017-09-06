@@ -99,3 +99,14 @@ time, mark, audio, video {
 .tool:hover {
   color: #0FA4DC;
 }
+
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.affix ~ .top {
+   position: relative;
+   top: 50px;
+ }

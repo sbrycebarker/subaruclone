@@ -3,6 +3,7 @@
 <head>
 <!-- <title>Subaru Cars, Sedans, SUVs, Crossovers, Wagons | Subaru of America</title> -->
 <link rel="stylesheet" href="./dist/styles.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" /> -->
 <script>
@@ -11,7 +12,7 @@
 
 
 </head>
-<body ng-controller="mainCtrl">
+<body ng-controller="mainCtrl" data-spy="scroll" data-target=".white" data-offset="50">
 
   <header>
     <div id="top" class="top">
@@ -27,7 +28,7 @@
       </div>
     </div>
 
-  <div id="white" class="white">
+  <nav id="white" class="white" data-spy="affix" data-offset-top="50">
     <a ui-sref="home" class="subaruhome"></a>
 
     <div id="centermenu" class="centermenu">
@@ -58,9 +59,7 @@
           <h4>FIND RETAILER</h4>
         </a>
       </div>
-
-    </div>
-  </div>
+    </nav>
   </header>
   <main>
       <ui-view></ui-view>
@@ -73,6 +72,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- <script src="/node_modules/jquery/dist/jquery.js"></script> -->
 <script src="./dist/js/bundle.js"></script>
 </body>
