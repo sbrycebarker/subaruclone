@@ -31,7 +31,7 @@ const express = require('express'),
       mongoose.connect('mongodb://sbrycebarker:serg1234@ds129030.mlab.com:29030/subaru/');
 
       app.use(express.static('./public'))
-            var port = 3030
+            var port = 8083
         app.listen(port, function() {
           console.log("listining on port " + port)
         })

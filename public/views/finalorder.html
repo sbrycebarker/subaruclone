@@ -27,11 +27,13 @@
 <div class="emailform">
   <h3>Send us your car and a dealer will contact you shortly</h3>
   <input type="email" class="data" name="email" ng-model="email" placeholder="yourEmail">
-  <button class="submit" ng-click="postCart( { email: email}) ; validate({email: email}); orderpop = !orderpop; ty = !ty">Submit</button>
+  <button class="submit" ng-click="postCart( { email: email}) ; validate({email: email}); orderpop = !orderpop; ty = !ty;">Submit</button>
 
 </div>
+
 </div>
 <script>
+
 function validate(email) {
 
            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;

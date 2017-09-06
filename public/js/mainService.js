@@ -30,7 +30,7 @@ this.colors = function(color) {
     controller: "buildCtrl"
   })
 }
-;
+
 this.carOptions = function (options) {
   return $http({
     method: "POST",

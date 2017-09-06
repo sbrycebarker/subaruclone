@@ -1,0 +1,1668 @@
+.footerlist {
+  height: auto;
+  width: auto;
+  display: inline-block;
+  margin: 10px; }
+
+.footerlist a {
+  color: white;
+  font-family: sans-serif;
+  text-decoration: none; }
+
+.footersub {
+  position: relative;
+  font-family: sans-serif; }
+
+.ty {
+  height: 400px;
+  width: 700px;
+  background-color: black;
+  opacity: .8;
+  color: white;
+  position: relative;
+  top: 300px;
+  margin: auto;
+  border-radius: 15px;
+  font-size: 12px;
+  text-align: center;
+  display: flex; }
+
+.ty h1 {
+  margin: auto auto;
+  position: relative; }
+
+.colorname {
+  position: relative;
+  color: white;
+  font-family: sans-serif;
+  font-weight: lighter; }
+
+.visual h1 {
+  margin: 40px 0; }
+
+html, body, main, div, .tool {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+@media only screen and (max-width: 650px) {
+  html {
+    margin: 0; }
+  body {
+    margin: 0;
+    display: grid; }
+  #top {
+    display: none; }
+  .white {
+    position: relative;
+    margin: 0;
+    border-bottom: 1px solid #CCCCCC;
+    height: 58px;
+    width: 100%;
+    color: #232323;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: #FAFAFA;
+    z-index: 2; }
+  #centermenu {
+    background-color: grey;
+    display: none; }
+  .items {
+    display: none; }
+  .frontcont {
+    width: 100%;
+    height: 322px; }
+  .bp {
+    display: none; }
+  .build {
+    font-size: 20px;
+    padding-top: 17px;
+    color: #999;
+    font-weight: bold;
+    margin: 0; }
+  .front {
+    width: 100%;
+    height: 322px;
+    position: relative;
+    background: url("../assets/imgs/bigoutbackback.JPG") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: 100% 322px cover;
+    z-index: 0;
+    margin-top: 59px;
+    display: inline-block;
+    text-align: center; }
+  .fronttext {
+    color: white;
+    font-size: 10px;
+    font-family: sans-serif; }
+  .frontlinks {
+    height: 30px;
+    width: 500px;
+    top: 150px;
+    position: relative;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0 auto; }
+  .frontlinks h1 {
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    font-weight: normal;
+    vertical-align: middle;
+    font-size: 16px;
+    opacity: .8; }
+  .special {
+    height: 54px;
+    width: 161px;
+    background-color: grey;
+    opacity: .8;
+    color: white;
+    font-family: sans-serif;
+    font-weight: lighter;
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto; }
+  .special h4 {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    vertical-align: middle;
+    position: absolute;
+    top: -10px; }
+  .side {
+    height: 30px;
+    width: 150px;
+    position: relative;
+    margin: auto 0;
+    display: flex;
+    flex-direction: row; }
+  .byo {
+    width: 28px;
+    height: 24px;
+    background: url("../assets/imgs/siteimgs.PNG") no-repeat -95px -269px;
+      background-position: relative;
+      background-top: 10px;
+      background-text-decoration: none; }
+  .cars {
+    height: 920px;
+    width: 100%;
+    background-color: #FAFAFA;
+    position: relative;
+    display: flex;
+    margin: auto;
+    top: 0;
+    z-index: 1;
+    flex-wrap: wrap; }
+  .car {
+    width: 265px;
+    height: 186px;
+    margin: 12px auto;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #20609F;
+    text-decoration: none;
+    z-index: 1; }
+  .car h2 {
+    font-size: 14px;
+    margin: auto;
+    width: 80px; }
+  .car h2:hover {
+    width: 100px;
+    color: #414141;
+    margin: 0 auto; }
+  .car h3 {
+    font-size: 14px;
+    color: #B8B8B8;
+    display: inline;
+    margin: 0; }
+  .car:hover {
+    cursor: pointer; }
+  .carbut {
+    height: 112px;
+    width: 206px; }
+  .modelbutton {
+    width: 164px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto; }
+  .tools {
+    height: 592px;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-top: 116px;
+    border: 1px black solid;
+    top: -125px;
+    z-index: 0; }
+  .tools h1 {
+    height: 42px;
+    width: 100%;
+    position: absolute;
+    font-family: Helvetica;
+    color: #A2A2A2;
+    font-weight: normal;
+    font-size: 36px; }
+  .tool {
+    height: 140px;
+    width: 240px;
+    top: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-family: sans-serif;
+    cursor: pointer;
+    margin-top: 0; }
+  .tool a {
+    text-decoration: none;
+    color: inherit;
+    position: relative; }
+  .tool b {
+    margin: 18px; }
+  .toolicon {
+    margin: auto;
+    width: 76px;
+    cursor: pointer; }
+  .promise {
+    color: white;
+    background-color: #0FA4DC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 750px;
+    width: 100%; }
+  .love {
+    height: 325px;
+    width: 325px;
+    margin: 0;
+    background: url("../assets/imgs/lovepromise.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+  .tslp {
+    height: 200px;
+    width: 100%;
+    position: relative;
+    text-align: center; }
+  .tslp h2 {
+    font-size: 36px;
+    font-family: sans-serif; }
+  .learn {
+    height: 60px;
+    width: 250px;
+    background-color: #0FA4DC;
+    color: white;
+    border: 2px white solid; }
+  .learn:hover {
+    border: 2px black solid;
+    color: black; }
+  .content {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; }
+  .content p {
+    border: 1px solid white;
+    width: 450px;
+    height: 30px;
+    margin: 300px auto;
+    padding-top: 5px; }
+  .fma3 {
+    height: 400px;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    color: white; }
+  .fma2 {
+    height: 400px;
+    width: 100%;
+    display: inline-block;
+    color: white;
+    text-align: center; }
+  #left {
+    background: url("../assets/imgs/ALG.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+  #mid {
+    background: url("../assets/imgs/MY18_OBK_HP_FMA.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+  #right {
+    background: url("../assets/imgs/MY18_WRX_HP_FMA.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+  #lef {
+    background: url("../assets/imgs/owner.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+  #rig {
+    background: url("../assets/imgs/desk.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+  .footer {
+    height: 350px;
+    width: 100%;
+    margin: auto;
+    background-color: #232323;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    color: white; }
+  .rowcollapse {
+    display: none; }
+  #global_footer {
+    display: none; }
+  .backtotop {
+    height: 100px;
+    width: 100%;
+    padding: 49px 0 53px 0;
+    text-align: center;
+    background-color: #EFEFEF; }
+  .topscroller {
+    height: 90px;
+    width: 150px;
+    position: relative;
+    bottom: 0;
+    margin: 0 auto;
+    color: #0FA4DC; }
+  .arrowimg {
+    height: 40px;
+    width: 40px;
+    background: url("../assets/imgs/back-to-top.png");
+    border: none; }
+  .arrowimg:hover {
+    height: 40px;
+    width: 40px;
+    background: url("../assets/imgs/back-to-top-hover.png"); }
+  .vehiclecardscon {
+    height: 100%;
+    width: 100%;
+    top: 165px;
+    position: absolute; }
+  .modelcon {
+    height: 450px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-bottom: 40px; }
+  .modelimg {
+    height: 210px;
+    width: 100%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+  .modelequip {
+    height: 50%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; }
+  .subinfo {
+    height: 50;
+    width: 100%;
+    border: black 1px solid;
+    display: flex;
+    flex-direction: row; }
+  .subinfoprice {
+    height: 15px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 0; }
+  .subinfompg {
+    height: 15px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    position: relative; }
+  .carfeat {
+    display: none; }
+  .bottomcontent {
+    height: 155px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0; }
+  #accolades {
+    height: 75px;
+    width: 49%;
+    background-color: white; }
+  #compare {
+    height: 75px;
+    width: 49%;
+    background-color: white; }
+  #build {
+    height: 75px;
+    width: 100%;
+    background-color: #0099FF; } }
+
+
+@media only screen and (min-width: 650px) {
+  html {
+    margin: 0; }
+  body {
+    margin: 0;
+    display: grid; }
+  .white {
+    height: 58px;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    top: 38px;
+    border-bottom: 1px solid #CCCCCC;
+    color: #232323;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: #FAFAFA;
+    z-index: 2; }
+  .arrow {
+    background: url("../assets/imgs/siteimgs.PNG") no-repeat -99px -450px;
+    width: 19px;
+    height: 10px;
+      height-border: none; }
+  .itemscon {
+    height: 20px;
+    width: 550px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    bottom: -5px; }
+  .topitems {
+    height: 20px;
+    width: 115px;
+    margin: 0 5px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    bottom: 0; }
+  .modelimg {
+    height: 302px;
+    width: 482px; }
+  .modelequip {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    font-family: sans-serif;
+    color: #333; }
+  .subinfo {
+    height: 55px;
+    width: 100%;
+    position: relative;
+    font-size: 10px;
+    display: inline-block;
+    border-bottom: solid 1px #EFEFEF; }
+  .subinfocar {
+    height: 50px;
+    width: 49%;
+    position: relative;
+    font-size: 10px;
+    margin: 0;
+    display: inline-block; }
+  .subinfocar h3 {
+    left: 10px;
+    position: relative; }
+  .subinfoprice {
+    height: 50px;
+    width: 24%;
+    position: relative;
+    display: inline-block;
+    font-size: 10px;
+    margin: 0; }
+  .subinfoprice h3 {
+    margin: 0;
+    font-size: 10px; }
+  .subinfo h4 {
+    margin: 0;
+    color: #666; }
+  .subinfompg {
+    height: 50px;
+    width: 24%;
+    display: inline-block;
+    margin: 0; }
+  .subinfo h3 {
+    margin: 0; }
+  .carfeat {
+    position: relative;
+    top: 25px;
+    left: 10px;
+    color: #666;
+    font-weight: lighter; }
+  .carfeat li {
+    margin: 5px; }
+  .subaruhome {
+    margin: 11px 0 0 23px;
+    background: url("../assets/imgs/siteimgs.PNG") no-repeat -1px 0;
+    width: 150px;
+    height: 40px;
+    border: none;
+    position: relative; }
+  .centermenu {
+    height: 100%;
+    width: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto; }
+  .items {
+    height: 41px;
+    display: inline-block;
+    text-align: center;
+    background-color: #FAFAFA;
+    margin: 15px; }
+  .items h1 {
+    position: absolute; }
+  .items:hover {
+    cursor: pointer;
+    border-bottom: 3px solid #333333; }
+  #vehicles {
+    width: 80px; }
+  #tools {
+    width: 125px; }
+  #why {
+    width: 104px; }
+  .sideitems {
+    height: 30px;
+    width: 320px;
+    right: 50px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    top: 10px; }
+  .sideitems a {
+    text-decoration: none;
+    color: inherit;
+    cursor: grab; }
+  .side {
+    height: 30px;
+    width: 150px;
+    position: relative;
+    margin: auto 0;
+    display: flex;
+    flex-direction: row; }
+  .side h4 {
+    font-size: 12px;
+    margin-left: 5px; }
+  .byo {
+    background: url("../assets/imgs/byo.gif");
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: 5px;
+    text-decoration: none; }
+  .byo:hover {
+    background: url("../assets/imgs/byo.gif") -30px;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: 5px;
+    text-decoration: none; }
+  .fad {
+    background: url("../assets/imgs/fad.gif");
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: 5px;
+    text-decoration: none; }
+  .fad:hover {
+    background: url("../assets/imgs/fad.gif") -30px;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: 5px;
+    text-decoration: none; }
+  .build {
+    display: none; }
+  .footersociallinks {
+    position: relative; }
+  .brz {
+    height: 855px;
+    width: auto;
+    position: relative;
+    top: 96px;
+    background: url("../assets/imgs/BRZ.JPG") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+  .small-only {
+    display: none; }
+  .ui-link {
+    position: relative;
+    display: inline-flex; }
+  .zip_modal_input {
+    display: none; }
+  p {
+    height: auto;
+    width: auto;
+    display: none; }
+  .map_search_input {
+    display: none; }
+  .change_retailer_modal {
+    display: none; }
+  .zip_code.far_zipCode {
+    display: none; }
+  .top {
+    position: fixed;
+    height: 38px;
+    width: 100%;
+    background-color: #232323;
+    font-size: 10px;
+    font-family: helvetica arial sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    color: white;
+    z-index: 2; }
+  .links {
+    height: 200px;
+    width: 1130px;
+    background-color: #FAFAFA; }
+  .vehicledropdown {
+    transition: 600ms ease-out;
+    position: relative;
+    display: inline-block;
+    top: 40px;
+    right: 200px;
+    width: 956px;
+    height: 568px;
+    background-color: #FAFAFA;
+    margin: 0;
+    border: .5px solid #CCCCCC;
+    z-index: 10; }
+  #certified {
+    border-right: .5px solid #CCCCCC;
+    border-left: .5px solid #CCCCCC; }
+  .shoppingcon {
+    height: 387px;
+    width: 960px;
+    background-color: #FAFAFA;
+    position: relative;
+    display: flex;
+    right: 200px;
+    top: 40px;
+    margin: 0;
+    border: .5px solid #CCCCCC; }
+  .shopping {
+    height: auto;
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    border: 1px solid black;
+    line-height: 16px;
+    color: #0099FF; }
+  .blah {
+    position: absolute;
+    height: 449px;
+    width: 675px;
+    left: 240px;
+    padding: 20px;
+    top: 0;
+    border-bottom: .5px #CCCCCC solid; }
+  .vehiclepanel {
+    position: relative;
+    height: 100%;
+    width: 100%; }
+  .icon {
+    height: 44px;
+    width: 85px;
+    position: absolute;
+    display: grid;
+    right: 5px;
+    background-color: inherit;
+    top: 10px; }
+  .vmodel {
+    width: 114px;
+    height: 20px;
+    font-size: 13px;
+    font-weight: bold; }
+  .price {
+    width: 114px;
+    height: 20px; }
+  .panelmenubut {
+    position: relative;
+    display: inline-block;
+    flex-direction: row;
+    height: 40px;
+    width: 158.5px;
+    top: 40px;
+    margin: auto;
+    background-color: #232323; }
+  .panelmenubut:hover {
+    background-color: #FAFAFA;
+    color: black;
+    -webkit-transition: background-color 600ms ease-out;
+    -moz-transition: background-color 600ms ease-out;
+    transition: background-color 600ms ease-out;
+    cursor: pointer; }
+  .buildheader {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    background-color: #232323;
+    top: 96px;
+    font-family: sans-serif;
+    color: #FAFAFA;
+    z-index: 1; }
+  .bottomcontent {
+    position: absolute;
+    height: 50px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    color: #0099FF;
+    margin: 0;
+    bottom: 0;
+    border-top: 2px #EFEFEF solid;
+    font-weight: bold;
+    font-family: sans-serif; }
+  .cars {
+    height: 140px;
+    padding: 15px 0;
+    width: 1130px;
+    background-color: #FAFAFA;
+    position: relative;
+    display: flex;
+    margin: auto;
+    top: -85px;
+    z-index: 1;
+    flex-direction: row;
+    box-shadow: 0 18px 25px 0 rgba(0, 0, 0, 0.1); }
+  .car {
+    width: 145px;
+    margin: 12px auto;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #20609F;
+    text-decoration: none;
+    z-index: 1; }
+  .car h2 {
+    font-size: 14px;
+    margin: auto;
+    width: 80px; }
+  .car h2:hover {
+    width: 100px;
+    color: #414141;
+    margin: 0 auto; }
+  .car h3 {
+    font-size: 14px;
+    color: #B8B8B8;
+    display: inline-block;
+    margin: 0; }
+  .car:hover {
+    cursor: pointer; }
+  .carbut {
+    height: 70px;
+    width: 145px; }
+  .modelbutton {
+    width: 164px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto; }
+  .yearselector {
+    font-size: .8125rem; }
+  .buildbody {
+    width: 100%;
+    height: 2620px; }
+  #build {
+    border-left: 2px #EFEFEF solid;
+    color: white;
+    background-color: #0099FF;
+    cursor: pointer; }
+  #build:hover {
+    background-color: #232323;
+    color: white; }
+  #compare:hover {
+    background: #232323;
+    cursor: pointer;
+    color: white; }
+  .choose {
+    position: relative;
+    margin: 0 auto;
+    height: 100px;
+    width: 600px;
+    margin-top: 200px;
+    font-style: 14px;
+    color: #595959;
+    font-family: sans-serif;
+    display: flex; }
+  .yearselector {
+    height: 25px;
+    width: auto;
+    margin: 0 auto; }
+  .modelcon {
+    height: 302px;
+    width: 960px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 40px auto;
+    margin-bottom: 40px;
+    box-shadow: 0 18px 25px 0 rgba(0, 0, 0, 0.1);
+    z-index: 0; }
+  .modelbuildinfo {
+    height: 100px;
+    width: 100px;
+    background-color: grey;
+    position: relative; }
+  .modeldetcon {
+    display: flex;
+    flex-direction: row; }
+  .modelimg {
+    display: flex;
+    flex-direction: row; }
+  .views {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: row; }
+  .viewselect {
+    height: 25px;
+    width: 238px;
+    margin: 0 auto;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-weight: bold;
+    font-family: sans-serif; }
+  .vehiclelist {
+    height: 80px;
+    width: 33.2%;
+    position: relative;
+    display: inline-block;
+    margin-left: -3px;
+    left: 1px;
+    bottom: 0;
+    vertical-align: center;
+    background-color: #EFEFEF; }
+  .vehiclelist:hover {
+    background-color: white; }
+  .vehicle {
+    width: 238px;
+    height: 69px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: .5px #CCCCCC solid;
+    border-top: none;
+    border-left: none;
+    background-color: #EFEFEF;
+    margin-right: 0; }
+  .vehicle:hover {
+    background-color: white;
+    cursor: pointer;
+    -webkit-transition: background-color 600ms ease-out;
+    -moz-transition: background-color 600ms ease-out;
+    transition: background-color 600ms ease-out; }
+  .model {
+    top: 20px;
+    display: flex;
+    flex-direction: row; }
+  .modelyear h3 {
+    color: white;
+    font-size: 36px;
+    width: 300px;
+    font-family: sans-serif;
+    margin: 0; }
+  .vehicleinfo {
+    color: white;
+    font-family: sans-serif;
+    height: 50px;
+    margin: 0; }
+  .modelyear {
+    top: 25px;
+    position: relative; }
+  .modelinfo {
+    height: 60px;
+    width: 325px;
+    margin: auto;
+    top: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: row; }
+  .modelinfo h5 {
+    height: 30px;
+    width: 100px;
+    position: relative;
+    margin: 0 auto; }
+  .modelinfo h4 {
+    height: 30px;
+    width: 150px;
+    position: relative;
+    margin: 0 auto; }
+  .topbuttons {
+    background-color: #FAFAFA;
+    border: none; }
+  .carheader {
+    background-color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 95px;
+    height: 70px;
+    width: 100%;
+    color: black; }
+  .carheader h4 {
+    position: relative;
+    display: inline-block;
+    margin: auto 100px;
+    color: black;
+    background-color: white; }
+  .carheaderitems {
+    height: 67px;
+    position: absolute;
+    display: inline-block;
+    right: 200px; }
+  .caritem:hover {
+    border-bottom: 3px solid #0099FF; }
+  #overview {
+    border-bottom: 3px solid #0099FF;
+    background-color: #FAFAFA; }
+  .carheaderitems .caritem {
+    height: 100%;
+    width: 100px;
+    border-left: 1px solid black;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-family: sans-serif;
+    margin: auto; }
+  #shopcar {
+    height: 100%;
+    width: 200px;
+    background-color: #0099FF;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    right: 0; }
+  #shopcar h4 {
+    color: white;
+    position: relative;
+    margin: auto;
+    background-color: inherit; }
+  .cartbackground {
+    height: 100%;
+    width: 100vw;
+    position: fixed; }
+  .carview {
+    position: fixed;
+    width: 50vw;
+    top: 210px;
+    left: -25px; }
+  .cartmain {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center center;
+    -webkit-background-size: center;
+    -moz-background-size: cover;
+    background-size: cover; }
+  .title {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 94px;
+    background-color: #222;
+    color: white;
+    opacity: .9;
+    display: flex;
+    z-index: 1; }
+  .title h1 {
+    opacity: none; }
+  .change {
+    margin: auto;
+    position: fixed;
+    color: #09f;
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
+    font-size: .8125rem;
+    font-weight: bold;
+    left: -300px; }
+  .options {
+    height: auto;
+    width: 50%;
+    right: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0; }
+  .transmission {
+    height: 315px;
+    width: 300px;
+    margin: 175px 30px;
+    background-color: #EFEFEF;
+    font-family: sans-serif;
+    position: relative; }
+  .addtran {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 1px solid grey;
+    background: url("../assets/imgs/greenplus.jpg") center no-repeat;
+    background-size: 20px 20px;
+    float: right;
+    margin-right: 15px; }
+  .addtran:hover {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 1px solid grey;
+    background: url("../assets/imgs/bgchck.png") center no-repeat;
+    background-size: 20px 20px;
+    float: right;
+    margin-right: 15px; }
+  .t {
+    position: relative;
+    height: auto;
+    width: auto;
+    font-family: sans-serif;
+    top: 150px; }
+  .transimg {
+    height: 177px;
+    width: 100%; }
+  .options h1 {
+    color: white;
+    font-family: sans-serif; }
+  .options h3 {
+    color: white;
+    font-family: sans-serif; }
+  .options h5 {
+    color: white; }
+  .color {
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px white solid; }
+  .color:hover {
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px white solid;
+    background: url("../assets/imgs/checkmark.png") center; }
+  .leather {
+    height: 50px;
+    width: 50px;
+    margin: 15px 5px;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px white solid; }
+  .packages {
+    height: 256px;
+    width: 615px;
+    margin: 0 auto;
+    background-color: white; }
+  .accessories {
+    height: auto;
+    width: 95%;
+    border-bottom: 1px solid white;
+    margin: auto; }
+  .accessory {
+    height: 300px;
+    width: 280px;
+    margin: 10px;
+    position: relative;
+    background-color: #EFEFEF;
+    display: inline-flex;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: black;
+    z-index: 0; }
+  .accessory h4 {
+    font-weight: lighter; }
+  .add {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: .5px solid grey;
+    background: url("../assets/imgs/greenplus.jpg") center no-repeat;
+    background-size: 20px 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px; }
+  .add:hover {
+    height: 40px;
+    width: 40px;
+    background: url("../assets/imgs/bgchck.PNG") center no-repeat;
+    background-size: 20px 20px; }
+  .accimg {
+    height: 177px;
+    width: 100%;
+    position: relative; }
+  .accessory h4 {
+    position: relative;
+    margin: 5px; }
+  .summary {
+    height: 620px;
+    width: 891px;
+    left: 25px;
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    margin: auto;
+    opacity: .8;
+    font-family: sans-serif; }
+  .summary hr {
+    width: 400px; }
+  .carsum h4 {
+    height: 50px;
+    margin: 0;
+    font-size: 14px; }
+  .msrp {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row; }
+  .msrp h5 {
+    height: 30px;
+    width: 100px;
+    margin: 0;
+    display: inline-block;
+    font-family: 14px; }
+  .dest {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row; }
+  .dest h5 {
+    height: 30px;
+    width: 150px;
+    margin: 0;
+    display: inline-block;
+    font-family: 14px; }
+  #leftsum {
+    height: 80%;
+    width: 50%;
+    position: relative;
+    display: inline-block;
+    margin: 0; }
+  #addlist {
+    height: 80%;
+    width: 50%;
+    margin: 0;
+    position: relative;
+    display: inline-block; }
+  #addlist h4 {
+    height: 50px;
+    margin: 0; }
+  .yourtot {
+    height: 19%;
+    width: 100%;
+    border-top: 1px solid white;
+    position: absolute;
+    bottom: 0; }
+  .yourtot h3 {
+    position: relative; }
+  .shopcon {
+    height: 250px;
+    width: auto;
+    position: relative;
+    display: inline-flex;
+    margin: auto;
+    text-align: center;
+    left: -75px; }
+  .shopcon h1 {
+    height: auto;
+    position: absolute;
+    width: 100%; }
+  .shop {
+    height: 130px;
+    width: 283px;
+    top: 25px;
+    left: 90px;
+    margin: 0 10px;
+    position: relative;
+    background-color: black;
+    opacity: .8;
+    display: inline-block;
+    color: white;
+    border-radius: 15px;
+    vertical-align: middle;
+    z-index: inherit; }
+  .img {
+    position: relative;
+    top: 25px; }
+  .shop:hover {
+    opacity: 1;
+    cursor: grab; }
+  .shop h5 {
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+    position: relative;
+    top: 25px; }
+  .foot {
+    height: 70px;
+    width: 50%;
+    position: fixed;
+    background-color: #222;
+    opacity: .9;
+    bottom: 0;
+    color: white; }
+  .viewcon {
+    height: 100%;
+    width: 671px;
+    position: relative;
+    margin: 0 auto; }
+  .view {
+    height: 100%;
+    width: auto;
+    margin: 25px;
+    position: relative;
+    display: inline-block;
+    text-align: center; }
+  .view h3 {
+    font-size: 1rem; }
+  .finalbuild {
+    height: 70px;
+    width: 50%;
+    bottom: 0;
+    position: fixed;
+    display: block;
+    background-color: #FAFAFA;
+    z-index: 2; }
+  .finalbuild h1 {
+    color: black; }
+  .builddets {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    margin: auto; }
+  #price {
+    height: 100%;
+    width: 300px;
+    position: relative;
+    background-color: #FAFAFA;
+    float: left; }
+  #testd {
+    height: 100%;
+    width: 237px;
+    position: relative;
+    font-weight: bold;
+    font-family: sans-serif;
+    float: right;
+    border-left: 2px solid #CCCCCC; }
+  #testd h3 {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    font-size: 14px;
+    color: #09f; }
+  #checkout {
+    height: 100%;
+    width: 225px;
+    position: relative;
+    background-color: #09f;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    float: right; }
+  #checkout h3 {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    font-size: 14px; }
+  .carmain {
+    height: 855px;
+    width: 100%;
+    position: relative;
+    top: 115px;
+    background-color: #FAFAFA;
+    background: url("../assets/imgs/brz.JPG") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+  .carmain h1 {
+    margin: 0; }
+  .front {
+    height: 855px;
+    width: 100vw;
+    position: relative;
+    background: url("../assets/imgs/bigoutbackback.JPG") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    z-index: 0;
+    margin-top: 96px;
+    display: inline-block;
+    text-align: center; }
+  .fronttext {
+    position: relative;
+    margin: 0 auto; }
+  .fronttext {
+    height: 100px;
+    width: 700px;
+    top: 50px;
+    position: relative;
+    color: white;
+    font-size: 16px;
+    font-family: sans-serif;
+    display: flex; }
+  .special {
+    height: 60px;
+    width: 240px;
+    top: 100px;
+    background-color: grey;
+    opacity: .8;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto; }
+  .special h4 {
+    position: relative;
+    margin: auto;
+    top: 22px; }
+  .frontlinks {
+    height: 30px;
+    width: 920px;
+    top: 500px;
+    position: relative;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0 auto; }
+  .frontlinks h1 {
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    opacity: .8; }
+  .tools {
+    height: 310px;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    text-align: center;
+    padding-top: 116px;
+    border: 1px black solid;
+    top: -170px;
+    z-index: 0; }
+  .tools h1 {
+    height: 42px;
+    width: 100%;
+    position: absolute;
+    font-family: Helvetica;
+    color: #A2A2A2;
+    font-weight: normal;
+    font-size: 36px; }
+  .tool {
+    margin: auto;
+    width: 15%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-family: sans-serif;
+    cursor: pointer;
+    padding-top: 40px; }
+  .tool a {
+    text-decoration: none;
+    color: inherit; }
+  .tool b {
+    margin: 18px; }
+  .toolicon {
+    margin: auto;
+    width: 76px;
+    cursor: pointer; }
+  .promise {
+    color: white;
+    background-color: #0FA4DC;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6.3% 8.45%;
+    margin-bottom: 40px; }
+  .love {
+    height: 22vw;
+    width: 22vw;
+    position: relative;
+    margin: 0;
+    background: url("../assets/imgs/lovepromise.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+  .tslp {
+    height: 20vw;
+    width: 40vw;
+    position: relative;
+    padding: 0 6%;
+    text-align: center; }
+  .tslp h2 {
+    font-size: 36px;
+    font-family: sans-serif; }
+  .learn {
+    height: 60px;
+    width: 250px;
+    background-color: #0FA4DC;
+    color: white;
+    border: 2px white solid; }
+  .learn:hover {
+    border: 2px black solid;
+    color: black; }
+  .content {
+    width: 100%;
+    height: 50vw;
+    margin: 0; }
+  .fma3 {
+    height: 25vw;
+    display: inline-block;
+    margin: -2px;
+    width: 33.3%; }
+  .fma2 {
+    height: 25vw;
+    width: 50%;
+    display: inline-block;
+    margin: -2px;
+    margin-top: -2px; }
+  #left {
+    background: url("../assets/imgs/ALG.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+  #mid {
+    background: url("../assets/imgs/MY18_OBK_HP_FMA.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+  #right {
+    background: url("../assets/imgs/MY18_WRX_HP_FMA.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+  #lef {
+    background: url("../assets/imgs/owner.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+  #rig {
+    background: url("../assets/imgs/desk.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover; }
+  .backtotop {
+    height: 100px;
+    width: 100%;
+    padding: 49px 0 53px 0;
+    text-align: center;
+    background-color: #EFEFEF; }
+  .textwrapper {
+    width: 1440px;
+    height: 75px;
+    margin: 0 auto; }
+  .topscroller {
+    height: 90px;
+    width: 150px;
+    position: relative;
+    bottom: 0;
+    margin: 0 auto;
+    color: #0FA4DC; }
+  .arrowimg {
+    height: 40px;
+    width: 40px;
+    background: url("../assets/imgs/back-to-top.png");
+    border: none; }
+  .arrowimg:hover {
+    height: 40px;
+    width: 40px;
+    background: url("../assets/imgs/back-to-top-hover.png"); }
+  .footer {
+    height: 603px;
+    width: 100%;
+    margin: auto;
+    background-color: #232323;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    color: white; }
+  .social {
+    background-color: white;
+    position: absolute; }
+  .footercolumn {
+    height: auto;
+    width: auto;
+    position: relative;
+    color: white; }
+  .column {
+    height: auto;
+    width: auto;
+    position: relative;
+    color: white; }
+  .finalorder {
+    height: 600px;
+    width: 1000px;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    background-color: black;
+    border-radius: 25px; }
+  .carimg {
+    position: absolute;
+    left: 126px;
+    top: 40px; }
+  .features {
+    height: auto;
+    width: auto;
+    right: 50px;
+    top: 20px;
+    position: absolute; }
+  .emailform {
+    height: auto;
+    width: 250px;
+    position: absolute;
+    display: block;
+    bottom: 150px;
+    right: 50px; }
+  .orderdetails {
+    position: absolute;
+    height: auto;
+    width: 400px;
+    left: 140px;
+    top: 200px; }
+  .orderdetails h2 {
+    left: 175px;
+    top: 50px;
+    margin: 0 0 0; }
+  .visual {
+    height: auto;
+    width: 90%;
+    position: relative;
+    margin: auto;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: white; }
+  .visual h4 {
+    font-weight: lighter; } }
+
+/*html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}*/
+.subaruhome {
+  margin: 11px 150px 0 23px;
+  background: url("../assets/imgs/siteimgs.PNG") no-repeat -1px 0;
+  width: 150px;
+  height: 40px;
+  border: none;
+  position: relative; }
+
+.items h1 {
+  width: auto;
+  font-size: 12px;
+  font-family: sans-serif; }
+
+.choose h3 {
+  height: 23px;
+  width: 300px;
+  position: relative;
+  color: #595959;
+  margin: 0 auto; }
+
+.choose h1 {
+  height: 20px;
+  width: 150px;
+  position: relative;
+  font-size: 14px;
+  font-family: sans-serif;
+  margin: 0 auto;
+  display: inline-block;
+  color: #595959; }
+
+.modelcon h1 {
+  font-size: 20px; }
+
+.buildheader h1 {
+  height: auto;
+  width: 220px;
+  margin: 10px 0;
+  margin-right: 0;
+  position: absolute;
+  font-size: 1.5rem; }
+
+.buildheader h2 {
+  position: absolute;
+  right: 100px;
+  font-size: 12px;
+  top: 20px;
+  letter-spacing: 2px; }
+
+.modelequip {
+  width: 480px; }
+
+.modelequip h1 {
+  font-size: .99rem; }
+
+.carbut:hover {
+  cursor: grab; }
+
+.subinfo h3 {
+  font-size: 1.55rem;
+  color: #333333; }
+
+.tool:hover {
+  color: #0FA4DC; }
+
+/*# sourceMappingURL=maps/styles.css.map */

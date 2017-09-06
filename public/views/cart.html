@@ -1,9 +1,10 @@
+<html>
 <title>Build & Price</title>
 <head><script>
 
 </script>
 </head>
-<body ng-controller="buildCtrl">
+<body ng-controller="buildCtrl" onload="boxCloser()" id="body" class="body">
   <img class="cartbackground" style="background: url('{{vehicle.cartback}}') no-repeat center center;">
   <div class="title">
     <div>
@@ -124,7 +125,7 @@
     </div>
     <div class="shop">
       <img class="img" src="../assets/imgs/special-offers.png">
-      <h5>SPECIAL OFFERS</h5>
+      <h5 ng-click="topFunction()">SPECIAL OFFERS</h5>
     </div>
     <div class="shop">
       <img class="img" src="../assets/imgs/request-quote.png">
@@ -135,7 +136,7 @@
     <div class="order">
     <div class="finalbuild">
       <div id="price" class="builddets"><h1>${{total}}</h1>TOTAL</div>
-      <div id="checkout" class="builddets" ng-click="orderpop = !orderpop"><h3>CHECKOUT</h3></div>
+      <div id="checkout" class="builddets" ng-click="orderpop = !orderpop; orderscroll()"><h3>CHECKOUT</h3></div>
       <div id="testd" class="builddets"><h3>SCHEDULE A TEST DRIVE</h3></div>
     </div>
     </div>
@@ -155,18 +156,11 @@
     </div>
 
     <script>
-    // var myVar;
-    //
-    // function myFunction() {
-    //     myVar = setTimeout(showPage, 3000);
-    // }
-    //
-    // function showPage() {
-    //   document.getElementById("body").style.display = "none";
-    //   document.getElementById("body").style.display = "block";
-    // }
+    function orderscroll() {
+        $(document).animate({ scrollTop: "0" }, 1000); // For Chrome, Safari and Opera
+    }
 
     </script>
-
-</body id="body">
 <ty ng-show="ty"></ty>
+</body>
+</html>

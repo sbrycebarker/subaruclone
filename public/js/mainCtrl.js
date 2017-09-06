@@ -1,4 +1,12 @@
 angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, mainService, $http) {
+  function boxCloser(event){
+
+  $(html, body).click(function() {
+      console.log("CLICKY")
+      $(".dropdown").hide();
+      // $(".dropdown-content").removeClass("show");
+  });
+  }
 
   $scope.getCars = function(results) {
     mainService.getCars().then(function(results){
