@@ -5,7 +5,7 @@ const express = require('express'),
       cors = require('cors'),
       moment = require('moment'),
       foundation = require('foundation-cli'),
-      mongoose =require('mongoose'),
+      mongoose = require('mongoose'),
       MongoStore = require('connect-mongo')(session),
       request = require('request');
 
@@ -28,7 +28,9 @@ const express = require('express'),
       app.put('/postcart/:id', cart.update);
       app.delete('/deletecart/:id', cart.destroy);
 // sbrycebarker:serg1234@ds129030.mlab.com:29030
-      mongoose.connect('mongodb://sbrycebarker:serg1234@ds129030.mlab.com:29030/subaru/');
+      mongoose.connect('mongodb://sbrycebarker:serg1234@ds129030.mlab.com:29030/subaru', {
+        useMongoClient: true,
+      })
 
       app.use(express.static('./public'))
             var port = 8083

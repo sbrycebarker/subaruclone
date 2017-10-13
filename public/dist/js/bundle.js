@@ -37,7 +37,6 @@ angular.module('myApp').controller('buildCtrl', function ($scope, $stateParams, 
       $scope.ints = results.data.interior;
     });
   };
-
   $scope.colors();
 
   $scope.getOptions = function (options) {
@@ -81,19 +80,16 @@ angular.module('myApp').controller('buildCtrl', function ($scope, $stateParams, 
     //     console.log("ALREADY THERE")
     //     flag = false
     //   }
-    // }
+    //
     mainService.postCart(data);
     $scope.order = order;
   };
-
   $scope.chooseColor = function (color) {
     console.log("chosencolor", color.name);
     $scope.color = color;
   };
-
   $scope.addOption = function (option) {
     console.log("adding", option);
-
     var flag = true;
     for (var i = 0; i < $scope.cart.length; i++) {
       if (option._id[0] === $scope.cart[i].accessory._id[0]) {
@@ -104,24 +100,22 @@ angular.module('myApp').controller('buildCtrl', function ($scope, $stateParams, 
       }
     }
     if (flag) {
-      $scope.cart.push({ accessory: option });
+      $scope.cart.push({
+        accessory: option
+      });
       $scope.total += option.price;
     }
   };
-
   $scope.deleteCart = function (id, i) {
     var removeItem = $scope.data.splice(i, 1);
     mainService.deleteCart(id).then(function () {}, function (err) {
       $scope.data.splice(i, 0, removedItem[0]);
     });
   };
-
   $scope.getCart = function (results) {
     $scope.cart = [];
   };
   $scope.getCart();
-  // $scope.getTotal()
-
   $scope.getOrder = function (order) {
     mainService.getOrder().then(function (order) {
       $scope.finalorder = order.data[0];
@@ -281,6 +275,7 @@ angular.module('myApp').service('mainService', function ($http, $stateParams) {
       controller: "buildCtrl"
     });
   };
+
   this.carOptions = function (options) {
     return $http({
       method: "POST",
