@@ -1456,20 +1456,21 @@ html, body, main, div, .tool {
     justify-content: center;
     margin: 0 auto; }
   .items {
-    height: 41px;
+    height: 58px;
     display: inline-block;
     text-align: center;
-    background-color: #FAFAFA;
+    background-color: none;
     margin: auto 15px; }
   .items h1 {
-    position: absolute; }
+    position: relative;
+    top: 5px; }
   .items:hover {
     cursor: pointer;
     border-bottom: 3px solid #333333; }
   #vehicles {
     width: 80px; }
   #tools {
-    width: 125px; }
+    width: 135px; }
   #why {
     width: 104px; }
   .sideitems {
@@ -2270,7 +2271,8 @@ html, body, main, div, .tool {
     position: relative;
     text-align: center;
     vertical-align: middle;
-    margin: 0 auto; }
+    margin: 0 auto;
+    cursor: pointer; }
   .special h4 {
     position: relative;
     margin: auto;
@@ -2428,11 +2430,13 @@ html, body, main, div, .tool {
     height: 40px;
     width: 40px;
     background: url("../assets/imgs/back-to-top.png");
-    border: none; }
+    border: none;
+    cursor: pointer; }
   .arrowimg:hover {
     height: 40px;
     width: 40px;
-    background: url("../assets/imgs/back-to-top-hover.png"); }
+    background: url("../assets/imgs/back-to-top-hover.png");
+    cursor: grab; }
   .footer {
     height: 603px;
     width: 100%;
