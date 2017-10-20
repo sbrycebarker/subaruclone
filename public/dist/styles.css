@@ -1350,7 +1350,7 @@ html, body, main, div, .tool {
     position: fixed;
     display: flex;
     justify-content: center;
-    background-color: green;
+    background-color: #FAFAFA;
     z-index: 2; }
   .arrow {
     background: url("../assets/imgs/siteimgs.PNG") no-repeat -99px -450px;
