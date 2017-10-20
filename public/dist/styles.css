@@ -2245,11 +2245,11 @@ html, body, main, div, .tool {
     background: no-repeat center center;
     background-size: cover;
     z-index: 0;
-    margin-top: 45px;
+    margin-top: 0px;
     text-align: center; }
   .fronttext {
     position: relative;
-    margin: 0 auto; }
+    margin: 15px auto; }
   .fronttext {
     height: 100px;
     width: 700px;
