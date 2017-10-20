@@ -68,10 +68,8 @@ html, body, main, div, .tool {
   .white {
     height: 58px;
     width: 100%;
-    position: relative;
     margin: 0;
-    top: 38px;
-    border-bottom: 1px solid #CCCCCC;
+    border: 1px solid black;
     color: #232323;
     position: fixed;
     display: flex;
@@ -83,6 +81,20 @@ html, body, main, div, .tool {
     width: 19px;
     height: 10px;
       height-border: none; }
+  .caronav {
+    border: white solid 1px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center; }
+  .caromain {
+    height: 50px;
+    width: 200px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    color: white; }
   .itemscon {
     height: 20px;
     width: 550px;
@@ -95,7 +107,7 @@ html, body, main, div, .tool {
     width: 115px;
     margin: 5px 5px;
     position: relative;
-    display: inline-block;
+    display: none;
     text-align: center;
     bottom: 0; }
   .modelimg {
@@ -153,7 +165,7 @@ html, body, main, div, .tool {
   .carfeat li {
     margin: 5px; }
   .subaruhome {
-    margin: 11px 0 0 23px;
+    margin: 0;
     background: url("../assets/imgs/siteimgs.PNG") no-repeat -1px 0;
     width: 150px;
     height: 40px;
@@ -163,25 +175,26 @@ html, body, main, div, .tool {
     height: 100%;
     width: 500px;
     position: relative;
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: center;
     margin: 0 auto; }
   .items {
-    height: 41px;
-    display: inline-block;
+    height: 58px;
+    display: none;
     text-align: center;
-    background-color: #FAFAFA;
-    margin: 15px; }
+    background-color: none;
+    margin: auto 15px; }
   .items h1 {
-    position: absolute; }
+    position: relative;
+    top: 5px; }
   .items:hover {
     cursor: pointer;
     border-bottom: 3px solid #333333; }
   #vehicles {
     width: 80px; }
   #tools {
-    width: 125px; }
+    width: 135px; }
   #why {
     width: 104px; }
   .sideitems {
@@ -264,18 +277,6 @@ html, body, main, div, .tool {
     display: none; }
   .zip_code.far_zipCode {
     display: none; }
-  .top {
-    height: 38px;
-    width: 100%;
-    background-color: #232323;
-    font-size: 10px;
-    font-family: helvetica arial sans-serif;
-    margin: 0 0;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    color: white;
-    z-index: 2; }
   .links {
     height: 200px;
     width: 1130px;
@@ -284,7 +285,7 @@ html, body, main, div, .tool {
     transition: 600ms ease-out;
     position: relative;
     display: inline-block;
-    top: 40px;
+    top: 15px;
     right: 200px;
     width: 956px;
     height: 568px;
@@ -315,8 +316,8 @@ html, body, main, div, .tool {
     color: #0099FF; }
   .blah {
     position: absolute;
-    height: 449px;
-    width: 675px;
+    height: 483px;
+    width: 715px;
     left: 240px;
     padding: 20px;
     top: 0;
@@ -358,12 +359,13 @@ html, body, main, div, .tool {
     transition: background-color 600ms ease-out;
     cursor: pointer; }
   .buildheader {
+    margin: 0;
     display: flex;
     height: 70px;
     width: 100%;
-    position: fixed;
+    position: relative;
     background-color: #232323;
-    top: 96px;
+    top: 58px;
     font-family: sans-serif;
     color: #FAFAFA;
     z-index: 1; }
@@ -380,28 +382,30 @@ html, body, main, div, .tool {
     font-weight: bold;
     font-family: sans-serif; }
   .cars {
-    height: 140px;
-    padding: 15px 0;
-    width: 1130px;
-    background-color: #FAFAFA;
+    padding: 25px 0;
+    width: 1255px;
+    background-color: white;
     position: relative;
     display: flex;
     margin: auto;
-    top: -85px;
+    top: -100px;
     z-index: 1;
     flex-direction: row;
     box-shadow: 0 18px 25px 0 rgba(0, 0, 0, 0.1); }
   .car {
-    width: 145px;
-    margin: 12px auto;
+    width: 180px;
+    margin: auto;
     text-align: center;
     font-family: sans-serif;
     font-weight: bold;
     color: #20609F;
     text-decoration: none;
     z-index: 1; }
+  .cardiv {
+    height: 140px; }
   .car h2 {
     font-size: 14px;
+    font-weight: bold;
     margin: auto;
     width: 80px; }
   .car h2:hover {
@@ -417,7 +421,8 @@ html, body, main, div, .tool {
     cursor: pointer; }
   .carbut {
     height: 70px;
-    width: 145px; }
+    width: 145px;
+    margin: 12px 0 12px; }
   .modelbutton {
     width: 164px;
     text-align: center;
@@ -556,9 +561,6 @@ html, body, main, div, .tool {
     width: 150px;
     position: relative;
     margin: 0 auto; }
-  .topbuttons {
-    background-color: #FAFAFA;
-    border: none; }
   .carheader {
     background-color: white;
     position: absolute;
@@ -951,16 +953,16 @@ html, body, main, div, .tool {
   .carmain h1 {
     margin: 0; }
   .front {
-    height: 100vh;
+    height: 1000px;
     width: 100vw;
     background: no-repeat center center;
     background-size: cover;
     z-index: 0;
-    margin-top: 45px;
+    margin-top: 0px;
     text-align: center; }
   .fronttext {
     position: relative;
-    margin: 0 auto; }
+    margin: 15px auto; }
   .fronttext {
     height: 100px;
     width: 700px;
@@ -981,7 +983,8 @@ html, body, main, div, .tool {
     position: relative;
     text-align: center;
     vertical-align: middle;
-    margin: 0 auto; }
+    margin: 0 auto;
+    cursor: pointer; }
   .special h4 {
     position: relative;
     margin: auto;
@@ -1139,11 +1142,13 @@ html, body, main, div, .tool {
     height: 40px;
     width: 40px;
     background: url("../assets/imgs/back-to-top.png");
-    border: none; }
+    border: none;
+    cursor: pointer; }
   .arrowimg:hover {
     height: 40px;
     width: 40px;
-    background: url("../assets/imgs/back-to-top-hover.png"); }
+    background: url("../assets/imgs/back-to-top-hover.png");
+    cursor: grab; }
   .footer {
     height: 603px;
     width: 100%;
@@ -1212,125 +1217,7 @@ html, body, main, div, .tool {
     font-weight: lighter;
     color: white; }
   .visual h4 {
-    font-weight: lighter; }
-  .subaruhome {
-    margin: 11px 150px 0 23px;
-    background: url("../assets/imgs/siteimgs.PNG") no-repeat -1px 0;
-    width: 150px;
-    height: 40px;
-    border: none;
-    position: relative; }
-  .items h1 {
-    width: auto;
-    font-size: 12px;
-    font-family: sans-serif; }
-  .choose h3 {
-    height: 23px;
-    width: 300px;
-    position: relative;
-    color: #595959;
-    margin: 0 auto; }
-  .choose h1 {
-    height: 20px;
-    width: 150px;
-    position: relative;
-    font-size: 14px;
-    font-family: sans-serif;
-    margin: 0 auto;
-    display: inline-block;
-    color: #595959; }
-  .modelcon h1 {
-    font-size: 20px; }
-  .buildheader h1 {
-    height: auto;
-    width: 220px;
-    margin: 10px 0;
-    margin-right: 0;
-    position: absolute;
-    font-size: 1.5rem; }
-  .buildheader h2 {
-    position: absolute;
-    right: 100px;
-    font-size: 12px;
-    top: 20px;
-    letter-spacing: 2px; }
-  .modelequip {
-    width: 480px; }
-  .modelequip h1 {
-    font-size: .99rem; }
-  .carbut:hover {
-    cursor: grab; }
-  .subinfo h3 {
-    font-size: 1.55rem;
-    color: #333333; }
-  .tool:hover {
-    color: #0FA4DC; }
-  .affix {
-    top: 0;
-    width: 100%;
-    z-index: 9999; }
-  .affix .top {
-    position: relative;
-    top: 50px; }
-  .subaruhome {
-    left: 0px;
-    top: 10px;
-    background: url("../assets/imgs/siteimgs.PNG") no-repeat -1px 0;
-    width: 150px;
-    height: 40px;
-    position: absolute; }
-  .items h1 {
-    width: auto;
-    font-size: 12px;
-    font-family: sans-serif; }
-  .choose h3 {
-    height: 23px;
-    width: 300px;
-    position: relative;
-    color: #595959;
-    margin: 0 auto; }
-  .choose h1 {
-    height: 20px;
-    width: 150px;
-    position: relative;
-    font-size: 14px;
-    font-family: sans-serif;
-    margin: 0 auto;
-    display: inline-block;
-    color: #595959; }
-  .modelcon h1 {
-    font-size: 20px; }
-  .buildheader h1 {
-    height: auto;
-    width: 220px;
-    margin: 10px 0;
-    margin-right: 0;
-    position: absolute;
-    font-size: 1.5rem; }
-  .buildheader h2 {
-    position: absolute;
-    right: 100px;
-    font-size: 12px;
-    top: 20px;
-    letter-spacing: 2px; }
-  .modelequip {
-    width: 480px; }
-  .modelequip h1 {
-    font-size: .99rem; }
-  .carbut:hover {
-    cursor: grab; }
-  .subinfo h3 {
-    font-size: 1.55rem;
-    color: #333333; }
-  .tool:hover {
-    color: #0FA4DC; }
-  .affix {
-    top: 0;
-    width: 100%;
-    z-index: 9999; }
-  .affix .top {
-    position: relative;
-    top: 50px; } }
+    font-weight: lighter; } }
 
 
 @media only screen and (min-width: 750px) {
