@@ -1573,7 +1573,7 @@ html, body, main, div, .tool {
     transition: 600ms ease-out;
     position: relative;
     display: inline-block;
-    top: 40px;
+    top: 15px;
     right: 200px;
     width: 956px;
     height: 568px;
@@ -1604,8 +1604,8 @@ html, body, main, div, .tool {
     color: #0099FF; }
   .blah {
     position: absolute;
-    height: 449px;
-    width: 675px;
+    height: 483px;
+    width: 715px;
     left: 240px;
     padding: 20px;
     top: 0;
