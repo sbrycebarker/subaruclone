@@ -1343,7 +1343,6 @@ html, body, main, div, .tool {
   .white {
     height: 58px;
     width: 100%;
-    position: relative;
     margin: 0;
     top: 38px;
     border-bottom: 1px solid #CCCCCC;
@@ -1457,20 +1456,21 @@ html, body, main, div, .tool {
     justify-content: center;
     margin: 0 auto; }
   .items {
-    height: 41px;
+    height: 58px;
     display: inline-block;
     text-align: center;
-    background-color: #FAFAFA;
-    margin: 15px; }
+    background-color: none;
+    margin: auto 15px; }
   .items h1 {
-    position: absolute; }
+    position: relative;
+    top: 5px; }
   .items:hover {
     cursor: pointer;
     border-bottom: 3px solid #333333; }
   #vehicles {
     width: 80px; }
   #tools {
-    width: 125px; }
+    width: 135px; }
   #why {
     width: 104px; }
   .sideitems {
@@ -1647,12 +1647,13 @@ html, body, main, div, .tool {
     transition: background-color 600ms ease-out;
     cursor: pointer; }
   .buildheader {
+    margin: 0;
     display: flex;
     height: 70px;
     width: 100%;
-    position: fixed;
+    position: relative;
     background-color: #232323;
-    top: 96px;
+    top: 58px;
     font-family: sans-serif;
     color: #FAFAFA;
     z-index: 1; }
@@ -2270,7 +2271,8 @@ html, body, main, div, .tool {
     position: relative;
     text-align: center;
     vertical-align: middle;
-    margin: 0 auto; }
+    margin: 0 auto;
+    cursor: pointer; }
   .special h4 {
     position: relative;
     margin: auto;
@@ -2428,11 +2430,13 @@ html, body, main, div, .tool {
     height: 40px;
     width: 40px;
     background: url("../assets/imgs/back-to-top.png");
-    border: none; }
+    border: none;
+    cursor: pointer; }
   .arrowimg:hover {
     height: 40px;
     width: 40px;
-    background: url("../assets/imgs/back-to-top-hover.png"); }
+    background: url("../assets/imgs/back-to-top-hover.png");
+    cursor: grab; }
   .footer {
     height: 603px;
     width: 100%;
