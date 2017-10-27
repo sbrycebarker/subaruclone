@@ -1,6 +1,19 @@
 $break-small: 650px
 
+a
+  color: none
+  text-decoration: none
+
+
 @media only screen and (min-width:750px)
+  html, body, main, div, .tool
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    font: inherit
+    vertical-align: top
+
   html
     margin: 0
   body
@@ -1291,13 +1304,16 @@ $break-small: 650px
     background-size: cover
 
   .backtotop
-    height: 100px
+    height: 200px
     width: 100%
     padding: 49px 0 53px 0
     text-align: center
     background-color: #EFEFEF
+    text-decoration: none
 
-
+  .backtotop
+    text-decoration: none
+    cursor: grab
 
   .textwrapper
     width: 1440px
@@ -1311,27 +1327,38 @@ $break-small: 650px
     bottom: 0
     margin: 0 auto
     color: #0FA4DC
+    cursor: crosshair
 
-  // .topscroller h3:hover
-  //   color: black
+  .topscroller:hover
+    color: black
+
+  .topscroller h3
+    font-size: 15px
+    font-weight: bold
+
+  .topscroller h3:hover
+    font-size: 15px
+    font-weight: bold
+    text-decoration: none
+    cursor: grab
 
   .arrowimg
     height: 40px
     width: 40px
     background: url("../assets/imgs/back-to-top.png")
-    border: none
-    cursor: pointer
-
+    background-size: cover
+    border: none 
+    color: inherit
+    cursor: crosshair
 
   .arrowimg:hover
     height: 40px
     width: 40px
+    color: inherit
     background: url("../assets/imgs/back-to-top-hover.png")
-    cursor: grab
-
 
   .footer
-    height: 603px
+    height: 685px
     width: 100%
     margin: auto
     background-color: #232323
@@ -1412,5 +1439,37 @@ $break-small: 650px
   .visual h4
     font-weight: lighter
 
-.addedoptions
+  .footersub
+    vertical-align: top
+
+  .footerlist
+    width: 140px
+    height: 270px
+
+  .footersub h3
+    padding: 0 0 15px
+    margin: 0 0 17px
+    width: 120px
+    font-size: 16px
+    font-weight: bold
+    border-bottom: 2px solid #333
+    white-space: nowrap
+
+  #global_footer
+    margin: 0 auto
+    position: relative
+    text-rendering: optimizeLegibility
+    -webkit-font-smoothing: antialiased
+    z-index: 10
+    width: 980px
+
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+
+  ul li
+    margin: 0px 0px 8px 0px
+
+  .addedoptions
   // border-bottom: 1px solid white
