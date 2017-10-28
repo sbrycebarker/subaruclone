@@ -92,4 +92,6 @@ angular.module('myApp').controller('buildCtrl', function($scope, $stateParams, m
     })
   }
   $scope.getOrder();
+
+
 })

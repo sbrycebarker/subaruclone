@@ -19,6 +19,15 @@ time, mark, audio, video {
     background:transparent;
 }*/
 
+/*span::before {
+  content: 'fsd';
+  background: url('../assets/imgs2/navigation-sprite.png') no-repeat -2px -225px;
+  width: 21px;
+  height: 28px;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+}*/
 
 @media only screen and (min-width:750px) {
 

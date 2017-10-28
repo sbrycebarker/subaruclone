@@ -1,4 +1,4 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html ng-app="myApp" onload="boxCloser()">
 <head>
   <link rel="icon" href="../assets/imgs/subaruicon.png" type="image/png" sizes="18x18">
@@ -18,14 +18,14 @@
   <header>
     <div id="top" class="top">
       <div class="itemscon">
-      <ul>
-        <b>
-      <div class="topitems"><img class="location">YOUR LOCATION <b></b></div>
-      <div class="topitems"><img class="">FOR OWNERS</div>
-      <div class="topitems"><img class="">CUSTOMER SUPPORT</div>
-      <div class="topitems"><img class="">SEARCH</div>
-        </b>
-      </ul>
+
+
+      <li class="topitems"><span class="loc">YOUR LOCATION: {{zip}}</span></li>
+      <li class="topitems"><span class="own">FOR OWNERS</span></li>
+      <li class="topitems"><span class="cust">CUSTOMER SUPPORT</span></li>
+      <li class="topitems"><span class="sear">SEARCH</span></li>
+
+
       </div>
     </div>
 

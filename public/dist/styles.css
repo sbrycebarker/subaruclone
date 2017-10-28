@@ -1273,8 +1273,7 @@ a {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
-    vertical-align: top; }
+    font: inherit; }
   html {
     margin: 0; }
   body {
@@ -1308,25 +1307,47 @@ a {
   .caromain {
     height: 50px;
     width: 200px;
-    border: 1px solid white;
     display: flex;
     flex-direction: row;
     color: white; }
   .itemscon {
-    height: 20px;
-    width: 550px;
+    height: 100%;
+    width: 640px;
     position: relative;
     display: flex;
-    justify-content: flex-end;
-    bottom: -5px; }
+    justify-content: flex-end; }
   .topitems {
-    height: 20px;
-    width: 115px;
-    margin: 5px 5px;
+    height: 100%;
+    width: 170px;
+    margin: auto;
     position: relative;
     display: inline-block;
     text-align: center;
-    bottom: 0; }
+    border: red solid 1px; }
+  .topitems h3 {
+    height: 30px;
+    margin: auto;
+    font-size: 11px;
+    font-family: sans-serif; }
+  .topitems span .loc:before {
+    background: url("../assets/imgs2/navigation-sprite.png") no-repeat -2px -225px;
+    content: '';
+    padding: 0;
+    position: absolute;
+    height: 30px;
+    width: 29px;
+    top: 3px;
+    left: 5px;
+    zoom: .5; }
+  .topitems span:before {
+    content: '';
+    padding: 0;
+    position: absolute;
+    height: 30px;
+    width: 29px;
+    top: 3px;
+    left: 5px;
+    zoom: .5; }
   .modelimg {
     height: 302px;
     width: 482px; }
@@ -1435,7 +1456,8 @@ a {
     flex-direction: row; }
   .side h4 {
     font-size: 12px;
-    margin-left: 5px; }
+    margin-left: 5px;
+    margin-top: 15px; }
   .byo {
     background: url("../assets/imgs/byo.gif");
     height: 30px;
@@ -2088,9 +2110,6 @@ a {
     border-radius: 15px;
     vertical-align: middle;
     z-index: inherit; }
-  .img {
-    position: relative;
-    top: 25px; }
   .shop:hover {
     opacity: 1;
     cursor: grab; }
@@ -2513,6 +2532,15 @@ time, mark, audio, video {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+}*/
+/*span::before {
+  content: 'fsd';
+  background: url('../assets/imgs2/navigation-sprite.png') no-repeat -2px -225px;
+  width: 21px;
+  height: 28px;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
 }*/
 @media only screen and (min-width: 750px) {
   .subaruhome {

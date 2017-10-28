@@ -76,6 +76,15 @@ this.getOrder = function() {
       controller: "buildCtrl"
     })
   }
+  this.getZip = function(x , y) {
+    // console.log("server", x)
+    // console.log("server", y)
+    return $http({
+      method: 'GET',
+      url: 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + x + ',' + y + '&sensor=false',
+      controller: 'mainCtrl'
+    })
+  }
 
 
 })

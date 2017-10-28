@@ -4,8 +4,42 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
   $(html, body).click(function() {
       console.log("CLICKY")
       $(".dropdown").hide();
-      // $(".dropdown-content").removeClass("show");
-  });
+      $(".dropdown-content").removeClass("show");
+
+      })
+
+  }
+
+  function getLocation() {
+	// console.log("pow")
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+        console.log(x.innerHTML)
+    }
+
+}
+function showPosition(position) {
+    var x = position.coords.latitude;
+
+    var y = position.coords.longitude;
+  	// console.log(x)
+  	// console.log(y)
+    $scope.x = x
+    $scope.y = y
+    $scope.zip()
+}
+
+getLocation()
+
+  $scope.zip = function() {
+    var x = $scope.x
+    var y = $scope.y
+    mainService.getZip(x , y).then(function(zip) {
+      console.log(zip.data.results[0].address_components[5].short_name)
+      $scope.zip = zip.data.results[0].address_components[5].short_name
+    })
   }
 
   $scope.getCars = function(results) {
@@ -29,7 +63,9 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
       $scope.Impreza = false
       $scope[param] = true
     }
+
   $scope.showmenu = false;
   $scope.orderpop = false;
   $scope.ty = false
+
 })

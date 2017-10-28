@@ -12,7 +12,6 @@ a
     border: 0
     font-size: 100%
     font: inherit
-    vertical-align: top
 
   html
     margin: 0
@@ -51,27 +50,54 @@ a
   .caromain
     height: 50px
     width: 200px
-    border: 1px solid white
+    // border: 1px solid white
     display: flex
     flex-direction: row
     color: white
 
   .itemscon
-    height: 20px
-    width: 550px
+    height: 100%
+    width: 640px
     position: relative
     display: flex
     justify-content: flex-end
-    bottom: -5px
+    // border: white solid 1px
 
   .topitems
-    height: 20px
-    width: 115px
-    margin: 5px 5px
+    height: 100%
+    width: 170px
+    margin: auto
     position: relative
     display: inline-block
     text-align: center
-    bottom: 0
+    border: red solid 1px
+
+  .topitems h3
+    height: 30px
+    margin: auto
+    font-size: 11px
+    font-family: sans-serif
+
+  .topitems span .loc:before
+    background: url('../assets/imgs2/navigation-sprite.png') no-repeat -2px -225px
+    content: ''
+    padding: 0
+    position: absolute
+    height: 30px
+    width: 29px
+    top: 3px
+    left: 5px
+    zoom: .5
+
+  .topitems span:before
+    content: ''
+    padding: 0
+    position: absolute
+    height: 30px
+    width: 29px
+    top: 3px
+    left: 5px
+    zoom: .5
 
   .modelimg
     height: 302px
@@ -207,6 +233,7 @@ a
   .side h4
     font-size: 12px
     margin-left: 5px
+    margin-top: 15px
 
   .byo
     background: url("../assets/imgs/byo.gif")
@@ -983,10 +1010,6 @@ a
     vertical-align: middle
     z-index: inherit
 
-  .img
-    position: relative
-    top: 25px
-
   .shop:hover
     opacity: 1
     cursor: grab
@@ -1347,7 +1370,7 @@ a
     width: 40px
     background: url("../assets/imgs/back-to-top.png")
     background-size: cover
-    border: none 
+    border: none
     color: inherit
     cursor: crosshair
 
