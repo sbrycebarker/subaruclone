@@ -50,54 +50,59 @@ a
   .caromain
     height: 50px
     width: 200px
-    // border: 1px solid white
     display: flex
     flex-direction: row
     color: white
 
   .itemscon
     height: 100%
-    width: 640px
+    width: 600px
     position: relative
     display: flex
-    justify-content: flex-end
-    // border: white solid 1px
+    right: 50px
 
   .topitems
     height: 100%
-    width: 170px
     margin: auto
     position: relative
     display: inline-block
     text-align: center
-    border: red solid 1px
 
-  .topitems h3
+  .topitems span
     height: 30px
-    margin: auto
-    font-size: 11px
-    font-family: sans-serif
+    position: relative
+    padding: 0 0 0 20px
+    line-height: 30px
+    color: #FFF
+    display: table
+    margin: 5px 0
+    font-size: 10px
+    cursor: pointer
+    text-transform: uppercase
+    letter-spacing: .5px
 
-  .topitems span .loc:before
+  span::before
+    content: ''
+    padding: 0 0 5px 0
+    position: absolute
+    height: 35px
+    width: 30px
+    top: 14px
+    left: 5px
+    zoom: .5
+
+  .loc:before
     background: url('../assets/imgs2/navigation-sprite.png') no-repeat -2px -225px
-    content: ''
-    padding: 0
-    position: absolute
-    height: 30px
-    width: 29px
-    top: 3px
-    left: 5px
-    zoom: .5
 
-  .topitems span:before
-    content: ''
-    padding: 0
-    position: absolute
-    height: 30px
-    width: 29px
-    top: 3px
-    left: 5px
-    zoom: .5
+  .own::before
+    background: url('../assets/imgs2/navigation-sprite.png') no-repeat -1px -269px
+
+  .cust::before
+    background: url('../assets/imgs2/navigation-sprite.png') no-repeat -3px -313px
+
+  .sear::before
+    background: url('../assets/imgs2/navigation-sprite.png') no-repeat -2px -357px
+
 
   .modelimg
     height: 302px
@@ -215,7 +220,6 @@ a
     justify-content: flex-end
     top: 10px
 
-
   .sideitems a
    text-decoration: none
    color: inherit
@@ -228,10 +232,10 @@ a
     margin: auto 0
     display: flex
     flex-direction: row
-    // border: 1px solid red
 
   .side h4
     font-size: 12px
+    font-weight: bold
     margin-left: 5px
     margin-top: 15px
 
@@ -469,7 +473,6 @@ a
     margin: auto
     width: 80px
 
-
   .car h2:hover
     width: 100px
     color: #414141
@@ -494,7 +497,6 @@ a
     text-align: center
     position: relative
     margin: 0 auto
-
 
   .yearselector
     font-size: .8125rem
@@ -611,7 +613,6 @@ a
     -webkit-transition: background-color 600ms ease-out
     -moz-transition: background-color 600ms ease-out
     transition: background-color 600ms ease-out
-
 
   .model
     top: 20px
@@ -1117,9 +1118,13 @@ a
       -moz-background-size: cover
       background-size: cover
 
-
-
   .carmain h1
+    margin: 0
+
+  .item
+    margin: 0
+
+  .active
     margin: 0
 
   .front
@@ -1128,6 +1133,7 @@ a
     background: no-repeat center center
     background-size: cover
     z-index: 0
+    margin: 0
     margin-top: 0px
     text-align: center
 
@@ -1350,7 +1356,6 @@ a
     bottom: 0
     margin: 0 auto
     color: #0FA4DC
-    cursor: crosshair
 
   .topscroller:hover
     color: black
@@ -1368,17 +1373,17 @@ a
   .arrowimg
     height: 40px
     width: 40px
-    background: url("../assets/imgs/back-to-top.png")
     background-size: cover
+    background: url("../assets/imgs/back-to-top.png")
     border: none
-    color: inherit
-    cursor: crosshair
+    color: white
 
   .arrowimg:hover
     height: 40px
     width: 40px
-    color: inherit
+    color: white
     background: url("../assets/imgs/back-to-top-hover.png")
+    cursor: grab
 
   .footer
     height: 685px
@@ -1486,12 +1491,12 @@ a
     z-index: 10
     width: 980px
 
-  ul
+  #global_footer ul
     list-style-type: none
     margin: 0
     padding: 0
 
-  ul li
+    #global_footer ul li
     margin: 0px 0px 8px 0px
 
   .addedoptions

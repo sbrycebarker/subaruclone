@@ -133,10 +133,8 @@ time, mark, audio, video {
     position: absolute;
   }
 
-  .items h1 {
-    width: auto;
-    font-size: 12px;
-    font-family: sans-serif;
+  .item {
+    margin: 0
   }
 
   .choose h3 {

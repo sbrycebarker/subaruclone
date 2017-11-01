@@ -210,6 +210,9 @@ $(document).ready(function () {});
 'use strict';
 
 angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, mainService, $http) {
+
+  // <<=====================================DROPDOWN==================================================>>
+
   function boxCloser(event) {
 
     $(html, body).click(function () {
@@ -218,6 +221,8 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
       $(".dropdown-content").removeClass("show");
     });
   }
+
+  // <<=====================================API CALLS==================================================>>
 
   function getLocation() {
     // console.log("pow")
