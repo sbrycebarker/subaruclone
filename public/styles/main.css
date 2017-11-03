@@ -1,0 +1,53 @@
+.footerlist {
+  height: auto;
+  width: auto;
+  display: inline-block;
+  margin: 10px; }
+
+.footerlist a {
+  color: white;
+  font-family: sans-serif;
+  text-decoration: none; }
+
+.footersub {
+  position: relative;
+  font-family: sans-serif; }
+
+.ty {
+  height: 400px;
+  width: 700px;
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+  position: relative;
+  top: 300px;
+  margin: auto;
+  border-radius: 15px;
+  font-size: 12px;
+  text-align: center;
+  display: flex; }
+
+.ty h1 {
+  margin: auto auto;
+  position: relative; }
+
+.colorname {
+  position: relative;
+  color: white;
+  font-family: sans-serif;
+  font-weight: lighter; }
+
+.visual h1 {
+  margin: 40px 0; }
+
+.carousel-indicators {
+  margin: 0;
+  margin-bottom: 100px; }
+
+.frontcontainer {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto; }
+
+/*# sourceMappingURL=main.css.map */
