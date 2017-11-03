@@ -76,6 +76,14 @@ this.getOrder = function() {
       controller: "buildCtrl"
     })
   }
+
+    this.getCoOrd = function() {
+    return $http({
+      method: 'POST',
+      url: 'https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAisRSShuY4yJB-8XCv9jYMyp4WLTmD9tQ',
+    })
+  }
+
   this.getZip = function(x , y) {
     // console.log("server", x)
     // console.log("server", y)

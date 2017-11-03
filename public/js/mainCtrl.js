@@ -15,35 +15,46 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
 
   // <<=====================================API CALLS==================================================>>
 
-  function getLocation() {
-	// console.log("pow")
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-        console.log(x.innerHTML)
-    }
+//   function getLocation() {
+// 	// console.log("pow")
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(showPosition);
+//     } else {
+//         x.innerHTML = "Geolocation is not supported by this browser.";
+//         console.log(x.innerHTML)
+//     }
+//
+// }
+// function showPosition(position) {
+//     var x = position.coords.latitude;
+//
+//     var y = position.coords.longitude;
+//   	// console.log(x)
+//   	// console.log(y)
+//     $scope.x = x
+//     $scope.y = y
+//     $scope.zip()
+// }
+  $scope.getCoOrd = function() {
+    mainService.getCoOrd().then(function(latlng) {
+      $scope.x = latlng.data.location.lat
+      $scope.y = latlng.data.location.lng
+      $scope.getZip()
+    })
+  }
+  $scope.getCoOrd()
 
-}
-function showPosition(position) {
-    var x = position.coords.latitude;
-
-    var y = position.coords.longitude;
-  	// console.log(x)
-  	// console.log(y)
-    $scope.x = x
-    $scope.y = y
-    $scope.zip()
-}
-
-getLocation()
-
-  $scope.zip = function() {
+  $scope.getZip = function() {
     var x = $scope.x
     var y = $scope.y
     mainService.getZip(x , y).then(function(zip) {
       console.log(zip.data.results[0].address_components[5].short_name)
-      $scope.zip = zip.data.results[0].address_components[5].short_name
+      var zip = zip.data.results[0].address_components[5].short_name
+      if (!zip) {
+        $scope.zip = zip.data.results[0].address_components[7].short_name
+      } else {
+      $scope.zip = zip
+    }
     })
   }
 
