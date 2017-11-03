@@ -15,16 +15,16 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
 
   // <<=====================================API CALLS==================================================>>
 
-//   function getLocation() {
-// 	// console.log("pow")
-//     if (navigator.geolocation) {
-//         navigator.geolocation.getCurrentPosition(showPosition);
-//     } else {
-//         x.innerHTML = "Geolocation is not supported by this browser.";
-//         console.log(x.innerHTML)
-//     }
-//
-// }
+  function getLocation() {
+	// console.log("pow")
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+        console.log(x.innerHTML)
+    }
+
+}
 function showPosition(position) {
     var x = position.coords.latitude;
 
