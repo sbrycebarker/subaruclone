@@ -7,16 +7,40 @@ const express = require('express'),
       foundation = require('foundation-cli'),
       mongoose = require('mongoose'),
       MongoStore = require('connect-mongo')(session),
+      smtpapi = require('smtpapi');
+      header = new smtpapi();
       request = require('request');
+
+      // header.addTo('sbrycesti@gmail.com');
+      // header.setUniqueArgs({cow: 'chicken'});
+      // console.log(header.jsonString());
 
       var app = express();
 
       app.use(bodyParser.json())
       app.use(cors());
 
-      var cart = require('./server/cartcrud')
-      var cars = require('./server/carcrud')
-      var options = require('./server/optionscrud')
+
+
+      let cart = require('./server/cartcrud')
+      let cars = require('./server/carcrud')
+      let options = require('./server/optionscrud')
+
+      const sgMail = require('@sendgrid/mail');
+
+      let process = require ('./server/sendgrid.js')
+
+      app.post('./sendemail', function(){
+          sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+            const msg = {
+              to: "sbrycesti@gmail.com",
+              from: 'sbrycesti@gmail.com',
+              subject: 'Your subaru has been ordered',
+              text: 'A representative from Subaru will contact you when your car arrives',
+              html: '<strong><h1>Thank you for visiting Sergios <b>SUBARU CLONE</b></h1></strong>',
+            };
+        sgMail.send(msg);
+      })
 
       app.get('/getCars', cars.read);
       app.get('/getCars/:id', cars.show);

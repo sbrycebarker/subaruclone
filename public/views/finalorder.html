@@ -1,6 +1,6 @@
 <div class="finalorder">
   <div class="carimg">
-    <img src="{{vehicle.icon}}" style="height: 200px">
+    <img src="{{vehicle.carback}}" style="height: 200px">
   </div>
   <div class="orderdetails">
     <ul>
@@ -26,8 +26,8 @@
 </div>
 <div class="emailform">
   <h3>Send us your car and a dealer will contact you shortly</h3>
-  <input type="email" class="data" name="email" ng-model="email" placeholder="yourEmail">
-  <button class="submit" ng-click="postCart( { email: email}) ; validate({email: email}); orderpop = !orderpop; ty = !ty;">Submit</button>
+  <input type="email" style="color: black" class="data" name="email" ng-model="email" placeholder="yourEmail">
+  <button class="submit" style="color: black" ng-click="postCart( { email: email}) ; validate({email: email}); orderpop = !orderpop; ty = !ty;">Submit</button>
 
 </div>
 
