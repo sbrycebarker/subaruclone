@@ -1,4 +1,7 @@
-var Cart = require('./cart.js');
+let Cart = require('./cart.js');
+const sgMail = require('@sendgrid/mail');
+
+let process = require ('./sendgrid.js')
 
 module.exports = {
 
@@ -23,14 +26,26 @@ create: function(req, res, next) {
   var cart = new Cart({car, color, cart, finalprice, email})
     cart.save(function(err, response) {
       if (err) {
-        console.log(err, response)
+        // console.log(err, response)
         res.status(500).json(err);
       } else {
-        console.log("response", response)
+        // console.log("response", response)
         // console.log("cart in server", req.body)
         res.status(200).json(req.body);
       }
     })
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    console.log("email", email, car)
+      const msg = {
+        to: email,
+        from: 'sbrycesti@gmail.com',
+        subject: 'Your Subaru has been ordered',
+        text: 'A representative from Subaru will contact you when your car arrives to confirm the order of your ' + car,
+        // html:
+        // '<strong><h1>Thank you for visiting Sergio' + `'` + 's <b>SUBARU CLONE</b></h1></strong>',
+      };
+  sgMail.send(msg);
+
 },
 
 
@@ -56,9 +71,9 @@ update: function(req, res, next) {
 },
 
 destroy: function(req, res, next) {
-  console.log(req.params.body);
+  // console.log(req.params.body);
   Cart.findByIdAndRemove(req.params.id, function(error, response){
-    console.log(response);
+    // console.log(response);
     if(error) {
       return res.status(500).json(error)
     }else {
