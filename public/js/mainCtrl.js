@@ -60,6 +60,7 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
 
   $scope.getCars = function(results) {
     mainService.getCars().then(function(results){
+      console.log("cars", results)
       $scope.cars = results.data
     })
   }
