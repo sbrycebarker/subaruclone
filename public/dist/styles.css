@@ -1782,6 +1782,11 @@ a {
     text-align: center;
     background-color: none;
     margin: auto 15px; }
+  @keyframes pulse {
+    0%, 100% {
+      background-color: white; }
+    50% {
+      background-color: black; } }
   .items h1 {
     position: relative;
     top: 5px; }
