@@ -32,12 +32,25 @@ angular.module('myApp').controller('buildCtrl', function ($scope, $stateParams, 
 
   $scope.colors = function (results) {
     mainService.colors().then(function (results) {
-      console.log("colorslist", results.data.colors);
-      $scope.colors = results.data.colors;
+      var colors = results.data.colors;
+      console.log("colorslist", colors);
+      $scope.colorlist = colors;
+      $scope.default = colors;
       $scope.ints = results.data.interior;
+      $scope.chooseColor();
     });
   };
   $scope.colors();
+
+  $scope.chooseColor = function (color) {
+    console.log("default", $scope.colorlist[0].name);
+    var defaultcolor = $scope.colorlist[0].name;
+    if (!color) {
+      $scope.color = defaultcolor;
+    } else {
+      $scope.color = color.name;
+    }
+  };
 
   $scope.getOptions = function (options) {
     mainService.getOptions(options).then(function (results) {
@@ -54,7 +67,6 @@ angular.module('myApp').controller('buildCtrl', function ($scope, $stateParams, 
     });
   };
   $scope.vehicleData();
-
   $scope.carOptions = function (options) {
     mainService.carOptions(options).then(function (results) {
       // console.log("ops", results.data)
@@ -70,7 +82,7 @@ angular.module('myApp').controller('buildCtrl', function ($scope, $stateParams, 
     var cart = $scope.cart;
     var finalcost = $scope.total;
     var car = $scope.vehicle.model;
-    var color = $scope.color.name;
+    var color = $scope.colorlist.name;
     order.push(car, color, cart, finalcost, email);
     data = order;
     console.log("car to order", data);
@@ -84,10 +96,7 @@ angular.module('myApp').controller('buildCtrl', function ($scope, $stateParams, 
     mainService.postCart(data);
     $scope.order = order;
   };
-  $scope.chooseColor = function (color) {
-    console.log("chosencolor", color.name);
-    $scope.color = color;
-  };
+
   $scope.addOption = function (option) {
     console.log("adding", option);
     var flag = true;
@@ -206,15 +215,19 @@ angular.module('myApp').directive('tasks', function () {
 });
 'use strict';
 
-$(document).ready(function () {
+$('HTML').ready(function () {
 
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 0,
-        autoplay: 10000,
-        items: 1,
-        autoHeight: true
-    });
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 0,
+    autoplay: 10000,
+    items: 1,
+    autoHeight: true
+  });
+
+  function reload() {
+    location.reload();
+  }
 });
 'use strict';
 

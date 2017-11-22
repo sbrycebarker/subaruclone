@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$('HTML').ready(function(){
 
   $('.owl-carousel').owlCarousel({
       loop:true,
@@ -7,5 +7,12 @@ $(document).ready(function(){
       items: 1,
       autoHeight: true
   })
+
+
+
+  function reload() {
+    location.reload()
+  }
+
 
 })
