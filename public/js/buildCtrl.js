@@ -55,7 +55,7 @@ angular.module('myApp').controller('buildCtrl', function($scope, $stateParams, m
     let cart = $scope.cart
     let finalcost = $scope.total;
     let car = $scope.vehicle.model;
-    let color = $scope.colorlist.name
+    let color = $scope.color
     order.push(car, color, cart, finalcost, email)
     data = order
     console.log("car to order", data)

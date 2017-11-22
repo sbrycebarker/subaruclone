@@ -35,7 +35,7 @@
 
     <div id="centermenu" class="centermenu">
 
-            <div id="vehicles" class="items" ng-click="showmenu = !showmenu; boxCloser()">
+            <div id="vehicles" class="items" ng-click="showmenu = !showmenu;">
               <h1 style="animation: pulse 3s infinite">VEHICLES<img class="arrow"></h1>
               <tasks ng-show="showmenu">
             </div>
@@ -68,7 +68,6 @@
       <script type="text/javascript">
       function topFunction() {
           $("html, body").animate({ scrollTop: "0" }, 1200)
-
       }
 
       </script>
