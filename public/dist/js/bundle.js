@@ -215,7 +215,7 @@ angular.module('myApp').directive('tasks', function () {
 });
 'use strict';
 
-$('HTML').ready(function () {
+$(document).ready(function () {
 
   $('.owl-carousel').owlCarousel({
     loop: true,
