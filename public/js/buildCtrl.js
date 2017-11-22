@@ -2,12 +2,27 @@ angular.module('myApp').controller('buildCtrl', function($scope, $stateParams, m
 
   $scope.colors = function(results) {
     mainService.colors().then(function(results) {
-      console.log("colorslist", results.data.colors)
-      $scope.colors = results.data.colors
+      let colors = results.data.colors
+      console.log("colorslist", colors)
+      $scope.colorlist = colors
+      $scope.default = colors
       $scope.ints = results.data.interior
+      $scope.chooseColor()
     })
   }
   $scope.colors()
+
+  $scope.chooseColor = function(color) {
+    console.log("default", $scope.colorlist[0].name)
+    let defaultcolor = $scope.colorlist[0].name
+    if (!color) {
+      $scope.color = defaultcolor }
+      else {
+        $scope.color = color.name
+      }
+  }
+
+
 
   $scope.getOptions = function(options) {
     mainService.getOptions(options).then(function(results) {
@@ -24,11 +39,11 @@ angular.module('myApp').controller('buildCtrl', function($scope, $stateParams, m
     })
   }
   $scope.vehicleData();
-
   $scope.carOptions = function(options) {
     mainService.carOptions(options).then(function(results) {
       // console.log("ops", results.data)
       $scope.options = results.data
+
     })
   }
   $scope.carOptions();
@@ -40,7 +55,7 @@ angular.module('myApp').controller('buildCtrl', function($scope, $stateParams, m
     let cart = $scope.cart
     let finalcost = $scope.total;
     let car = $scope.vehicle.model;
-    let color = $scope.color.name
+    let color = $scope.colorlist.name
     order.push(car, color, cart, finalcost, email)
     data = order
     console.log("car to order", data)
@@ -54,10 +69,9 @@ angular.module('myApp').controller('buildCtrl', function($scope, $stateParams, m
     mainService.postCart(data)
     $scope.order = order
   }
-  $scope.chooseColor = function(color) {
-    console.log("chosencolor", color.name)
-    $scope.color = color
-  }
+
+
+
   $scope.addOption = function(option) {
     console.log("adding", option)
     let flag = true
