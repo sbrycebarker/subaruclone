@@ -34,6 +34,7 @@ create: function(req, res, next) {
         res.status(200).json(req.body);
       }
     })
+    let order = require('./email.js')
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     console.log("email", email, car)
       const msg = {
@@ -41,8 +42,7 @@ create: function(req, res, next) {
         from: 'sbrycesti@gmail.com',
         subject: 'Your Subaru has been ordered',
         text: 'A representative from Subaru will contact you when your car arrives to confirm the order of your ' + car,
-        // html:
-        // '<strong><h1>Thank you for visiting Sergio' + `'` + 's <b>SUBARU CLONE</b></h1></strong>',
+        html: order
       };
   sgMail.send(msg);
 
