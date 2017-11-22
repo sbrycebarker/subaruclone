@@ -1649,7 +1649,8 @@ a {
     z-index: 2; }
   .arrow {
     background: url("../assets/imgs/siteimgs.PNG") no-repeat -99px -450px;
-    width: 19px;
+    margin: 0;
+    width: 18px;
     height: 10px;
     border: none; }
   .caronav {
@@ -1778,6 +1779,7 @@ a {
     margin: 0 auto; }
   .items {
     height: 58px;
+    width: auto;
     display: inline-block;
     text-align: center;
     background-color: none;
@@ -2791,9 +2793,11 @@ a {
   .arrowimg {
     height: 40px;
     width: 40px;
+    margin: auto;
     background-size: cover;
-    background-img: url("../assets/imgs/back-to-top.png");
-    border: none;
+    background-color: black;
+    background: url("../assets/imgs/back-to-top.png");
+    border: black;
     color: white; }
   .arrowimg:hover {
     height: 40px;
