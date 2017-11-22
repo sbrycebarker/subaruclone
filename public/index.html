@@ -70,10 +70,21 @@
           $("html, body").animate({ scrollTop: "0" }, 1200)
 
       }
+      $('HTML').ready(function(){
 
-      // function reload() {
-      //   location.reload()
-      // }
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:0,
+            autoplay: 10000,
+            items: 1,
+            autoHeight: true
+        })
+
+        function reload() {
+          location.reload()
+        }
+
+      })
 
       </script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>

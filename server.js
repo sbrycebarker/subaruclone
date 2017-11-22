@@ -3,6 +3,7 @@ const express = require('express'),
       bodyParser = require('body-parser'),
       massive = require('massive'),
       cors = require('cors'),
+      reload = require('reload'),
       moment = require('moment'),
       foundation = require('foundation-cli'),
       mongoose = require('mongoose'),
@@ -44,6 +45,8 @@ const express = require('express'),
       mongoose.connect('mongodb://sbrycebarker:serg1234@ds129030.mlab.com:29030/subaru', {
         useMongoClient: true,
       })
+
+      reload(app);
 
       app.use(express.static('./public'))
             var port = 8083
