@@ -26,7 +26,8 @@ gulp.task('build-css', function(){
         .pipe(cachebust.resources())
         .pipe(concat('styles.css'))
         .pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest('./public/dist'));
+        .pipe(gulp.dest('./public/dist'))
+        // .pipe(livereload());
 })
 
 gulp.task('clean', function (cb) {
@@ -53,8 +54,24 @@ gulp.task('build-js', function() {
 // });
 
 gulp.task('watch', function() {
+  livereload.listen()
+
+  nodemon({
+    script: 'index.js',
+    stdout: false
+  }).on('readable', function() {
+    this.stdout.on('data', function(chunk) {
+      if (/^listening/.test(chunk)) {
+        livereload.reload()
+      }
+      process.stdout.write(chunk)
+    })
+  })
+})
+
+gulp.task('watch', function() {
     livereload.listen();
-    return gulp.watch(['./public/index.html',
+    gulp.watch(['./public/index.html',
     './public/views/*.*html',
     './public/styles/*.*css',
     './public/styles/*.*sass',
