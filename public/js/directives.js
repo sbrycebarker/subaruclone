@@ -9,6 +9,12 @@ angular.module('myApp')
  })
 
  .directive('pop', function(){
+   $(".email").keydown(function(event){
+   if(event.keyCode == 13){
+     console.log("getting band")
+       $(".submit").click();
+   }
+ });
    return {
      restrict: 'E',
      templateUrl: "./views/finalorder.html"

@@ -12,7 +12,7 @@ $(document).ready(function(){
     location.reload()
   }
 
-  $(".email").keyup(function(event){
+  $(".email").keydown(function(event){
   if(event.keyCode == 13){
     console.log("getting band")
       $(".submit").click();

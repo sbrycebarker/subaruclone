@@ -140,6 +140,12 @@ angular.module('myApp').directive('tasks', function () {
     templateUrl: "./views/cardropdown.html"
   };
 }).directive('pop', function () {
+  $(".email").keydown(function (event) {
+    if (event.keyCode == 13) {
+      console.log("getting band");
+      $(".submit").click();
+    }
+  });
   return {
     restrict: 'E',
     templateUrl: "./views/finalorder.html"
@@ -166,7 +172,7 @@ $(document).ready(function () {
     location.reload();
   }
 
-  $(".email").keyup(function (event) {
+  $(".email").keydown(function (event) {
     if (event.keyCode == 13) {
       console.log("getting band");
       $(".submit").click();

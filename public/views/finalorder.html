@@ -8,7 +8,7 @@
       {{vehicle.year}}
       {{vehicle.model}}
       ${{total}}
-      {{color}}
+      {{color.name}}
       </h2>
       <h5 class="addedoptions" ng-repeat="item in cart">{{item.accessory.accessory}}</h5>
       <!-- {{finalorder}} -->
@@ -27,7 +27,7 @@
 <div class="emailform">
   <h3>Send us your car and a dealer will contact you shortly</h3>
   <input type="email" style="color: black" class="data" name="email" ng-model="email" placeholder="yourEmail">
-  <button class="submit" style="color: black" ng-click="postCart( { email: email}) ; validate({email: email}); orderpop = !orderpop; ty = !ty; topFunction()">Submit</button>
+  <button class="submit" style="color: black" ng-click="postCart( { email: email}) ; validate({email: email}); orderpop = !orderpop; ty = !ty;">Submit</button>
 
 </div>
 
