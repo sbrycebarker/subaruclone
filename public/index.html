@@ -70,6 +70,13 @@
           $("html, body").animate({ scrollTop: "0" }, 1200)
       }
 
+      $(".email").keyup(function(event){
+      if(event.keyCode == 13){
+        console.log("getting band")
+          $(".submit").click();
+      }
+    });
+
       </script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>

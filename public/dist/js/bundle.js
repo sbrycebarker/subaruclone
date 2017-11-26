@@ -150,7 +150,7 @@ angular.module('myApp').directive('tasks', function () {
     templateUrl: "./views/thankyou.html"
   };
 });
-'use strict';
+"use strict";
 
 $(document).ready(function () {
 
@@ -165,6 +165,13 @@ $(document).ready(function () {
   function reload() {
     location.reload();
   }
+
+  $(".email").keyup(function (event) {
+    if (event.keyCode == 13) {
+      console.log("getting band");
+      $(".submit").click();
+    }
+  });
 });
 'use strict';
 
