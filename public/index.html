@@ -65,17 +65,19 @@
   </header>
   <main>
       <ui-view></ui-view>
-      <script type="text/javascript">
+      <script>
+
+    //   $(".email").keyup(function(event){
+    //   if(event.keyCode == 13){
+    //     console.log("getting band")
+    //       $(".submit").click();
+    //   }
+    // });
+
       function topFunction() {
           $("html, body").animate({ scrollTop: "0" }, 1200)
       }
 
-      $(".email").keyup(function(event){
-      if(event.keyCode == 13){
-        console.log("getting band")
-          $(".submit").click();
-      }
-    });
 
       </script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>

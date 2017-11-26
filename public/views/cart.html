@@ -158,6 +158,14 @@
     </div>
 
     <script>
+    $(".email").keyup(function(event){
+    if(event.keyCode == 13){
+      console.log("getting band")
+        $(".submit").click();
+    }
+  });
+
+
     function orderscroll() {
         $(document).animate({ scrollTop: "0" }, 1000); // For Chrome, Safari and Opera
     }
