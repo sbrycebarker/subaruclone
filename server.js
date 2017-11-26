@@ -46,7 +46,13 @@ const express = require('express'),
         useMongoClient: true,
       })
 
-      reload(app);
+      app.use(session({
+        resave: true, //Without this you get a constant warning about default values
+        saveUninitialized: true, //Without this you get a constant warning about default values
+        secret: 'pizzaisgood'
+      }))
+
+      // reload(app);
 
       app.use(express.static('./public'))
             var port = 8083

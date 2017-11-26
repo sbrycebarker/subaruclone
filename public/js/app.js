@@ -22,6 +22,8 @@ angular.module('myApp', ['ui.router'])
             url: '/cart/:vehicle',
             templateUrl: "../views/cart.html",
             controller: 'buildCtrl'
+          }).otherwise({
+            redirect: '/'
           })
 
 })
