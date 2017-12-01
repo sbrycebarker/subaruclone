@@ -1,7 +1,6 @@
 const express = require('express'),
       session = require('express-session'),
       bodyParser = require('body-parser'),
-      massive = require('massive'),
       cors = require('cors'),
       reload = require('reload'),
       moment = require('moment'),

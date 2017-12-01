@@ -159,18 +159,18 @@ angular.module('myApp').directive('tasks', function () {
 "use strict";
 
 $(document).ready(function () {
+  //
+  // $('.owl-carousel').owlCarousel({
+  //     loop:true,
+  //     margin:0,
+  //     autoplay: 10000,
+  //     items: 1,
+  //     autoHeight: true
+  // })
 
-  $('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 0,
-    autoplay: 10000,
-    items: 1,
-    autoHeight: true
-  });
-
-  function reload() {
-    location.reload();
-  }
+  // function reload() {
+  //   location.reload()
+  // }
 
   $(".email").keydown(function (event) {
     if (event.keyCode == 13) {
@@ -241,7 +241,7 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
 
   $scope.getCars = function (results) {
     mainService.getCars().then(function (results) {
-      console.log("cars", results);
+      console.log("cars", results.data);
       $scope.cars = results.data;
     });
   };
