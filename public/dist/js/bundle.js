@@ -178,6 +178,27 @@ $(document).ready(function () {
       $(".submit").click();
     }
   });
+
+  $('#vehicles').click(function () {
+    if ($('#vehicledropdown').css('visibility') == 'hidden') $('#vehicledropdown').css('visibility', 'visible');else $('#vehicledropdown').css('visibility', 'hidden');
+  });
+
+  $(function () {
+
+    var $win = $(window); // or $box parent container
+    var $box = $(".box");
+    var $log = $(".log");
+
+    $win.on("click.Bst", function (event) {
+      if ($box.has(event.target).length == 0 //checks if descendants of $box was clicked
+      && !$box.is(event.target) //checks if the $box itself was clicked
+      ) {
+          console.log("you clicked outside the box");
+        } else {
+        console.log("you clicked inside the box");
+      }
+    });
+  });
 });
 'use strict';
 
@@ -262,7 +283,7 @@ angular.module('myApp').controller('mainCtrl', function ($scope, $stateParams, m
     $scope[param] = true;
   };
 
-  $scope.showmenu = false;
+  $scope.showmenu = true;
   $scope.orderpop = false;
   $scope.ty = false;
 });

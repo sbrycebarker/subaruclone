@@ -81,7 +81,7 @@ angular.module('myApp').controller('mainCtrl', function($scope, $stateParams, ma
       $scope[param] = true
     }
 
-  $scope.showmenu = false;
+  $scope.showmenu = true;
   $scope.orderpop = false;
   $scope.ty = false
 
