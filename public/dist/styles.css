@@ -50,6 +50,24 @@
   margin-right: auto;
   margin-left: auto; }
 
+.welcome {
+  height: 200px;
+  width: 400px;
+  margin: auto;
+  position: relative;
+  top: 300px;
+  display: flex;
+  background-color: white;
+  color: #0FA4DC;
+  text-align: center;
+  flex-direction: column; }
+
+.welcome h2 {
+  height: 70px;
+  margin: auto;
+  position: relative;
+  text-align: center; }
+
 /*# sourceMappingURL=main.css.map */
 
 .footerlist {

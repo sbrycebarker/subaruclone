@@ -58,6 +58,7 @@ angular.module('myApp').controller('buildCtrl', function ($scope, $stateParams, 
       $scope.accessories = results.data;
     });
   };
+
   $scope.vehicleData = function (response) {
     mainService.vehicleData().then(function (results) {
       console.log("car", results.data);
@@ -66,7 +67,9 @@ angular.module('myApp').controller('buildCtrl', function ($scope, $stateParams, 
       $scope.total = $scope.vehicle.cost += 820;
     });
   };
+
   $scope.vehicleData();
+
   $scope.carOptions = function (options) {
     mainService.carOptions(options).then(function (results) {
       // console.log("ops", results.data)

@@ -35,7 +35,7 @@ create: function(req, res, next) {
       }
     })
     let order = require('./email.js')
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    sgMail.setApiKey(process.SENDGRID_API_KEY);
     console.log("email", email, car)
       const msg = {
         to: email,
