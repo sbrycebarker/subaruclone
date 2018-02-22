@@ -25,13 +25,6 @@ var CarsSchema = new Schema({
   cmpg: { type: Number },
   _id: [{ type: Schema.Types.ObjectId, ref: 'options' }],
   enginesize: { type: Number },
-  awd: Boolean,
-  dat: Boolean,
-  bsd: Boolean,
-  cvt: Boolean,
-  aaw: Boolean,
-  gps: Boolean,
-  ltu: Boolean,
 });
 
 module.exports = mongoose.model('cars', CarsSchema);

@@ -34,9 +34,9 @@ $(document).ready(function(){
 
   				 $win.on("click.Bst", function(event){
   					if (
-              $box.has(event.target).length == 0 //checks if descendants of $box was clicked
+              $box.has(event.target).length == 0 
               &&
-              !$box.is(event.target) //checks if the $box itself was clicked
+              !$box.is(event.target)
             ){
   						console.log("you clicked outside the box");
   					} else {
