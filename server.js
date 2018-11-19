@@ -28,8 +28,14 @@ const express = require('express'),
 
       const sgMail = require('@sendgrid/mail');
 
-      let process = require ('./server/sendgrid.js')
+      let sendgrid = require ('./server/sendgrid.js')
 
+      // mongoose.connect('mongodb://sbrycebarker:serg1234@ds129030.mlab.com:29030/subaru', {
+      //   useMongoClient: true,
+      // })
+
+      var mlab = sendgrid.mongoose
+      // var moptions = 'useMongoClient: true'
 
       app.get('/getCars', cars.read);
       app.get('/getCars/:id', cars.show);
@@ -41,9 +47,7 @@ const express = require('express'),
       app.put('/postcart/:id', cart.update);
       app.delete('/deletecart/:id', cart.destroy);
 // sbrycebarker:serg1234@ds129030.mlab.com:29030
-      mongoose.connect('mongodb://sbrycebarker:serg1234@ds129030.mlab.com:29030/subaru', {
-        useMongoClient: true,
-      })
+      mongoose.connect(mlab)
 
 
       app.use(session({
